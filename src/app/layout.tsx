@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Michroma } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Cute Boka",
@@ -25,6 +27,11 @@ export const metadata: Metadata = {
   },
 };
 
+const michroma = Michroma({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`${michroma.className} antialiased`}> {children}</body>
     </html>
   );
 }

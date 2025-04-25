@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1745402603673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1745402603673,
+            "name": "Commit-0",
+            "content": "import type { Metadata } from \"next\";\r\nimport { Michroma } from \"next/font/google\";\r\nimport \"./globals.css\";\r\nimport Navbar from \"@/components/Navbar\";\r\n\r\nexport const metadata: Metadata = {\r\n  title: \"Cute Boka\",\r\n  description:\r\n    \"Cuteboka is a music exchanging platform where users can effortlessly share, discover, and connect through music they love.\",\r\n  keywords: [\r\n    \"Cuteboka\",\r\n    \"music sharing\",\r\n    \"music exchange\",\r\n    \"music platform\",\r\n    \"share music\",\r\n    \"discover music\",\r\n  ],\r\n  authors: [{ name: \"Neo Matrix\" }],\r\n  creator: \"Cuteboka\",\r\n  openGraph: {\r\n    title: \"Cuteboka | Share & Discover Music\",\r\n    description:\r\n      \"Join the Cuteboka community to exchange your favorite tracks and discover new sounds every day.\",\r\n    siteName: \"Cuteboka\",\r\n\r\n    type: \"website\",\r\n  },\r\n};\r\n\r\nconst michroma = Michroma({\r\n  weight: \"400\",\r\n  subsets: [\"latin\"],\r\n  display: \"swap\",\r\n});\r\nexport default function RootLayout({\r\n  children,\r\n}: Readonly<{\r\n  children: React.ReactNode;\r\n}>) {\r\n  return (\r\n    <html lang=\"en\">\r\n      <body className={`${michroma.className} antialiased`}>\r\n        {\" \"}\r\n        {children}\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n"
+        }
+    ]
+}
