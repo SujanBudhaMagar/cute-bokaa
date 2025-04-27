@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/constants/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1745748574645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745748587697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,5 @@\n   { href: \"/drip\", name: \"Drip\", more: \"TM\" },\r\n   { href: \"/about\", name: \"About\" },\r\n ];\r\n \r\n-export const FootData = [{ href: \"/\", name: \"home\" }];\r\n+export const FootData = [{ href: \"/\", name: \"home\" },{href:\"/\"}];\r\n"
+                },
+                {
+                    "date": 1745748650957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,5 @@\n   { href: \"/drip\", name: \"Drip\", more: \"TM\" },\r\n   { href: \"/about\", name: \"About\" },\r\n ];\r\n \r\n-export const FootData = [{ href: \"/\", name: \"home\" }, { href: \"/\" }];\r\n+export const FootData = [{ href: \"/\", name: \"home\" }, { href: \"/about\",name:\"About Us\" },{href:\"/contact\",name:\"Contact\"}];\r\n"
+                }
+            ],
+            "date": 1745748574645,
+            "name": "Commit-0",
+            "content": "import { AboutDataProps } from \"@/types\";\r\n\r\nexport const YoutubeData: AboutDataProps[] = [\r\n  {\r\n    img: \"/img/1.png\",\r\n    title: \"Advanced React Patterns Tutorial\",\r\n    des: \"Deep dive into React's advanced patterns and best practices\",\r\n    btn: \"Watch on YouTube →\",\r\n    btnClass: \"text-red-500\",\r\n  },\r\n  {\r\n    img: \"/img/2.png\",\r\n    title: \"Ultimate Dev Setup Guide 2025\",\r\n    des: \"Complete walkthrough of my development environment\",\r\n    btn: \"Watch on YouTube →\",\r\n    btnClass: \"text-red-500\",\r\n  },\r\n  {\r\n    img: \"/img/3.png\",\r\n    title: \"Modern UI/UX Design Workflow\",\r\n    des: \"Step-by-step guide to modern design practices\",\r\n    btn: \"Watch on YouTube →\",\r\n    btnClass: \"text-red-500\",\r\n  },\r\n  {\r\n    img: \"/img/1.png\",\r\n    title: \"Advanced React Patterns Tutorial\",\r\n    des: \"Deep dive into React's advanced patterns and best practices\",\r\n    btn: \"Watch on YouTube →\",\r\n    btnClass: \"text-red-500\",\r\n  },\r\n  {\r\n    img: \"/img/2.png\",\r\n    title: \"Ultimate Dev Setup Guide 2025\",\r\n    des: \"Complete walkthrough of my development environment\",\r\n    btn: \"Watch on YouTube →\",\r\n    btnClass: \"text-red-500\",\r\n  },\r\n];\r\nexport const SpotifyData: AboutDataProps[] = [\r\n  {\r\n    img: \"/img/4.png\",\r\n    title: \"Tech Talk: Future of AI\",\r\n    des: \"Weekly podcast discussing AI trends and innovations\",\r\n    btn: \"Listen on spotify →\",\r\n    btnClass: \"text-green-500\",\r\n  },\r\n  {\r\n    img: \"/img/5.png\",\r\n    title: \"Developer Stories\",\r\n    des: \"Interviews with leading developers and entrepreneurs\",\r\n    btn: \"Listen on spotify →\",\r\n    btnClass: \"text-green-500\",\r\n  },\r\n  {\r\n    img: \"/img/6.png\",\r\n    title: \"Code & Coffee\",\r\n    des: \"Morning discussions about programming and tech\",\r\n    btn: \"Listen on spotify →\",\r\n    btnClass: \"text-green-500\",\r\n  },\r\n  {\r\n    img: \"/img/4.png\",\r\n    title: \"Tech Talk: Future of AI\",\r\n    des: \"Weekly podcast discussing AI trends and innovations\",\r\n    btn: \"Listen on spotify →\",\r\n    btnClass: \"text-green-500\",\r\n  },\r\n  {\r\n    img: \"/img/5.png\",\r\n    title: \"Developer Stories\",\r\n    des: \"Interviews with leading developers and entrepreneurs\",\r\n    btn: \"Listen on spotify →\",\r\n    btnClass: \"text-green-500\",\r\n  },\r\n];\r\n\r\nexport const NavData = [\r\n  { href: \"/mixing\", name: \"Mixing\", more: \"Pro\" },\r\n  { href: \"/custombeat\", name: \"Custom Beat\", more: \"Pro\" },\r\n  { href: \"/drip\", name: \"Drip\", more: \"TM\" },\r\n  { href: \"/about\", name: \"About\" },\r\n];\r\n\r\nexport const FootData=[{href:\"/\",name:\"home\"}]"
+        }
+    ]
+}

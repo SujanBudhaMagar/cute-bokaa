@@ -26,6 +26,24 @@
   -webkit-text-stroke: 1px white;
 }
 
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  display: flex;
+  animation: slideAnimation 10s linear infinite;
+}
+
+.animate-slide > div {
+  flex-shrink: 0;
+}
+
 body {
   background-color: #151515;
 }

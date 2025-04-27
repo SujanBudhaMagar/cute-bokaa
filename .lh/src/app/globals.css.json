@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/globals.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745746640010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745747199475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n @import \"tailwindcss\";\r\n \r\n @layer components {\r\n   .globalContainer {\r\n-    @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-8;\r\n+    @apply max-w-9xl mx-auto px-5 md:px-8 lg:px-8;\r\n   }\r\n }\r\n \r\n .space-grotesk {\r\n"
+                },
+                {
+                    "date": 1745747207672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n @import \"tailwindcss\";\r\n \r\n @layer components {\r\n   .globalContainer {\r\n-    @apply max-w-9xl mx-auto px-5 md:px-8 lg:px-8;\r\n+    @apply max-w-8xl mx-auto px-5 md:px-8 lg:px-8;\r\n   }\r\n }\r\n \r\n .space-grotesk {\r\n"
+                },
+                {
+                    "date": 1745747213424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n @import \"tailwindcss\";\r\n \r\n @layer components {\r\n   .globalContainer {\r\n-    @apply max-w-8xl mx-auto px-5 md:px-8 lg:px-8;\r\n+    @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-8;\r\n   }\r\n }\r\n \r\n .space-grotesk {\r\n"
+                }
+            ],
+            "date": 1745746640010,
+            "name": "Commit-0",
+            "content": "@import url(\"https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap\");\r\n@import \"tailwindcss\";\r\n\r\n@layer components {\r\n  .globalContainer {\r\n    @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-8;\r\n  }\r\n}\r\n\r\n.space-grotesk {\r\n  font-family: \"Space Grotesk\", sans-serif;\r\n  font-weight: 400;\r\n}\r\n@theme {\r\n  --color-primary: #151515;\r\n  --color-secondary: #8b5cf6;\r\n  --color-tertiary: #f03f98;\r\n}\r\n.test {\r\n  border: 1px solid red;\r\n}\r\n\r\n.outlined-text {\r\n  font-weight: 700;\r\n  color: transparent;\r\n  -webkit-text-stroke: 1px white;\r\n}\r\n\r\n@keyframes slideAnimation {\r\n  0% {\r\n    transform: translateX(0);\r\n  }\r\n  100% {\r\n    transform: translateX(-100%);\r\n  }\r\n}\r\n\r\n.animate-slide {\r\n  display: flex;\r\n  animation: slideAnimation 10s linear infinite;\r\n}\r\n\r\n.animate-slide > div {\r\n  flex-shrink: 0;\r\n}\r\n"
+        }
+    ]
+}

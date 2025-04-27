@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/types/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1745573988041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745748792487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   btnClass?: string;\r\n }\r\n \r\n export interface NavProps {\r\n-  to: string;\r\n+  href: string;\r\n   name: string;\r\n   more?: string;\r\n }\r\n export interface PaymentIn {\r\n"
+                },
+                {
+                    "date": 1745748824907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,4 +22,8 @@\n export interface PaymentIn {\r\n   icon: React.JSX.Element;\r\n   name: string;\r\n }\r\n+export interface FooterProps{\r\n+  href:string;\r\n+  name:\"string\";\r\n+}\r\n"
+                }
+            ],
+            "date": 1745573988041,
+            "name": "Commit-0",
+            "content": "export interface AboutCardProps {\r\n  img: string;\r\n  title: string;\r\n  des: string;\r\n  btn: string;\r\n  btnClass?: string;\r\n}\r\n\r\nexport interface AboutDataProps {\r\n  img: string;\r\n  title: string;\r\n  des: string;\r\n  btn: string;\r\n  btnClass?: string;\r\n}\r\n\r\nexport interface NavProps {\r\n  to: string;\r\n  name: string;\r\n  more?: string;\r\n}\r\nexport interface PaymentIn{\r\n  icon :React.JSX.Element;\r\n  name : string;\r\n}\r\n"
+        }
+    ]
+}
