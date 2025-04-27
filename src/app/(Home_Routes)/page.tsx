@@ -56,7 +56,7 @@ const Home = () => {
           <div>
            <div className="w-[120px] h-[223px] bg-transparent border border-r-0 border-[#F03F9880] rounded-l-lg absolute top-0 left-0 -mt-[1px]">
            </div>
-           <div className="w-[120px] h-[223px] bg-transparent border border-l-0 border-[#F03F9880 ] rounded-r-lg absolute top-0 right-0 -mt-[1px]">
+           <div className="w-[120px] h-[223px] bg-transparent border border-l-0 border-[#F03F9880] rounded-r-lg absolute top-0 right-0 -mt-[1px]">
            </div>
             <h1 className="horizon-outlined text-xl text-[#FAFAFA] inline relative">
               Custom <span className="horizon">Beat </span>
