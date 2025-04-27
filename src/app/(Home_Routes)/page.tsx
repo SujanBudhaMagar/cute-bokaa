@@ -10,7 +10,7 @@ const Home = () => {
       <SearchBar />
 
       {/* treading track */}
-      <section className="globalContainer pb-10">
+      <section className="globalContainer pb-16">
         <h3 className="text-center text-4xl font-bold horizon text-white">
           <span className="bg-gradient-to-r from-[#B4C8F2] via-[#B4C8F2] to-[#E94DA1] text-transparent bg-clip-text ">
             Premium
@@ -50,18 +50,24 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div className="min-h-screen bg-gradient-to-br from-purple-900 to-black flex flex-col items-center justify-center p-4 text-white">
-          <div className="text-center max-w-md mx-auto">
-            <h1 className="text-5xl font-bold mb-8 tracking-wider">
-              CUSTOM BEAT PRO
+      <section className="globalContainer pb-16 flex items-center justify-center">
+        
+        <div className="relative w-[768px] h-[222px] bg-[#252525] text-center rounded-lg flex items-center justify-center z-10">
+          <div>
+           <div className="w-[120px] h-[223px] bg-transparent border border-r-0 border-[#F03F9880] rounded-l-lg absolute top-0 left-0 -mt-[1px]">
+           </div>
+           <div className="w-[120px] h-[223px] bg-transparent border border-l-0 border-[#F03F9880 ] rounded-r-lg absolute top-0 right-0 -mt-[1px]">
+           </div>
+            <h1 className="horizon-outlined text-xl text-[#FAFAFA] inline relative">
+              Custom <span className="horizon">Beat </span>
+              <span className="horizon text-sm inline -mt-2 ml-2 absolute bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text">
+                PRO
+              </span>
             </h1>
-
-            <p className="text-xl mb-10 leading-relaxed">
-              Get a Customised High Quality beat to match your style.
+            <p className="text-[#8C9092] text-sm mt-4">
+              Get a Customized High Quality beat to match your style.
             </p>
-
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg mb-6 transition duration-300 transform hover:scale-105">
+            <button className="text-[14px] py-3 px-4 bg-gradient-to-r from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer mt-6 tracking-widest ">
               Explore more
             </button>
           </div>
