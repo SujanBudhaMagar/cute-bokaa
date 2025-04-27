@@ -64,7 +64,7 @@ const SearchBar = () => {
           {/* Trending Section */}
           <div className="flex items-center gap-2">
             <h2 className="text-xs text-[#FAFAFA]">
-              What's trending right now:
+              {`What's trending right now:`}
             </h2>
             <div className="flex flex-wrap gap-3">
               {treading.map((item, idx) => (
@@ -79,8 +79,13 @@ const SearchBar = () => {
           </div>
         </div>
         <div className="w-[250px] h-full">
-          <Image src={"/img/Logo-wide 1.png"} alt="logo" width={1000} height={1000} 
-          className="object-center w-full h-auto"/>
+          <Image
+            src={"/img/Logo-wide 1.png"}
+            alt="logo"
+            width={1000}
+            height={1000}
+            className="object-center w-full h-auto"
+          />
         </div>
       </div>
     </div>

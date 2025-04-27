@@ -225,7 +225,7 @@ const MixingProForm = () => {
                 </p>
               </div>
               <p className="text-[#737373] md:text-base text-sm mt-4">
-                We'll respond within 10 hours.
+                {`We'll respond within 10 hours.`}
               </p>
             </div>
           </form>

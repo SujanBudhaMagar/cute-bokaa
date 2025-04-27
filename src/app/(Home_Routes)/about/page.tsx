@@ -1,7 +1,7 @@
 "use client";
 import AboutCard from "@/components/card/AboutCard";
 import { SpotifyData, YoutubeData } from "@/constants";
-import horizon from "@/lib/horizon";
+
 import Image from "next/image";
 import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
 
@@ -22,7 +22,7 @@ const About = () => {
             <div className="w-[90%] md:w-[48%] ml-4">
               <div className="inline-block">
                 <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest">
-                  HELLO, I'M MIKE
+                  {`HELLO, I'M MIKE`}
                 </p>
                 <p className="inline-block px-1 mt-1 text-xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
                   SHRESTHA
@@ -56,9 +56,7 @@ const About = () => {
       </div>
 
       <div className="flex items-center justify-center h-full flex-col w-full">
-        <p
-          className={`text-white font-bold text-3xl my-16 ${horizon.className}`}
-        >
+        <p className={`text-white font-bold text-3xl my-16`}>
           LATEST{" "}
           <span className="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
             WORKS

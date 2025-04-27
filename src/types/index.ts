@@ -27,12 +27,11 @@ export interface PaymentIn {
 export interface FooterProps {
   href: string;
   name: string;
-
+}
 
 export interface MusicCardProps {
   img: string;
-  title:string;
+  title: string;
   des: string;
   price: number;
-
 }

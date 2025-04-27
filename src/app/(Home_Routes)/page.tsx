@@ -25,7 +25,7 @@ const Home = () => {
               <BsFire className="inline -mt-2 ml-2" color="#FF5027" />
             </h3>
             <p className="font-normal">
-              Discover what's hot in music right now
+              {`Discover what's hot in music right now`}
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
