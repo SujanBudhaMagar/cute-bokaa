@@ -27,6 +27,7 @@ const SignUp = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
+              required
               className="w-full mb-4 px-3 py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151]"
             />
             <input
@@ -34,6 +35,7 @@ const SignUp = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter your full name"
+              required
               className="w-full mb-4 px-3 py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151]"
             />
             <a

@@ -7,6 +7,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop view */}
+
       <div className="py-5 sticky top-0 z-10 bg-[#151515]">
         <div className="globalContainer flex justify-between">
           <div className="md:flex items-center gap-9 hidden">
@@ -28,6 +29,7 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
+
             </div>
           </div>
 

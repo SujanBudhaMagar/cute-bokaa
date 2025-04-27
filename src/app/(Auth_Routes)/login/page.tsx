@@ -23,11 +23,13 @@ const LogIn = () => {
             <input
               type="email"
               placeholder="Enter your email address"
+              required
               className="w-full mb-4 px-3 py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151]"
             />
             <input
               type="password"
               placeholder="Enter your password"
+              required
               className="w-full mb-6 px-3 py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151]"
             />
             <button className="w-full py-3 rounded-xl text-base text-white font-semibold bg-gradient-to-r from-secondary to-tertiary">

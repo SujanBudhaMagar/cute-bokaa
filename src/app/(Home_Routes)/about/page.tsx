@@ -1,7 +1,7 @@
 "use client";
 import AboutCard from "@/components/card/AboutCard";
 import { SpotifyData, YoutubeData } from "@/constants";
-import horizon from "@/lib/horizon";
+
 import Image from "next/image";
 import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
 
@@ -18,13 +18,13 @@ const About = () => {
             width={150}
             className="hidden md:block"
           />
-          <div className="flex items-center justify-evenly h-full w-full">
-            <div className="w-[48%]">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-evenly h-screen md:h-full w-full">
+            <div className="w-[90%] md:w-[48%] ml-4">
               <div className="inline-block">
-                <p className="text-white text-lg md:text-4xl font-bold leading-tight tracking-widest">
-                  HELLO, I'M MIKE
+                <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest">
+                  {`HELLO, I'M MIKE`}
                 </p>
-                <p className="inline-block px-1 mt-1 text-lg md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
+                <p className="inline-block px-1 mt-1 text-xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
                   SHRESTHA
                 </p>
               </div>
@@ -34,11 +34,11 @@ const About = () => {
                 building immersive digital experiences. With over 8 years of
                 experience in web development and digital content creation.
               </p>
-              <div className="flex gap-4 mt-6">
-                <BsYoutube className="text-white" size={30} />
-                <BsSpotify className="text-white" size={30} />
-                <BsLinkedin className="text-white" size={30} />
-                <BsInstagram className="text-white" size={30} />
+              <div className="flex gap-4 mt-6 text-white">
+                <BsYoutube size={30} />
+                <BsSpotify size={30} />
+                <BsLinkedin size={30} />
+                <BsInstagram size={30} />
               </div>
             </div>
             <div>
@@ -46,7 +46,8 @@ const About = () => {
                 src="/img/mike.png"
                 alt="Mike Shrestha"
                 height={350}
-                width={430}
+                width={420}
+                className="h-[450px] w-[320px] md:h-[640px] md:w-[400px]"
               />
             </div>
           </div>
@@ -55,9 +56,7 @@ const About = () => {
       </div>
 
       <div className="flex items-center justify-center h-full flex-col w-full">
-        <p
-          className={`text-white font-bold text-3xl my-16 ${horizon.className}`}
-        >
+        <p className={`text-white font-bold text-3xl my-16`}>
           LATEST{" "}
           <span className="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
             WORKS

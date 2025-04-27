@@ -38,6 +38,7 @@ const SignUpPassword = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
+                required
                 className="mx-auto w-full max-w-sm px-3 py-2 md:py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151] text-[#8C9092]"
               />
             </div>
@@ -54,6 +55,7 @@ const SignUpPassword = () => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Enter your password again"
+                required
                 className="mx-auto w-full max-w-sm px-3 py-2 md:py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151] text-[#8C9092]"
               />
             </div>

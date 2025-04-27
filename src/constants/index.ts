@@ -1,4 +1,4 @@
-import { AboutDataProps, MusicCardProps } from "@/types";
+import { AboutDataProps, FooterProps, NavProps, MusicCardProps } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
   {
@@ -75,11 +75,26 @@ export const SpotifyData: AboutDataProps[] = [
   },
 ];
 
-export const NavData = [
+export const NavData: NavProps[] = [
   { href: "/mixing", name: "Mixing", more: "Pro" },
   { href: "/custombeat", name: "Custom Beat", more: "Pro" },
   { href: "/drip", name: "Drip", more: "TM" },
   { href: "/about", name: "About" },
+];
+
+export const QuickLinks: FooterProps[] = [
+  { href: "/", name: "Home" },
+  { href: "/about", name: "About Us" },
+  { href: "/contact", name: "Contact" },
+  { href: "drip", name: "Drip" },
+];
+
+export const Legal: FooterProps[] = [
+  { href: "/terms&conditions", name: "Terms & Conditions" },
+  { href: "/privacy", name: "Privacy and Policy" },
+  { href: "/cookies", name: "Cookie Policy" },
+  { href: "/copyright", name: "Copyright Complaint" },
+  { href: "/quickdownloads", name: "Quick Downloads" },
 ];
 
 export const Treading = ["All Genres", "Rap", "R&B", "Drill", "Hip Hop"];
@@ -134,5 +149,4 @@ export const MusicCardData: MusicCardProps[] = [
     des: "Luna Eclipse",
     price: 20,
   },
-
 ];

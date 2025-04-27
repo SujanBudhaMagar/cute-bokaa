@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/SwiperSlide.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745736683003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745736707178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,42 @@\n import React from \"react\";\r\n \r\n const SwiperSlide = () => {\r\n-  return <div></div>;\r\n+  return <div>\r\n+    <Swiper\r\n+          modules={[Autoplay]}\r\n+          spaceBetween={0}\r\n+          slidesPerView={8}\r\n+          loop={true}\r\n+          speed={1000}\r\n+          autoplay={{\r\n+            delay: 0,\r\n+            disableOnInteraction: false,\r\n+          }}\r\n+          allowTouchMove={false}\r\n+          grabCursor={true}\r\n+        >\r\n+          {Array(2)\r\n+            .fill(null)\r\n+            .map((_, index) => (\r\n+              <SwiperSlide key={`relume-${index}`}>\r\n+                <div className=\"flex items-center gap-2 text-white\">\r\n+                  <FaCube size={24} />\r\n+                  <p className=\"font-bold\">Relume</p>\r\n+                </div>\r\n+              </SwiperSlide>\r\n+            ))}\r\n+          {Array(2)\r\n+            .fill(null)\r\n+            .map((_, index) => (\r\n+              <SwiperSlide key={`webflow-${index}`}>\r\n+                <div className=\"flex items-center gap-2 text-white\">\r\n+                  <FaWebflow size={24} />\r\n+                  <p className=\"font-bold\">Webflow</p>\r\n+                </div>\r\n+              </SwiperSlide>\r\n+            ))}\r\n+        </Swiper>\r\n+  </div>;\r\n };\r\n \r\n export default SwiperSlide;\r\n"
+                },
+                {
+                    "date": 1745736724825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n import React from \"react\";\r\n-\r\n+import { Swiper, SwiperSlide } from \"swiper/react\";\r\n+import { Autoplay } from \"swiper/modules\";\r\n+import \"swiper/css\";\r\n+import \"swiper/css/autoplay\"; \r\n const SwiperSlide = () => {\r\n   return (\r\n     <div>\r\n       <Swiper\r\n"
+                },
+                {
+                    "date": 1745736750063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n import { Swiper, SwiperSlide } from \"swiper/react\";\r\n import { Autoplay } from \"swiper/modules\";\r\n import \"swiper/css\";\r\n import \"swiper/css/autoplay\";\r\n+import { FaWebflow } from \"react-icons/fa6\";\r\n+import { FaCube } from \"react-icons/fa\";\r\n const SwiperSlide = () => {\r\n   return (\r\n     <div>\r\n       <Swiper\r\n"
+                }
+            ],
+            "date": 1745736683003,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\n\r\nconst SwiperSlide = () => {\r\n  return <div></div>;\r\n};\r\n\r\nexport default SwiperSlide;\r\n"
+        }
+    ]
+}
