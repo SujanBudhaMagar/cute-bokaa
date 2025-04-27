@@ -15,7 +15,15 @@ export interface AboutDataProps {
 }
 
 export interface NavProps {
-  to: string;
+  href: string;
   name: string;
   more?: string;
+}
+export interface PaymentIn {
+  icon: React.JSX.Element;
+  name: string;
+}
+export interface FooterProps {
+  href: string;
+  name: string;
 }

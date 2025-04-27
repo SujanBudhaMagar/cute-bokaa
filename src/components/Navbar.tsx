@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop view */}
-      <div className="bg-black h-18 md:h-14 md:flex justify-between items-center sticky top-0 z-10 w-full overflow-y-hidden test">
+      <div className="bg-black h-18 md:h-14 md:flex justify-between items-center sticky top-0 z-10 w-full overflow-y-hidden">
         <div className="md:flex items-center justify-center px-9 gap-6 hidden">
           <p
             className={`text-sm font-bold bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text text-center${horizon.className}`}
@@ -35,7 +35,7 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className="text-white mr-16 gap-6 items-center hidden md:flex">
+        <div className="text-white mr-12 gap-6 items-center hidden md:flex">
           <Link href="/signup" className="text-sm">
             Sign Up
           </Link>
