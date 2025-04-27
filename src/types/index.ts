@@ -19,6 +19,7 @@ export interface NavProps {
   name: string;
   more?: string;
 }
+
 export interface PaymentIn {
   icon: React.JSX.Element;
   name: string;
@@ -26,4 +27,12 @@ export interface PaymentIn {
 export interface FooterProps {
   href: string;
   name: string;
+
+
+export interface MusicCardProps {
+  img: string;
+  title:string;
+  des: string;
+  price: number;
+
 }
