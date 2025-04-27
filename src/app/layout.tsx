@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Cute Boka",

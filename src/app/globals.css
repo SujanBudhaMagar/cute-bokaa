@@ -3,7 +3,7 @@
 
 @layer components {
   .globalContainer {
-    @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-8;
+    @apply max-w-[1350px] mx-auto px-5 md:px-8 lg:px-8;
   }
 }
 
@@ -25,3 +25,31 @@
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
+
+body {
+  background-color: #151515;
+}
+
+@font-face {
+  font-family: "HorizonFont";
+  src: url("/fonts/horizon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HorizonOutlinedFont";
+  src: url("/fonts/horizon_outlined.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.horizon {
+  font-family: "HorizonFont", sans-serif; /* Fallback to sans-serif */
+}
+
+.horizon-outlined {
+  font-family: "HorizonOutlinedFont", sans-serif; /* Fallback to sans-serif */
+}
+
+

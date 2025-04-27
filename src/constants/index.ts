@@ -1,4 +1,4 @@
-import { AboutDataProps } from "@/types";
+import { AboutDataProps, MusicCardProps } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
   {
@@ -80,4 +80,59 @@ export const NavData = [
   { href: "/custombeat", name: "Custom Beat", more: "Pro" },
   { href: "/drip", name: "Drip", more: "TM" },
   { href: "/about", name: "About" },
+];
+
+export const Treading = ["All Genres", "Rap", "R&B", "Drill", "Hip Hop"];
+
+export const MusicCardData: MusicCardProps[] = [
+  {
+    img: "/img/musicCardImg/1.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+
+  {
+    img: "/img/musicCardImg/2.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/3.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/4.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/5.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/6.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/7.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+  {
+    img: "/img/musicCardImg/8.jpg",
+    title: "Midnight Dreams",
+    des: "Luna Eclipse",
+    price: 20,
+  },
+
 ];

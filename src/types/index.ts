@@ -19,3 +19,10 @@ export interface NavProps {
   name: string;
   more?: string;
 }
+
+export interface MusicCardProps {
+  img: string;
+  title:string;
+  des: string;
+  price: number;
+}
