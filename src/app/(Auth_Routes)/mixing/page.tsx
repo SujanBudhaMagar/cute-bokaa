@@ -53,7 +53,7 @@ const MixingProForm = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen w-full">
+    <div className="bg-black min-h-screen w-full overflow-hidden">
       <Navbar />
       <div className="flex flex-col items-center justify-center px-4 md:px-0 min-h-screen text-white gap-6">
         {/* Logo */}
@@ -66,9 +66,12 @@ const MixingProForm = () => {
         />
 
         {/* Header Section */}
-        <div className="flex flex-col items-center justify-center gap-4 text-center text-white mb-6 mt-6 md:mt-0">
-          <p className="md:text-3xl font-bold text-sm">
-            TELL US <span>ABOUT YOUR MIXING NEEDS</span>
+        <div className="flex flex-col items-center justify-center gap-4 text-center mb-6 mt-6 md:mt-0">
+          <p className="md:text-3xl font-bold text-sm horizon-outlined tracking-widest ">
+            TELL US{" "}
+            <span className="horizon tracking-widest">
+              ABOUT YOUR MIXING NEEDS
+            </span>
           </p>
           <p className="text-[#8C9092] text-xs md:text-base w-sm md:w-2xl">
             Provide details about your beat, voice, and mixing preferences.
@@ -232,7 +235,12 @@ const MixingProForm = () => {
         </div>
 
         {/* Clients Section */}
-        <p className="text-3xl font-bold">OUR CLIENTS</p>
+        <p className="text-xl md:text-3xl font-bold horizon tracking-widest">
+          OUR{" "}
+          <span className="horizon-outlined md:text-3xl text-xl tracking-widest">
+            CLIENTS
+          </span>{" "}
+        </p>
         <CustomSwiperSlide />
       </div>
       <Footer />

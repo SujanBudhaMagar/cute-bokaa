@@ -13,11 +13,9 @@ const LogIn = () => {
           className="mb-10"
         />
         <div className="bg-[#252525] px-6 py-10 rounded-lg shadow-2xl w-full">
-          <h2 className="text-center text-3xl font-extrabold mb-6 text-[#FAFAFA] orbitron">
+          <h2 className="text-center text-3xl font-bold mb-6 text-[#FAFAFA] horizon">
             LOG{" "}
-            <span className="outlined-text font-extrabold text-3xl orbitron">
-              IN
-            </span>
+            <span className=" font-abold text-3xl horizon-outlined">IN</span>
           </h2>
           <div className="flex flex-col w-full items-center justify-center mb-4">
             <input

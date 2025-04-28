@@ -1,4 +1,10 @@
-import { AboutDataProps, FooterProps, NavProps, MusicCardProps } from "@/types";
+import {
+  AboutDataProps,
+  FooterProps,
+  NavProps,
+  MusicCardProps,
+  FooterImageProps,
+} from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
   {
@@ -149,4 +155,11 @@ export const MusicCardData: MusicCardProps[] = [
     des: "Luna Eclipse",
     price: 20,
   },
+];
+export const FooterImage: FooterImageProps[] = [
+  { image: "/img/footimg/1.jpg" },
+  { image: "/img/footimg/2.jpg" },
+  { image: "/img/footimg/3.jpg" },
+  { image: "/img/footimg/4.jpg" },
+  { image: "/img/footimg/5.jpg" },
 ];
