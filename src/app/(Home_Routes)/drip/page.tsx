@@ -17,7 +17,7 @@ const Drip = () => {
           alt="Logo"
           height={150}
           width={150}
-          className="hidden md:block "
+          className="hidden md:block mb-10"
         />
         {/* section1 */}
         <div className="flex flex-col items-center justify-between globalContainer">
@@ -65,10 +65,16 @@ const Drip = () => {
           </div>
           {/* products section */}
         </div>
+        <p className="horizon text-sm md:text-2xl text-white">
+          Trusted By{" "}
+          <span className="text-sm md:text-2xl horizon-outlined text-white">
+            The Best
+          </span>
+        </p>
         <CustomSwiperSlide />
       </div>
       {/* section 2 */}
-      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 py-10">
+      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-20 md:mt-26">
         <p className="horizon text-white text-base md:text-3xl tracking-widest">
           Worn by{" "}
           <span className="horizon-outlined text-white text-sm md:text-3xl tracking-widest">

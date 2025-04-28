@@ -175,7 +175,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <hr className="border border-[#FAFAFA] w-full hidden md:block" />
+      <hr className="border border-[#FAFAFA] w-full hidden md:block mt-6" />
       <p className="text-[10px] text-[#FFFFFF66] text-center w-full my-5">
         © 2025 Cute Boka. All rights reserved.
       </p>
