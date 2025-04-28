@@ -43,3 +43,11 @@ export interface IconProps {
   icon: React.JSX.Element;
   className: string;
 }
+export interface ProductDataProps {
+  image: string;
+  name: string;
+  price: string;
+}
+export interface WornProps {
+  image: string;
+}

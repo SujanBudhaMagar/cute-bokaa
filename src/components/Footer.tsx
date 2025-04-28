@@ -35,7 +35,7 @@ const Footer = () => {
   const [openLegal, setOpenLegal] = useState(false);
 
   return (
-    <div className="bg-black h-full mt-10 md:mt-20 globalContainer">
+    <div className="bg-[#151515] h-full mt-10 md:mt-20 globalContainer">
       <div className="flex flex-col md:flex-row items-center justify-between gap-5">
         {/* booking */}
         <div className="flex flex-col gap-8">
@@ -63,7 +63,7 @@ const Footer = () => {
             className="flex md:block cursor-pointer gap-3"
             onClick={() => setOpenQuickLinks(!openQuickLinks)}
           >
-            <p className="md:horizon mb-2">Quick Links</p>
+            <p className="horizon mb-2">Quick Links</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
@@ -86,7 +86,7 @@ const Footer = () => {
             className="flex gap-3 md:block cursor-pointer"
             onClick={() => setOpenSupport(!openSupport)}
           >
-            <p className="md:horizon mb-2">Support</p>
+            <p className="horizon mb-2">Support</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
@@ -106,7 +106,7 @@ const Footer = () => {
             className="flex gap-3 md:block cursor-pointer"
             onClick={() => setOpenResources(!openResources)}
           >
-            <p className="md:horizon mb-2">Resources</p>
+            <p className="horizon mb-2">Resources</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
@@ -126,7 +126,7 @@ const Footer = () => {
             className="flex gap-3 md:block cursor-pointer"
             onClick={() => setOpenLegal(!openLegal)}
           >
-            <p className="md:horizon mb-2">Legal</p>
+            <p className="horizon mb-2">Legal</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div

@@ -53,7 +53,7 @@ const MixingProForm = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen w-full overflow-hidden">
+    <div className="bg-[#151515] min-h-screen w-full overflow-hidden">
       <Navbar />
       <div className="flex flex-col items-center justify-center px-4 md:px-0 min-h-screen text-white gap-6">
         {/* Logo */}

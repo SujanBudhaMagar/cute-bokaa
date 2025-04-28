@@ -8,7 +8,7 @@ import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
 const About = () => {
   return (
     <div className="bg-primary overflow-hidden">
-      <div className="bg-black">
+      <div className="bg-[#151515]">
         {/* details */}
         <div className="flex flex-col items-center">
           <Image
