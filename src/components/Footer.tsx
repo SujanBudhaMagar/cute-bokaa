@@ -157,7 +157,7 @@ const Footer = () => {
         {/* Social Media */}
       </div>
       <div className="hidden md:flex justify-between">
-        <Image src="/img/logo.png" alt="none" height={80} width={80} />
+        <Image src="/img/Logo-wide 1.png" alt="none" height={80} width={80} />
         <div className="flex -space-x-2">
           {FooterImage.map((item, idx) => (
             <div

@@ -166,8 +166,6 @@ const Home = () => {
       {/* Mixing Pro  */}
 
 
-      <Footer/>
-
     </div>
   );
 };
