@@ -18,8 +18,8 @@ const SignUp = () => {
           className="mb-10"
         />
         <div className="bg-[#252525] px-6 py-10 rounded-lg shadow-2xl w-full">
-          <h2 className="text-center text-3xl font-bold mb-6 text-[#FAFAFA] orbitron">
-            SIGN <span className="outlined-text text-3xl">UP</span>
+          <h2 className="text-center text-3xl font-bold mb-6 text-[#FAFAFA] horizon">
+            SIGN <span className="horizon-outlined text-3xl">UP</span>
           </h2>
           <div className="flex flex-col w-full items-center justify-center mb-4">
             <input

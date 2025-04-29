@@ -18,9 +18,9 @@ const SignUpPassword = () => {
           className="mb-6"
         />
         <div className="bg-[#252525] px-6 py-8 md:px-8 md:py-12 rounded-lg shadow-2xl w-full">
-          <h2 className="text-center text-lg md:text-2xl font-bold mb-6 text-[#FAFAFA] tracking-widest">
+          <h2 className="text-center text-lg md:text-2xl font-bold mb-6 text-[#FAFAFA] tracking-widest horizon-outlined">
             CREATE{" "}
-            <span className="outlined-text text-lg md:text-xl tracking-widest">
+            <span className="horizon text-lg md:text-2xl tracking-widest">
               A PASSWORD
             </span>
           </h2>
@@ -66,7 +66,7 @@ const SignUpPassword = () => {
               Sign Up
             </a>
           </div>
-          <div className="flex items-center justify-center gap-2 mt-6 text-xs md:text-sm text-white">
+          <div className="flex items-center justify-center gap-2 mt-6 text-xs text-white">
             <input type="checkbox" id="terms" />
             <label htmlFor="terms">
               I agree to the{" "}
