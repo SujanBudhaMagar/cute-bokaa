@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-black h-full mt-20">
+    <div className="bg-[#151515] h-full mt-20">
       <div className="flex items-center justify-between">
         {/* booking */}
         <div className="flex flex-col ml-10 gap-8">
