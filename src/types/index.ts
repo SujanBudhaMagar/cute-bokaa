@@ -35,3 +35,19 @@ export interface MusicCardProps {
   des: string;
   price: number;
 }
+export interface FooterImageProps {
+  image: string;
+}
+
+export interface IconProps {
+  icon: React.JSX.Element;
+  className: string;
+}
+export interface ProductDataProps {
+  image: string;
+  name: string;
+  price: string;
+}
+export interface WornProps {
+  image: string;
+}

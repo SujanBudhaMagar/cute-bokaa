@@ -1,4 +1,12 @@
-import { AboutDataProps, FooterProps, NavProps, MusicCardProps } from "@/types";
+import {
+  AboutDataProps,
+  FooterProps,
+  NavProps,
+  MusicCardProps,
+  FooterImageProps,
+  ProductDataProps,
+  WornProps,
+} from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
   {
@@ -149,4 +157,23 @@ export const MusicCardData: MusicCardProps[] = [
     des: "Luna Eclipse",
     price: 20,
   },
+];
+export const FooterImage: FooterImageProps[] = [
+  { image: "/img/footimg/1.jpg" },
+  { image: "/img/footimg/2.jpg" },
+  { image: "/img/footimg/3.jpg" },
+  { image: "/img/footimg/4.jpg" },
+  { image: "/img/footimg/5.jpg" },
+];
+export const ProductData: ProductDataProps[] = [
+  { image: "/img/products/1.jpg", name: "Wool Sweater", price: "$ 89.99" },
+  { image: "/img/products/2.jpg", name: "Wool Sweater", price: "$ 89.99" },
+  { image: "/img/products/3.jpg", name: "Wool Sweater", price: "$ 89.99" },
+  { image: "/img/products/4.jpg", name: "Wool Sweater", price: "$ 89.99" },
+];
+export const WornData: WornProps[] = [
+  { image: "/img/worn/1.jpg" },
+  { image: "/img/worn/2.jpg" },
+  { image: "/img/worn/3.jpg" },
+  { image: "/img/worn/4.jpg" },
 ];

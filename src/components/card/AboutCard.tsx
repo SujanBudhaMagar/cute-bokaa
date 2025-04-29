@@ -9,8 +9,8 @@ const AboutCard: React.FC<AboutCardProps> = ({
   btnClass,
 }) => {
   return (
-    <div className="h-[300px] w-[400px] md:h-[320px] md:w-[640px] bg-[#1F2937] rounded-xl flex flex-col items-start gap-4 p-4 md:p-6 mb-4">
-      <div className="h-[210px] w-full rounded-xl overflow-hidden">
+    <div className="h-[300px] w-[400px] md:h-[260px] md:w-[540px] bg-[#1F2937] rounded-xl flex flex-col items-start gap-4 p-4 md:p-3 mb-4">
+      <div className="h-[290px] w-full rounded-xl overflow-hidden">
         <Image
           src={img}
           alt="None"
