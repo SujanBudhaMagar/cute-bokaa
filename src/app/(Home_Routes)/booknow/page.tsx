@@ -64,7 +64,7 @@ const BookNow = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 bg-primary opacity-80 z-0">
-          <div className="absolute inset-0 flex flex-col items-center justify-around px-4 text-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-evenly px-4 text-center">
             <h1 className="text-lg md:text-3xl horizon mt-44">
               <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
                 BOOK YOUR STUDIO{" "}
@@ -114,21 +114,21 @@ const BookNow = () => {
               </p>
               <div className="flex md:flex-row flex-col w-full gap-4 md:gap-8">
                 {/* Date Picker */}
-                <div className="block w-full md:w-1/2">
-                  <label className="mb-2 text-sm md:text-base font-medium">
+                <div className=" block w-full md:w-1/2">
+                  <label className="mb-2 text-[12px] md:text-base font-medium">
                     Select Date
                   </label>
                   <input
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="uppercase appearance-none text-white w-full mb-4 p-2 rounded bg-primary border border-[#374151] mt-0 md:mt-2 text-[10px] md:text-base"
+                    className="date-input uppercase appearance-none text-white w-full p-2 rounded bg-primary border border-[#374151] mt-2 md:mt-2 text-[10px] md:text-base"
                   />
                 </div>
 
                 {/* Duration Selector */}
                 <div className="block w-full md:w-1/2">
-                  <label className="mb-2 text-sm md:text-base font-medium">
+                  <label className="mb-2 text-[12px] md:text-base font-medium">
                     Select Duration (in hour)
                   </label>
                   <select
@@ -145,14 +145,14 @@ const BookNow = () => {
 
               {/* Time Slots */}
               <div className="w-full">
-                <label className="block mb-2 text-sm md:text-base font-medium">
+                <label className="block mb-2 text-[12px] md:text-base font-medium">
                   Select Time Slot
                 </label>
-                <div className="flex flex-wrap gap-4 mb-4 text-[10px] md:text-base">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-[10px] md:text-base">
                   {timeOptions.map((slot, idx) => (
                     <button
                       key={idx}
-                      className={`px-4 py-2 rounded ${
+                      className={`px-4 py-2 rounded w-full ${
                         timeSlot === slot ? "bg-purple-600" : "bg-primary"
                       } hover:bg-[#444]`}
                       onClick={() => setTimeSlot(slot)}
@@ -161,10 +161,12 @@ const BookNow = () => {
                     </button>
                   ))}
                   <select
-                    className="px-2 py-2 rounded bg-primary border border-[#374151] text-[10px] md:text-base"
+                    className="px-4 py-2 rounded bg-primary border border-[#374151] text-[10px] md:text-base w-full"
                     onChange={(e) => setTimeSlot(e.target.value)}
                   >
-                    <option>Select time</option>
+                    <option className="text-text-[12px] md:text-base">
+                      Select time
+                    </option>
                     {extraTimes.map((et, idx) => (
                       <option key={idx} value={et}>
                         {et}
@@ -176,7 +178,7 @@ const BookNow = () => {
 
               {/* Upload Beat */}
               <div>
-                <label className="block mb-2 text-sm md:text-base font-medium">
+                <label className="block mb-2 text-[12px] md:text-base font-medium">
                   Upload Beat
                 </label>
                 <input
