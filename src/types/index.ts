@@ -51,3 +51,13 @@ export interface ProductDataProps {
 export interface WornProps {
   image: string;
 }
+export interface BookProps {
+  icon: React.JSX.Element;
+  price: string;
+  detail: string;
+}
+
+export interface StudioRulesProps {
+  icon: React.JSX.Element;
+  name: string;
+}

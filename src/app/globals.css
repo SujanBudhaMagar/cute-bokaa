@@ -69,3 +69,7 @@ body {
 .horizon-outlined {
   font-family: "HorizonOutlinedFont", sans-serif; /* Fallback to sans-serif */
 }
+
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
