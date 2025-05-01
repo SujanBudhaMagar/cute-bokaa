@@ -6,6 +6,8 @@ import {
   FooterImageProps,
   ProductDataProps,
   WornProps,
+  blogCardprops,
+  FeatureProps,
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -177,3 +179,46 @@ export const WornData: WornProps[] = [
   { image: "/img/worn/3.jpg" },
   { image: "/img/worn/4.jpg" },
 ];
+
+export const BlogCardData: blogCardprops[] = [
+  {
+    img: "/img/blogimg/1.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/1.jpg",
+    autName: "Sarah Miller",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/2.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/2.jpg",
+    autName: "Hari Shyam",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/3.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/3.jpg",
+    autName: "Ramesh Stif",
+    autWork: "Music Producer",
+  },
+];
+
+
+export const standardFeatures:FeatureProps[] = [
+  { name: "High Quality WAV Version", available: true },
+  { name: "Radio Play & Profit Live Performance", available: true },
+  { name: "Unlimited Streams  50,000 Streams", available: false },
+  { name: "Unlimited Rights Limited Rights", available: false },
+  { name: "Free Performance Version", available: false },
+  { name: "Producer Tag", available: false },
+]
+
+export const premiumFeatures:FeatureProps[] = [
+  { name: "Fully Customized Beat with STEMS", available: true },
+  { name: "Exclusive License with Full Rights", available: true },
+  { name: "Unlimited Streams", available: true },
+  { name: "Free Performance Version", available: true },
+  { name: "Radio Play & Profit Live Performance", available: true },
+  { name: "Remove Producer Tag", available: true },
+]
