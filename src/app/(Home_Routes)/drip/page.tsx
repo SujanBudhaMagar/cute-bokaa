@@ -40,7 +40,7 @@ const Drip = () => {
             {ProductData.map((item, idx) => (
               <div
                 key={idx}
-                className="h-[300px] w-[160px] md:h-[330px] md:w-[230px] rounded-md shadow-lg "
+                className="h-[320px] w-[180px] md:h-[330px] md:w-[230px] rounded-md shadow-lg "
               >
                 <div className="h-[250px] w-full">
                   <Image
@@ -88,7 +88,7 @@ const Drip = () => {
         <div className="flex flex-nowrap gap-6 mt-14 animate-slide relative w-full">
           {photoSlides.map((item, idx) => (
             <div
-              className="w-[190px] h-[320px] md:w-[330px] md:h-[320px] relative flex-shrink-0"
+              className="w-[200px] h-[320px] md:w-[330px] md:h-[320px] relative flex-shrink-0"
               key={idx}
             >
               <Image
