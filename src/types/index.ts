@@ -54,6 +54,18 @@ export interface WornProps {
   image: string;
 }
 
+export interface BookProps {
+  icon: React.JSX.Element;
+  price: string;
+  detail: string;
+}
+
+export interface StudioRulesProps {
+  icon: React.JSX.Element;
+  name: string;
+}
+=======
+
 export interface FollowBtnProps {
   Icon: JSX.Element;
   title: string;
@@ -73,5 +85,6 @@ export interface FeatureProps {
   name: string
   available: boolean
 }
+
 
 
