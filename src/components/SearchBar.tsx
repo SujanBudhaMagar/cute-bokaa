@@ -24,13 +24,13 @@ const SearchBar = () => {
           <div className="relative mb-4 w-fit">
             <input
               type="text"
-              placeholder="Search beats, producers, genres..."
-              className="bg-[#FAF8F01A] rounded-lg py-5 px-5 text-xs border border-[#F03F9880] outline-none w-[450px] placeholder-[#8C9092] text-[#8C9092]"
+              placeholder="Search beats, producers..."
+              className="bg-[#FAF8F01A] rounded-lg py-5 px-5 text-xs border border-[#F03F9880] outline-none w-[358px] md:w-[450px] placeholder-[#8C9092] text-[#8C9092] placeholder:text-[10px] md:placeholder:text-xs"
             />
-            <div className="w-fit flex gap-5 items-center text-[#FAFAFA] absolute top-3 right-5">
+            <div className="w-fit flex gap-3 md:gap-5 items-center text-[#FAFAFA] absolute top-3 right-5">
               <div className="flex gap-2 items-center">
                 <p
-                  className="text-sm cursor-pointer"
+                  className="text-[10px] md:text-sm cursor-pointer"
                   onClick={() => setMoodfil(!Moodfil)}
                 >
                   Mood
@@ -62,15 +62,15 @@ const SearchBar = () => {
           </div>
 
           {/* Trending Section */}
-          <div className="flex items-center gap-2">
-            <h2 className="text-xs text-[#FAFAFA]">
+          <div className="md:flex items-center gap-2">
+            <h2 className=" text-[10px] md:text-xs text-[#FAFAFA]">
               {`What's trending right now:`}
             </h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2 md:gap-3 mt-3.5 md:mt-0">
               {treading.map((item, idx) => (
                 <span
                   key={idx}
-                  className="text-xs py-2 px-4 border border-[#252525] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer"
+                  className="text-[10px] md:text-xs py-2 px-4 border border-[#252525] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer"
                 >
                   {item}
                 </span>
@@ -78,7 +78,7 @@ const SearchBar = () => {
             </div>
           </div>
         </div>
-        <div className="w-[250px] h-full">
+        <div className="hidden  md:block w-[250px] h-full">
           <Image
             src={"/img/Logo-wide 1.png"}
             alt="logo"
