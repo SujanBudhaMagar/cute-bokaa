@@ -14,7 +14,7 @@ const CustomSwiperSlide = () => {
   );
 
   return (
-    <div className="w-full mt-3 md:mt-6 h-16 md:h-24 overflow-hidden relative">
+    <div className="w-full mt-3 md:mt-6 h-14 md:h-24 relative">
       <div className="relative w-full h-full animate-slide gap-3">
         {repeatedSlides.map((slide, index) => (
           <div
@@ -22,7 +22,7 @@ const CustomSwiperSlide = () => {
             className="flex px-4 text-[#D4D4D4] items-center gap-3"
           >
             {slide.icon}
-            <p className="font-bold text-2xl whitespace-nowrap">
+            <p className="font-bold text-xl md:text-2xl whitespace-nowrap">
               {slide.title}
             </p>
           </div>

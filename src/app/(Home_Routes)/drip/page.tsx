@@ -10,8 +10,8 @@ const Drip = () => {
     (_, i) => WornData[i % WornData.length]
   );
   return (
-    <div className="bg-primary overflow-hidden">
-      <div className="bg-[#151515] flex flex-col items-center">
+    <div className="bg-primary min-h-screen overflow-hidden">
+      <div className="flex flex-col items-center">
         <Image
           src="/img/logo.png"
           alt="Logo"
@@ -20,7 +20,7 @@ const Drip = () => {
           className="hidden md:block mb-10"
         />
         {/* section1 */}
-        <div className="flex flex-col items-center justify-between globalContainer">
+        <div className="flex flex-col items-center justify-between globalContainer w-full h-screen">
           <p className="uppercase horizon text-base md:text-3xl text-white tracking-widest mt-4">
             Rock{" "}
             <span className="horizon-outlined text-base md:text-3xl text-white tracking-widest mt-4">
@@ -36,11 +36,11 @@ const Drip = () => {
           {/* section1 */}
 
           {/* products section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 md:flex-wrap gap-6 justify-center w-full py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:flex-wrap gap-6 justify-center py-12">
             {ProductData.map((item, idx) => (
               <div
                 key={idx}
-                className="h-[340px] w-[180px] md:h-[330px] md:w-[230px] bg-[#0E0E0E] rounded-md overflow-hidden shadow-lg"
+                className="h-[300px] w-[160px] md:h-[330px] md:w-[230px] rounded-md shadow-lg "
               >
                 <div className="h-[250px] w-full">
                   <Image
@@ -64,14 +64,14 @@ const Drip = () => {
             ))}
           </div>
           {/* products section */}
+          <p className="horizon text-sm md:text-2xl text-white mt-2">
+            Trusted By{" "}
+            <span className="text-sm md:text-2xl horizon-outlined text-white">
+              The Best
+            </span>
+          </p>
+          <CustomSwiperSlide />
         </div>
-        <p className="horizon text-sm md:text-2xl text-white">
-          Trusted By{" "}
-          <span className="text-sm md:text-2xl horizon-outlined text-white">
-            The Best
-          </span>
-        </p>
-        <CustomSwiperSlide />
       </div>
       {/* section 2 */}
       <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-20 md:mt-26">

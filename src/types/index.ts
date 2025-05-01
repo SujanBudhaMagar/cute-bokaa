@@ -61,3 +61,12 @@ export interface StudioRulesProps {
   icon: React.JSX.Element;
   name: string;
 }
+export interface CustomBeatProps {
+  icon: React.JSX.Element;
+  des: string;
+}
+export interface PackagesProps {
+  name: string;
+  work: string;
+  price: string;
+}

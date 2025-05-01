@@ -6,6 +6,7 @@ import {
   FooterImageProps,
   ProductDataProps,
   WornProps,
+  PackagesProps,
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -176,4 +177,16 @@ export const WornData: WornProps[] = [
   { image: "/img/worn/2.jpg" },
   { image: "/img/worn/3.jpg" },
   { image: "/img/worn/4.jpg" },
+];
+export const Packages: PackagesProps[] = [
+  {
+    name: "Book a Studio time",
+    work: "Melbourne CLients",
+    price: "50$",
+  },
+  {
+    name: "Mixing Pro",
+    work: "Custom Artwork Design",
+    price: "149.99$",
+  },
 ];
