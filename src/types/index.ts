@@ -73,7 +73,7 @@ export interface PackagesProps {
   name: string;
   work: string;
   price: string;
-
+}
 
 export interface FollowBtnProps {
   Icon: JSX.Element;
