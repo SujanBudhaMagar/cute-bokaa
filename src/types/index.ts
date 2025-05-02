@@ -65,6 +65,16 @@ export interface StudioRulesProps {
   name: string;
 }
 
+export interface CustomBeatProps {
+  icon: React.JSX.Element;
+  des: string;
+}
+export interface PackagesProps {
+  name: string;
+  work: string;
+  price: string;
+
+
 export interface FollowBtnProps {
   Icon: JSX.Element;
   title: string;
@@ -99,4 +109,5 @@ export interface comparisonDataProps {
   category: string
   regular: string
   cuteboka: string
+
 }

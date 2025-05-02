@@ -6,10 +6,12 @@ import {
   FooterImageProps,
   ProductDataProps,
   WornProps,
+  PackagesProps,
   blogCardprops,
   FeatureProps,
   ServiceOption,
   comparisonDataProps,
+
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -182,6 +184,20 @@ export const WornData: WornProps[] = [
   { image: "/img/worn/4.jpg" },
 ];
 
+export const Packages: PackagesProps[] = [
+  {
+    name: "Book a Studio time",
+    work: "Melbourne CLients",
+    price: "50$",
+  },
+  {
+    name: "Mixing Pro",
+    work: "Custom Artwork Design",
+    price: "149.99$",
+  },
+];
+=======
+
 export const BlogCardData: blogCardprops[] = [
   {
     img: "/img/blogimg/1.jpg",
@@ -312,3 +328,4 @@ export const services: ServiceOption[] = [
       cuteboka: "FREE with Mixing Service",
     },
   ]
+
