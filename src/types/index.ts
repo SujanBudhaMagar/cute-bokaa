@@ -1,3 +1,5 @@
+import { JSX, ReactElement } from "react";
+
 export interface AboutCardProps {
   img: string;
   title: string;
@@ -51,6 +53,7 @@ export interface ProductDataProps {
 export interface WornProps {
   image: string;
 }
+
 export interface BookProps {
   icon: React.JSX.Element;
   price: string;
@@ -61,6 +64,7 @@ export interface StudioRulesProps {
   icon: React.JSX.Element;
   name: string;
 }
+
 export interface CustomBeatProps {
   icon: React.JSX.Element;
   des: string;
@@ -69,4 +73,41 @@ export interface PackagesProps {
   name: string;
   work: string;
   price: string;
+
+
+export interface FollowBtnProps {
+  Icon: JSX.Element;
+  title: string;
+  color: string;
+}
+
+export interface blogCardprops {
+  img: string;
+  title: string;
+  authorImg: string;
+  autName: string;
+  autWork: string;
+}
+
+
+export interface FeatureProps {
+  name: string
+  available: boolean
+}
+
+export interface ServiceOption  {
+  id: string
+  title: string
+  description: string
+  price: string | number
+  priceLabel?: string
+  isIncluded?: boolean
+  isTBD?: boolean
+}
+
+export interface comparisonDataProps {
+  category: string
+  regular: string
+  cuteboka: string
+
 }
