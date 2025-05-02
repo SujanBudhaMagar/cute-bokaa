@@ -9,6 +9,7 @@ import { FaTape } from "react-icons/fa";
 import { CustomBeatProps } from "@/types";
 import { Packages } from "@/constants";
 import CustomSwiperSlide from "@/components/SwiperSlide";
+import LogoComp from "@/components/LogoComp";
 
 export const CustomBeatData: CustomBeatProps[] = [
   {
@@ -45,23 +46,16 @@ const CustomBeat = () => {
 
   return (
     <div className="bg-primary overflow-hidden min-h-screen globalContainer">
-      <div className="flex justify-center">
-        <Image
-          src="/img/logo.png"
-          alt="Logo"
-          height={100}
-          width={100}
-          className="object-contain md:block hidden"
-        />
-      </div>
+      <LogoComp/>
       <div
         className={`absolute w-[190px] md:w-[585px] h-[15vh] md:h-[20vh] mt-10 rounded ${
           blinkTarget === "div1" ? "blinking-border" : ""
         }`}
       ></div>
-      <div className="flex flex-col items-center justify-around md:justify-between md:h-[80vh] h-screen">
+
+      <div className="flex flex-col items-center justify-around md:justify-between">
         <div className="flex flex-col items-center justify-center relative w-full">
-          <div className="flex items-center justify-center my-10">
+          <div className="flex items-center justify-center mb-10">
             <h1 className="text-white horizon text-xl md:text-3xl tracking-widest mt-2">
               Custom{" "}
               <span className="horizon-outlined text-xl md:text-3xl">Beat</span>
@@ -78,7 +72,7 @@ const CustomBeat = () => {
         </div>
 
         {/* features */}
-        <div className="flex flex-col md:flex-row items-center justify-center globalContainer gap-10 mb-12 md:mb-6 md:gap-18">
+        <div className="flex flex-col md:flex-row items-center justify-center  gap-10 md:my-14 my-6 md:gap-18">
           <div
             className={`w-fit rounded ${
               blinkTarget === "image" ? "blinking-border" : ""
