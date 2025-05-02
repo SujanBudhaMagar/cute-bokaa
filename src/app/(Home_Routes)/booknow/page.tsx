@@ -92,9 +92,9 @@ const BookNow = () => {
 
       {/* Booking Section */}
       <div id="form" className="py-16 md:py-10 globalContainer text-white">
-        <div className="flex flex-col md:flex-row gap-8 test">
+        <div className="flex flex-col md:flex-row gap-8">
           {/* Booking Form */}
-          <div className="bg-[#252525] rounded-xl p-6 w-full md:max-w-4xl flex flex-col justify-around test">
+          <div className="bg-[#252525] rounded-xl p-6 w-full md:max-w-4xl flex flex-col justify-around">
             <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-wide">
               Book{" "}
               <span className="horizon-outlined text-lg md:text-3xl">

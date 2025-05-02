@@ -75,7 +75,7 @@ const MixingProForm = () => {
         </div>
 
         {/* Form Container */}
-        <div className="bg-[#252525] w-full max-w-3xl md:px-20 md:py-10 px-10 py-5 rounded-md test globalContainer">
+        <div className="bg-[#252525] w-full max-w-3xl md:px-20 md:py-10 px-10 py-5 rounded-md globalContainer">
           <form className="flex flex-col">
             {/* Name Input */}
             <div className="flex flex-col mb-4">

@@ -6,7 +6,6 @@ import {
   FooterImageProps,
   ProductDataProps,
   WornProps,
-  PackagesProps,
   blogCardprops,
   FeatureProps,
   ServiceOption,
@@ -183,16 +182,18 @@ export const WornData: WornProps[] = [
   { image: "/img/worn/4.jpg" },
 ];
 
-export const Packages: PackagesProps[] = [
+export const Packages: ServiceOption[] = [
   {
-    name: "Book a Studio time",
-    work: "Melbourne CLients",
-    price: "50$",
+    id: "studio time",
+    title: "Book a Studio time",
+    description: "Melbourne CLients",
+    price: 50,
   },
   {
-    name: "Mixing Pro",
-    work: "Custom Artwork Design",
-    price: "149.99$",
+    id: "mixing pro",
+    title: "Mixing Pro",
+    description: "Custom Artwork Design",
+    price: 149.99,
   },
 ];
 

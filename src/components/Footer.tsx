@@ -7,6 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { CiTwitter } from "react-icons/ci";
 import Image from "next/image";
 import { IconProps } from "@/types";
+import Link from "next/link";
 
 const Icons: IconProps[] = [
   { icon: <FaFacebook size={20} />, className: "hidden md:block text-white" },
@@ -48,9 +49,12 @@ const Footer = () => {
             (Only for Melbourne)
           </p>
         </div>
-        <button className="text-white w-full md:w-auto py-5 md:px-6 md:py-4 text-center text-base md:text-xl bg-gradient-to-r from-[#945AED] to-[#E24AA2] rounded-md">
+        <Link
+          href="/booknow"
+          className="text-white w-full md:w-auto py-5 md:px-6 md:py-4 text-center text-base md:text-xl bg-gradient-to-r from-[#945AED] to-[#E24AA2] rounded-md"
+        >
           Book Now
-        </button>
+        </Link>
       </div>
       {/* booking */}
       <hr className="border border-[#FAFAFA] mt-10 w-full hidden md:block" />
