@@ -8,6 +8,8 @@ import {
   WornProps,
   blogCardprops,
   FeatureProps,
+  ServiceOption,
+  comparisonDataProps,
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -222,3 +224,91 @@ export const premiumFeatures:FeatureProps[] = [
   { name: "Radio Play & Profit Live Performance", available: true },
   { name: "Remove Producer Tag", available: true },
 ]
+
+
+export const services: ServiceOption[] = [
+    {
+      id: "mastering",
+      title: "Professional Mastering",
+      description: "Industry standard mastering",
+      price: 0,
+      isIncluded: true,
+    },
+    {
+      id: "studio",
+      title: "Recording Studio Time",
+      description: "Melbourne Clients Only",
+      price: 80,
+    },
+    {
+      id: "custom-beat",
+      title: "Custom Beat Pro",
+      description: "Custom artwork design",
+      price: 199.99,
+    },
+    {
+      id: "urgent",
+      title: "24 Hours Urgent Delivery",
+      description: "Priority processing",
+      price: 50,
+    },
+    {
+      id: "stems",
+      title: "Mixed Audio Stems",
+      description: "Individual track stems",
+      price: 25,
+    },
+    {
+      id: "beat",
+      title: "Add a Beat",
+      description: "Include an extra beat",
+      price: 30,
+    },
+    {
+      id: "boka",
+      title: "Cute Boka Feature",
+      description: "After approval",
+      price: 0,
+      isTBD: true,
+    },
+    {
+      id: "promo",
+      title: "Promo Campaign",
+      description: "Marketing Support",
+      price: 50,
+    },
+    {
+      id: "performance",
+      title: "Performance Vision",
+      description: "Live Performance Mix",
+      price: 25,
+    },
+  ]
+
+  export const comparisonData:comparisonDataProps[] = [
+    {
+      category: "Communication",
+      regular: "1 week",
+      cuteboka: "Prompt within an hour",
+    },
+    {
+      category: "Quality",
+      regular: "Standard",
+      cuteboka: "Industry Standard",
+    },
+    {
+      category: "Delivery Time",
+      regular: "Up to 1 month",
+      cuteboka: "4-5 Business Days",
+    },
+    {
+      category: "Creative Approach",
+      regular: "Only to Top Artists",
+      cuteboka: "Priority to every Artist",
+    },
+    {
+      category: "Mastering",
+      regular: "Additional Charge",
+      cuteboka: "FREE with Mixing Service",
+    },
+  ]

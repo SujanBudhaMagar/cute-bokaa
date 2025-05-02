@@ -64,7 +64,6 @@ export interface StudioRulesProps {
   icon: React.JSX.Element;
   name: string;
 }
-=======
 
 export interface FollowBtnProps {
   Icon: JSX.Element;
@@ -86,5 +85,18 @@ export interface FeatureProps {
   available: boolean
 }
 
+export interface ServiceOption  {
+  id: string
+  title: string
+  description: string
+  price: string | number
+  priceLabel?: string
+  isIncluded?: boolean
+  isTBD?: boolean
+}
 
-
+export interface comparisonDataProps {
+  category: string
+  regular: string
+  cuteboka: string
+}

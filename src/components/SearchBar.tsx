@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
-const SearchBar = () => {
+const SearchBar = ({logo}:{logo:string}) => {
   const treading = ["pop", "dark", "drill"];
   const Mood = [
     "all",
@@ -80,7 +80,7 @@ const SearchBar = () => {
         </div>
         <div className="hidden  md:block w-[250px] h-full">
           <Image
-            src={"/img/Logo-wide 1.png"}
+            src={logo}
             alt="logo"
             width={1000}
             height={1000}

@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <SearchBar />
+      <SearchBar logo="/img/Logo-wide 1.png"/>
 
       {/* trending track */}
       <section className="globalContainer pb-9 md:pb-16">
