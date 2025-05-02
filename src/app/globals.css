@@ -15,6 +15,7 @@
   --color-primary: #151515;
   --color-secondary: #8b5cf6;
   --color-tertiary: #f03f98;
+  --color--white:#FAFAFA;
 }
 .test {
   border: 1px solid red;
