@@ -196,7 +196,7 @@ export const Packages: PackagesProps[] = [
     price: "149.99$",
   },
 ];
-=======
+
 
 export const BlogCardData: blogCardprops[] = [
   {
