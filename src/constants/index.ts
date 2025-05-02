@@ -11,7 +11,6 @@ import {
   FeatureProps,
   ServiceOption,
   comparisonDataProps,
-
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -90,7 +89,7 @@ export const SpotifyData: AboutDataProps[] = [
 ];
 
 export const NavData: NavProps[] = [
-  { href: "/mixing", name: "Mixing", more: "Pro" },
+  { href: "/mixingpro", name: "Mixing", more: "Pro" },
   { href: "/custombeat", name: "Custom Beat", more: "Pro" },
   { href: "/drip", name: "Drip", more: "TM" },
   { href: "/about", name: "About" },
@@ -197,25 +196,27 @@ export const Packages: PackagesProps[] = [
   },
 ];
 
-
 export const BlogCardData: blogCardprops[] = [
   {
     img: "/img/blogimg/1.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/1.jpg",
     autName: "Sarah Miller",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/2.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/2.jpg",
     autName: "Hari Shyam",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/3.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/3.jpg",
     autName: "Ramesh Stif",
     autWork: "Music Producer",
@@ -223,21 +224,24 @@ export const BlogCardData: blogCardprops[] = [
 
   {
     img: "/img/blogimg/4.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/1.jpg",
     autName: "Sarah Miller",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/5.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/2.jpg",
     autName: "Hari Shyam",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/6.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/3.jpg",
     autName: "Ramesh Stif",
     autWork: "Music Producer",
@@ -245,131 +249,131 @@ export const BlogCardData: blogCardprops[] = [
 
   {
     img: "/img/blogimg/7.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/1.jpg",
     autName: "Sarah Miller",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/8.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/2.jpg",
     autName: "Hari Shyam",
     autWork: "Music Producer",
   },
   {
     img: "/img/blogimg/9.jpg",
-    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    title:
+      "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
     authorImg: "/img/footimg/3.jpg",
     autName: "Ramesh Stif",
     autWork: "Music Producer",
   },
 ];
 
-
-export const standardFeatures:FeatureProps[] = [
+export const standardFeatures: FeatureProps[] = [
   { name: "High Quality WAV Version", available: true },
   { name: "Radio Play & Profit Live Performance", available: true },
   { name: "Unlimited Streams  50,000 Streams", available: false },
   { name: "Unlimited Rights Limited Rights", available: false },
   { name: "Free Performance Version", available: false },
   { name: "Producer Tag", available: false },
-]
+];
 
-export const premiumFeatures:FeatureProps[] = [
+export const premiumFeatures: FeatureProps[] = [
   { name: "Fully Customized Beat with STEMS", available: true },
   { name: "Exclusive License with Full Rights", available: true },
   { name: "Unlimited Streams", available: true },
   { name: "Free Performance Version", available: true },
   { name: "Radio Play & Profit Live Performance", available: true },
   { name: "Remove Producer Tag", available: true },
-]
-
+];
 
 export const services: ServiceOption[] = [
-    {
-      id: "mastering",
-      title: "Professional Mastering",
-      description: "Industry standard mastering",
-      price: 0,
-      isIncluded: true,
-    },
-    {
-      id: "studio",
-      title: "Recording Studio Time",
-      description: "Melbourne Clients Only",
-      price: 80,
-    },
-    {
-      id: "custom-beat",
-      title: "Custom Beat Pro",
-      description: "Custom artwork design",
-      price: 199.99,
-    },
-    {
-      id: "urgent",
-      title: "24 Hours Urgent Delivery",
-      description: "Priority processing",
-      price: 50,
-    },
-    {
-      id: "stems",
-      title: "Mixed Audio Stems",
-      description: "Individual track stems",
-      price: 25,
-    },
-    {
-      id: "beat",
-      title: "Add a Beat",
-      description: "Include an extra beat",
-      price: 30,
-    },
-    {
-      id: "boka",
-      title: "Cute Boka Feature",
-      description: "After approval",
-      price: 0,
-      isTBD: true,
-    },
-    {
-      id: "promo",
-      title: "Promo Campaign",
-      description: "Marketing Support",
-      price: 50,
-    },
-    {
-      id: "performance",
-      title: "Performance Vision",
-      description: "Live Performance Mix",
-      price: 25,
-    },
-  ]
+  {
+    id: "mastering",
+    title: "Professional Mastering",
+    description: "Industry standard mastering",
+    price: 0,
+    isIncluded: true,
+  },
+  {
+    id: "studio",
+    title: "Recording Studio Time",
+    description: "Melbourne Clients Only",
+    price: 80,
+  },
+  {
+    id: "custom-beat",
+    title: "Custom Beat Pro",
+    description: "Custom artwork design",
+    price: 199.99,
+  },
+  {
+    id: "urgent",
+    title: "24 Hours Urgent Delivery",
+    description: "Priority processing",
+    price: 50,
+  },
+  {
+    id: "stems",
+    title: "Mixed Audio Stems",
+    description: "Individual track stems",
+    price: 25,
+  },
+  {
+    id: "beat",
+    title: "Add a Beat",
+    description: "Include an extra beat",
+    price: 30,
+  },
+  {
+    id: "boka",
+    title: "Cute Boka Feature",
+    description: "After approval",
+    price: 0,
+    isTBD: true,
+  },
+  {
+    id: "promo",
+    title: "Promo Campaign",
+    description: "Marketing Support",
+    price: 50,
+  },
+  {
+    id: "performance",
+    title: "Performance Vision",
+    description: "Live Performance Mix",
+    price: 25,
+  },
+];
 
-  export const comparisonData:comparisonDataProps[] = [
-    {
-      category: "Communication",
-      regular: "1 week",
-      cuteboka: "Prompt within an hour",
-    },
-    {
-      category: "Quality",
-      regular: "Standard",
-      cuteboka: "Industry Standard",
-    },
-    {
-      category: "Delivery Time",
-      regular: "Up to 1 month",
-      cuteboka: "4-5 Business Days",
-    },
-    {
-      category: "Creative Approach",
-      regular: "Only to Top Artists",
-      cuteboka: "Priority to every Artist",
-    },
-    {
-      category: "Mastering",
-      regular: "Additional Charge",
-      cuteboka: "FREE with Mixing Service",
-    },
-  ]
-
+export const comparisonData: comparisonDataProps[] = [
+  {
+    category: "Communication",
+    regular: "1 week",
+    cuteboka: "Prompt within an hour",
+  },
+  {
+    category: "Quality",
+    regular: "Standard",
+    cuteboka: "Industry Standard",
+  },
+  {
+    category: "Delivery Time",
+    regular: "Up to 1 month",
+    cuteboka: "4-5 Business Days",
+  },
+  {
+    category: "Creative Approach",
+    regular: "Only to Top Artists",
+    cuteboka: "Priority to every Artist",
+  },
+  {
+    category: "Mastering",
+    regular: "Additional Charge",
+    cuteboka: "FREE with Mixing Service",
+  },
+];

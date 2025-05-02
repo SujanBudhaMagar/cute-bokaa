@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import CustomSwiperSlide from "@/components/SwiperSlide";
 import Footer from "@/components/Footer";
+import LogoComp from "@/components/LogoComp";
 
 const Payment: PaymentIn[] = [
   {
@@ -57,17 +58,11 @@ const MixingProForm = () => {
       <Navbar />
       <div className="flex flex-col items-center justify-center px-4 md:px-0 min-h-screen text-white gap-6">
         {/* Logo */}
-        <Image
-          src="/img/logo.png"
-          alt="Logo"
-          width={150}
-          height={150}
-          className="hidden md:block mb-6"
-        />
+        <LogoComp />
 
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center gap-4 text-center mb-6 mt-6 md:mt-0">
-          <p className="md:text-3xl font-bold text-sm horizon-outlined tracking-widest ">
+          <p className="md:text-3xl font-bold text-xl horizon-outlined tracking-widest ">
             TELL US{" "}
             <span className="horizon tracking-widest">
               ABOUT YOUR MIXING NEEDS
@@ -80,7 +75,7 @@ const MixingProForm = () => {
         </div>
 
         {/* Form Container */}
-        <div className="bg-[#252525] w-full max-w-3xl md:px-20 md:py-10 px-10 py-5 rounded-md">
+        <div className="bg-[#252525] w-full max-w-3xl md:px-20 md:py-10 px-10 py-5 rounded-md test globalContainer">
           <form className="flex flex-col">
             {/* Name Input */}
             <div className="flex flex-col mb-4">

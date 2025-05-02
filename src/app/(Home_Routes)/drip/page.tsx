@@ -1,3 +1,4 @@
+import LogoComp from "@/components/LogoComp";
 import CustomSwiperSlide from "@/components/SwiperSlide";
 import { ProductData, WornData } from "@/constants";
 import Image from "next/image";
@@ -12,15 +13,9 @@ const Drip = () => {
   return (
     <div className="bg-primary min-h-screen overflow-hidden">
       <div className="flex flex-col items-center">
-        <Image
-          src="/img/logo.png"
-          alt="Logo"
-          height={150}
-          width={150}
-          className="hidden md:block mb-10"
-        />
+        <LogoComp />
         {/* section1 */}
-        <div className="flex flex-col items-center justify-between globalContainer w-full h-screen">
+        <div className="flex flex-col items-center justify-evenly globalContainer w-full">
           <p className="uppercase horizon text-base md:text-3xl text-white tracking-widest mt-4">
             Rock{" "}
             <span className="horizon-outlined text-base md:text-3xl text-white tracking-widest mt-4">
@@ -64,31 +59,26 @@ const Drip = () => {
             ))}
           </div>
           {/* products section */}
-          <p className="horizon text-sm md:text-2xl text-white mt-2">
+          <p className="horizon text-xl md:text-3xl text-white mt-2 tracking-widest">
             Trusted By{" "}
-            <span className="text-sm md:text-2xl horizon-outlined text-white">
-              The Best
-            </span>
+            <span className=" horizon-outlined text-white">The Best</span>
           </p>
           <CustomSwiperSlide />
         </div>
       </div>
       {/* section 2 */}
-      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-20 md:mt-26">
-        <p className="horizon text-white text-base md:text-3xl tracking-widest">
-          Worn by{" "}
-          <span className="horizon-outlined text-white text-sm md:text-3xl tracking-widest">
-            the Best
-          </span>
+      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-20">
+        <p className="horizon text-white text-xl md:text-3xl tracking-widest">
+          Worn by <span className="horizon-outlined">the Best</span>
         </p>
         <p className="text-[#8C9092] text-sm md:text-base text-center">
           Join the elite community of producers and artists who trust our brand
         </p>
         {/* animated slides */}
-        <div className="flex flex-nowrap gap-6 mt-14 animate-slide relative w-full">
+        <div className="flex gap-6 mt-14 animate-slide relative w-full">
           {photoSlides.map((item, idx) => (
             <div
-              className="w-[200px] h-[320px] md:w-[330px] md:h-[320px] relative flex-shrink-0"
+              className="w-[200px] h-[320px] md:w-[330px] md:h-[320px] relative"
               key={idx}
             >
               <Image

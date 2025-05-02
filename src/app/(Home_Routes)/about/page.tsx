@@ -1,5 +1,6 @@
 "use client";
 import AboutCard from "@/components/card/AboutCard";
+import LogoComp from "@/components/LogoComp";
 import { SpotifyData, YoutubeData } from "@/constants";
 
 import Image from "next/image";
@@ -8,16 +9,10 @@ import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
 const About = () => {
   return (
     <div className="bg-primary overflow-hidden">
-      <div className="bg-[#151515]">
+      <div className="bg-[#000000]">
         {/* details */}
         <div className="flex flex-col items-center">
-          <Image
-            src="/img/logo.png"
-            alt="Logo"
-            height={150}
-            width={150}
-            className="hidden md:block "
-          />
+          <LogoComp />
           <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer">
             <div className="w-full md:w-[55%] ml-4 ">
               <div className="inline-block">
