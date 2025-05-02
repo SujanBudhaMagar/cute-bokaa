@@ -220,6 +220,50 @@ export const BlogCardData: blogCardprops[] = [
     autName: "Ramesh Stif",
     autWork: "Music Producer",
   },
+
+  {
+    img: "/img/blogimg/4.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/1.jpg",
+    autName: "Sarah Miller",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/5.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/2.jpg",
+    autName: "Hari Shyam",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/6.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/3.jpg",
+    autName: "Ramesh Stif",
+    autWork: "Music Producer",
+  },
+
+  {
+    img: "/img/blogimg/7.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/1.jpg",
+    autName: "Sarah Miller",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/8.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/2.jpg",
+    autName: "Hari Shyam",
+    autWork: "Music Producer",
+  },
+  {
+    img: "/img/blogimg/9.jpg",
+    title: "This platform completely transformed how I produce and share my music. The community here is incredibly supportive.",
+    authorImg: "/img/footimg/3.jpg",
+    autName: "Ramesh Stif",
+    autWork: "Music Producer",
+  },
 ];
 
 

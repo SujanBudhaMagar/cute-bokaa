@@ -228,7 +228,7 @@ const Home = () => {
       {/* BlogCard  */}
       <section className="globalContainer md:pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
-          {BlogCardData.map((item, idx) => (
+          {BlogCardData.slice(0,3).map((item, idx) => (
             <BlogCard key={idx} item={item} />
           ))}
         </div>
