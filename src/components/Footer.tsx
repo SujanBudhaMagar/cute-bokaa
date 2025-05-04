@@ -49,10 +49,7 @@ const Footer = () => {
             (Only for Melbourne)
           </p>
         </div>
-        <Link
-          href="/booknow"
-          className="text-white w-full md:w-auto py-5 md:px-6 md:py-4 text-center text-base md:text-xl bg-gradient-to-r from-[#945AED] to-[#E24AA2] rounded-md"
-        >
+        <Link href={"/booknow"} className="text-white w-full md:w-auto py-5 md:px-6 md:py-4 text-center text-base md:text-xl bg-gradient-to-r from-[#945AED] to-[#E24AA2] rounded-md">
           Book Now
         </Link>
       </div>

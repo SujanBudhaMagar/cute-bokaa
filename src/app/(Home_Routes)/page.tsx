@@ -6,6 +6,7 @@ import CustomSwiperSlide from "@/components/SwiperSlide";
 import { BlogCardData, MusicCardData, Treading } from "@/constants";
 import { FollowBtnProps } from "@/types";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BsFire } from "react-icons/bs";
 import { CiYoutube } from "react-icons/ci";
@@ -33,7 +34,6 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <SearchBar logo="/img/Logo-wide 1.png"/>
-
       {/* trending track */}
       <section className="globalContainer pb-9 md:pb-16">
         <h3 className="text-center text-base md:text-4xl font-bold horizon text-white ">
@@ -65,9 +65,9 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <button className="text-xs py-2 px-4 -mt-5 md:mt-0 md:bg-gradient-to-r from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer">
+            <Link href={'/viewallbeat'} className="text-xs py-2 px-4 -mt-5 md:mt-0 md:bg-gradient-to-r from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer">
               View all
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -233,9 +233,9 @@ const Home = () => {
           ))}
         </div>
         <div className="w-full text-center md:text-right mt-7">
-          <button className="bg-gradient-to-r from-[#F03F98] to-[#9B24CB] text-transparent bg-clip-text text-lg cursor-pointer">
+          <Link href={"/blogs"} className="bg-gradient-to-r from-[#F03F98] to-[#9B24CB] text-transparent bg-clip-text text-lg cursor-pointer">
             View More
-          </button>
+          </Link>
         </div>
       </section>
 

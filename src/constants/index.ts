@@ -94,6 +94,12 @@ export const NavData: NavProps[] = [
   { href: "/about", name: "About" },
 ];
 
+export const NavAuth: NavProps[] = [
+  { href: "signup", name: "Sign Up",},
+  { href: "/login", name: "Login" },
+];
+
+
 export const QuickLinks: FooterProps[] = [
   { href: "/", name: "Home" },
   { href: "/about", name: "About Us" },

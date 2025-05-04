@@ -1,47 +1,197 @@
 "use client";
-import { NavData } from "@/constants";
+import { NavAuth, NavData } from "@/constants";
+import { NavProps } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
-import { FaShoppingCart } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { FaRegUser, FaShoppingCart } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
+  const [IsOpen, setIsOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
   return (
     <>
-      {/* Desktop view */}
+      <div className="pb-3 pt-7 sticky top-0 z-10 bg-[#151515]">
+        <div className="globalContainer">
+          {/* Desktop view */}
+          <div className=" hidden sm:hidden md:hidden lg:flex justify-between ">
+            <div className="md:flex items-center gap-9 ">
+              <Link
+                href={"/"}
+                className={`text-sm flex flex-col items-center justify-center cursor-pointer group font-bold bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text text-center horizon`}
+              >
+                BEAT PASAL
+                <svg
+                  className={`opacity-0 ${
+                    pathname === "/" ? "opacity-100" : "group-hover:opacity-100"
+                  } group-hover:opacity-100 transition-opacity duration-300`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="43"
+                  height="15"
+                  viewBox="0 0 43 15"
+                  fill="none"
+                >
+                  <path
+                    d="M24.2778 0.572906C24.616 0.576397 24.9408 0.626892 25.1975 0.715875C25.4543 0.804859 25.6272 0.926883 25.687 1.06136L30.4655 11.7916L34.1738 8.32649C34.2876 8.21996 34.4761 8.12922 34.7161 8.06549C34.9561 8.00176 35.237 7.96782 35.5243 7.96786H41.1651C41.555 7.96786 41.9289 8.03042 42.2046 8.14177C42.4803 8.25312 42.6351 8.40414 42.6351 8.56161C42.6351 8.71909 42.4803 8.87011 42.2046 8.98146C41.9289 9.09281 41.555 9.15536 41.1651 9.15536H36.4905L31.2319 14.0692C31.1067 14.1864 30.8914 14.2842 30.6179 14.3481C30.3443 14.412 30.0271 14.4386 29.7132 14.424C29.3993 14.4093 29.1054 14.3542 28.8752 14.2667C28.6449 14.1793 28.4906 14.0643 28.4349 13.9386L24.0485 4.09028L20.0285 11.0015C19.9597 11.1191 19.8038 11.2254 19.5814 11.3063C19.3591 11.3871 19.081 11.4387 18.7842 11.454C18.4875 11.4693 18.1862 11.4477 17.9207 11.392C17.6552 11.3363 17.438 11.2493 17.2982 11.1424L11.3849 6.62203L8.62524 8.8292C8.50257 8.92734 8.31485 9.0098 8.08299 9.06739C7.85113 9.12498 7.58423 9.15544 7.31204 9.15536H1.67312C1.28326 9.15536 0.909356 9.09281 0.633678 8.98146C0.358 8.87011 0.203125 8.71909 0.203125 8.56161C0.203125 8.40414 0.358 8.25312 0.633678 8.14177C0.909356 8.03042 1.28326 7.96786 1.67312 7.96786H6.40848L10.0423 5.06166C10.1639 4.96435 10.3494 4.88243 10.5786 4.82488C10.8077 4.76734 11.0717 4.73638 11.3415 4.73539C11.6113 4.73441 11.8766 4.76345 12.1083 4.81932C12.34 4.8752 12.5291 4.95575 12.655 5.05216L18.0646 9.18703L22.8078 1.03128C22.8852 0.898368 23.0737 0.780292 23.3414 0.696945C23.6092 0.613597 23.9399 0.569279 24.2778 0.572906Z"
+                    fill="#F03F98"
+                  />
+                </svg>
+              </Link>
+              <div className="flex gap-9">
+                {NavData.map((item, index) => (
+                  <div key={index} className="flex items-center gap-1">
+                    <Link
+                      href={item.href}
+                      className="text-white text-sm group flex flex-col items-center justify-center"
+                    >
+                      {item.name}
+                      <svg
+                        className={`opacity-0 ${
+                          pathname === item.href
+                            ? "opacity-100"
+                            : "group-hover:opacity-100"
+                        } transition-opacity duration-300`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="43"
+                        height="15"
+                        viewBox="0 0 43 15"
+                        fill="none"
+                      >
+                        <path
+                          d="M24.2778 0.572906C24.616 0.576397 24.9408 0.626892 25.1975 0.715875C25.4543 0.804859 25.6272 0.926883 25.687 1.06136L30.4655 11.7916L34.1738 8.32649C34.2876 8.21996 34.4761 8.12922 34.7161 8.06549C34.9561 8.00176 35.237 7.96782 35.5243 7.96786H41.1651C41.555 7.96786 41.9289 8.03042 42.2046 8.14177C42.4803 8.25312 42.6351 8.40414 42.6351 8.56161C42.6351 8.71909 42.4803 8.87011 42.2046 8.98146C41.9289 9.09281 41.555 9.15536 41.1651 9.15536H36.4905L31.2319 14.0692C31.1067 14.1864 30.8914 14.2842 30.6179 14.3481C30.3443 14.412 30.0271 14.4386 29.7132 14.424C29.3993 14.4093 29.1054 14.3542 28.8752 14.2667C28.6449 14.1793 28.4906 14.0643 28.4349 13.9386L24.0485 4.09028L20.0285 11.0015C19.9597 11.1191 19.8038 11.2254 19.5814 11.3063C19.3591 11.3871 19.081 11.4387 18.7842 11.454C18.4875 11.4693 18.1862 11.4477 17.9207 11.392C17.6552 11.3363 17.438 11.2493 17.2982 11.1424L11.3849 6.62203L8.62524 8.8292C8.50257 8.92734 8.31485 9.0098 8.08299 9.06739C7.85113 9.12498 7.58423 9.15544 7.31204 9.15536H1.67312C1.28326 9.15536 0.909356 9.09281 0.633678 8.98146C0.358 8.87011 0.203125 8.71909 0.203125 8.56161C0.203125 8.40414 0.358 8.25312 0.633678 8.14177C0.909356 8.03042 1.28326 7.96786 1.67312 7.96786H6.40848L10.0423 5.06166C10.1639 4.96435 10.3494 4.88243 10.5786 4.82488C10.8077 4.76734 11.0717 4.73638 11.3415 4.73539C11.6113 4.73441 11.8766 4.76345 12.1083 4.81932C12.34 4.8752 12.5291 4.95575 12.655 5.05216L18.0646 9.18703L22.8078 1.03128C22.8852 0.898368 23.0737 0.780292 23.3414 0.696945C23.6092 0.613597 23.9399 0.569279 24.2778 0.572906Z"
+                          fill="#F03F98"
+                        />
+                      </svg>
+                    </Link>
+                    {item.more && (
+                      <p className=" bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text text-[10px] mb-6 ml-1 cursor-pointer">
+                        {item.more}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
 
-      <div className="py-5 sticky top-0 z-10 bg-[#151515]">
-        <div className="globalContainer flex justify-between">
-          <div className="md:flex items-center gap-9 hidden">
-            <p
-              className={`text-sm font-bold bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text text-center horizon`}
-            >
-              BEAT PASAL
-            </p>
-            <div className="flex gap-9">
-              {NavData.map((item, index) => (
-                <div key={index} className="flex items-center gap-1">
-                  <Link href={item.href} className="text-white text-sm">
-                    {item.name}
-                  </Link>
-                  {item.more && (
-                    <p className=" bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text text-[10px] mb-3 ml-1">
-                      {item.more}
-                    </p>
-                  )}
-                </div>
+            <div className="text-white  gap-6 items-center hidden md:flex">
+              {NavAuth.map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className="text-sm group flex flex-col items-center justify-center"
+                >
+                  {item.name}
+                  <svg
+                    className={`opacity-0 ${
+                      pathname === item.href
+                        ? "opacity-100"
+                        : "group-hover:opacity-100"
+                    } transition-opacity duration-300`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="43"
+                    height="15"
+                    viewBox="0 0 43 15"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.2778 0.572906C24.616 0.576397 24.9408 0.626892 25.1975 0.715875C25.4543 0.804859 25.6272 0.926883 25.687 1.06136L30.4655 11.7916L34.1738 8.32649C34.2876 8.21996 34.4761 8.12922 34.7161 8.06549C34.9561 8.00176 35.237 7.96782 35.5243 7.96786H41.1651C41.555 7.96786 41.9289 8.03042 42.2046 8.14177C42.4803 8.25312 42.6351 8.40414 42.6351 8.56161C42.6351 8.71909 42.4803 8.87011 42.2046 8.98146C41.9289 9.09281 41.555 9.15536 41.1651 9.15536H36.4905L31.2319 14.0692C31.1067 14.1864 30.8914 14.2842 30.6179 14.3481C30.3443 14.412 30.0271 14.4386 29.7132 14.424C29.3993 14.4093 29.1054 14.3542 28.8752 14.2667C28.6449 14.1793 28.4906 14.0643 28.4349 13.9386L24.0485 4.09028L20.0285 11.0015C19.9597 11.1191 19.8038 11.2254 19.5814 11.3063C19.3591 11.3871 19.081 11.4387 18.7842 11.454C18.4875 11.4693 18.1862 11.4477 17.9207 11.392C17.6552 11.3363 17.438 11.2493 17.2982 11.1424L11.3849 6.62203L8.62524 8.8292C8.50257 8.92734 8.31485 9.0098 8.08299 9.06739C7.85113 9.12498 7.58423 9.15544 7.31204 9.15536H1.67312C1.28326 9.15536 0.909356 9.09281 0.633678 8.98146C0.358 8.87011 0.203125 8.71909 0.203125 8.56161C0.203125 8.40414 0.358 8.25312 0.633678 8.14177C0.909356 8.03042 1.28326 7.96786 1.67312 7.96786H6.40848L10.0423 5.06166C10.1639 4.96435 10.3494 4.88243 10.5786 4.82488C10.8077 4.76734 11.0717 4.73638 11.3415 4.73539C11.6113 4.73441 11.8766 4.76345 12.1083 4.81932C12.34 4.8752 12.5291 4.95575 12.655 5.05216L18.0646 9.18703L22.8078 1.03128C22.8852 0.898368 23.0737 0.780292 23.3414 0.696945C23.6092 0.613597 23.9399 0.569279 24.2778 0.572906Z"
+                      fill="#F03F98"
+                    />
+                  </svg>
+                </Link>
               ))}
 
+              <Link
+                href="/cart"
+                className="flex flex-col items-center justify-center group"
+              >
+                <FaShoppingCart size={26} />
+                <svg
+                  className={`opacity-0 ${
+                    pathname === "/cart"
+                      ? "opacity-100"
+                      : "group-hover:opacity-100"
+                  } group-hover:opacity-100 transition-opacity duration-300`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="43"
+                  height="15"
+                  viewBox="0 0 43 15"
+                  fill="none"
+                >
+                  <path
+                    d="M24.2778 0.572906C24.616 0.576397 24.9408 0.626892 25.1975 0.715875C25.4543 0.804859 25.6272 0.926883 25.687 1.06136L30.4655 11.7916L34.1738 8.32649C34.2876 8.21996 34.4761 8.12922 34.7161 8.06549C34.9561 8.00176 35.237 7.96782 35.5243 7.96786H41.1651C41.555 7.96786 41.9289 8.03042 42.2046 8.14177C42.4803 8.25312 42.6351 8.40414 42.6351 8.56161C42.6351 8.71909 42.4803 8.87011 42.2046 8.98146C41.9289 9.09281 41.555 9.15536 41.1651 9.15536H36.4905L31.2319 14.0692C31.1067 14.1864 30.8914 14.2842 30.6179 14.3481C30.3443 14.412 30.0271 14.4386 29.7132 14.424C29.3993 14.4093 29.1054 14.3542 28.8752 14.2667C28.6449 14.1793 28.4906 14.0643 28.4349 13.9386L24.0485 4.09028L20.0285 11.0015C19.9597 11.1191 19.8038 11.2254 19.5814 11.3063C19.3591 11.3871 19.081 11.4387 18.7842 11.454C18.4875 11.4693 18.1862 11.4477 17.9207 11.392C17.6552 11.3363 17.438 11.2493 17.2982 11.1424L11.3849 6.62203L8.62524 8.8292C8.50257 8.92734 8.31485 9.0098 8.08299 9.06739C7.85113 9.12498 7.58423 9.15544 7.31204 9.15536H1.67312C1.28326 9.15536 0.909356 9.09281 0.633678 8.98146C0.358 8.87011 0.203125 8.71909 0.203125 8.56161C0.203125 8.40414 0.358 8.25312 0.633678 8.14177C0.909356 8.03042 1.28326 7.96786 1.67312 7.96786H6.40848L10.0423 5.06166C10.1639 4.96435 10.3494 4.88243 10.5786 4.82488C10.8077 4.76734 11.0717 4.73638 11.3415 4.73539C11.6113 4.73441 11.8766 4.76345 12.1083 4.81932C12.34 4.8752 12.5291 4.95575 12.655 5.05216L18.0646 9.18703L22.8078 1.03128C22.8852 0.898368 23.0737 0.780292 23.3414 0.696945C23.6092 0.613597 23.9399 0.569279 24.2778 0.572906Z"
+                    fill="#F03F98"
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
+          {/* Desktop view */}
 
-          <div className="text-white  gap-6 items-center hidden md:flex">
-            <Link href="/signup" className="text-sm">
-              Sign Up
-            </Link>
-            <Link href="/login" className="text-sm">
-              Log In
-            </Link>
-            <FaShoppingCart size={26} />
+          {/* Mobile view */}
+
+          {/* Hamburger */}
+          <div className=" lg:hidden flex justify-between border-b-[1px] border-[#FFFFFF1A] pb-3">
+            <div className="">
+              {!IsOpen ? (
+                <div onClick={() => setIsOpen(!IsOpen)}>
+                  <RxHamburgerMenu size={30} color="white" />
+                </div>
+              ) : (
+                <IoClose
+                  className="absolute top-7 left-5"
+                  size={30}
+                  color="white"
+                  onClick={() => setIsOpen(!IsOpen)}
+                />
+              )}
+            </div>
+
+            {IsOpen && (
+              <>
+                <div
+                  className={` bg-primary w-[100%] px-5 py-14 h-[100vh] text-white }`}
+                >
+                  {NavData.map((item, idx) => (
+                    <div key={idx} className="mb-4">
+                      <Link href={item.href} onClick={() => setIsOpen(!IsOpen)}>
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {!IsOpen && (
+              <Link href={"/"} className="w-[77px] h-full">
+                <Image
+                  src={"/img/Logo-wide 1.png"}
+                  alt="logo"
+                  width={1000}
+                  height={1000}
+                  className="object-center w-full h-auto"
+                />
+              </Link>
+            )}
+
+            <div className=" flex gap-3">
+              <Link href="/cart" className="text-white">
+                <FaRegUser size={20} />
+              </Link>
+
+              <Link href="/cart" className="text-white">
+                <FaShoppingCart size={20} />
+              </Link>
+            </div>
+
+            {/* Hamburger */}
           </div>
+          {/* Mobile view */}
         </div>
       </div>
     </>

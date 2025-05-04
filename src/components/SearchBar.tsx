@@ -19,7 +19,7 @@ const SearchBar = ({logo}:{logo:string}) => {
 
   return (
     <div>
-      <div className="globalContainer py-16 flex gap-20">
+      <div className="globalContainer py-10 md:py-16 flex gap-20">
         <div>
           <div className="relative mb-4 w-fit">
             <input
