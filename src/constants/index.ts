@@ -90,11 +90,17 @@ export const SpotifyData: AboutDataProps[] = [
 ];
 
 export const NavData: NavProps[] = [
-  { href: "/mixing", name: "Mixing", more: "Pro" },
+  { href: "/mixingpro", name: "Mixing", more: "Pro" },
   { href: "/custombeat", name: "Custom Beat", more: "Pro" },
   { href: "/drip", name: "Drip", more: "TM" },
   { href: "/about", name: "About" },
 ];
+
+export const NavAuth: NavProps[] = [
+  { href: "signup", name: "Sign Up",},
+  { href: "/login", name: "Login" },
+];
+
 
 export const QuickLinks: FooterProps[] = [
   { href: "/", name: "Home" },

@@ -6,6 +6,7 @@ import { FaCrown } from "react-icons/fa6";
 import { premiumFeatures, standardFeatures } from "@/constants";
 import LogoComp from "@/components/LogoComp";
 import MusicCard from "@/components/card/MusicCard";
+import Link from "next/link";
 
 const AudioArray = ["140 BPM", "Trap", "Am"];
 
@@ -57,9 +58,9 @@ const Beat = () => {
               <button className="flex-1 bg-gradient-to-r from-[#9B58E6] to-[#E94CA1] text-white py-4  rounded-lg border border-[#8C9092] ">
                 Buy Now
               </button>
-              <button className="flex-1 bg-transparent border border-[#8C9092] text-white py-4  rounded-lg">
+              <Link href={"/cart"} className="flex-1 flex items-center justify-center bg-transparent border border-[#8C9092] text-white py-4  rounded-lg">
                 Add to Cart
-              </button>
+              </Link>
             </div>
           </div>
         </div>
