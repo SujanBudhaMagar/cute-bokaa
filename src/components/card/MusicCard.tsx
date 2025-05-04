@@ -1,5 +1,4 @@
 "use client";
-import { MusicCardProps } from "@/types";
 import Image from "next/image";
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
@@ -33,6 +32,7 @@ const MusicCard = () => {
     >
       {MusicCardData.map((item, idx) => (
         <SwiperSlide
+        key={idx}
           className={`relative w-[145px] cursor-pointer overflow-hidden bg-[#252525] rounded-lg shadow-sm 
           }`}
         >

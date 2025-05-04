@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import { PaymentIn } from "@/types";
-import Image from "next/image";
+
 import React, { useState } from "react";
 import {
   FaApplePay,

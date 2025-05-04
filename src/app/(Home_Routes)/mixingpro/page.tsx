@@ -17,7 +17,6 @@ import {
   FaFrown,
 } from "react-icons/fa";
 import { MdOutlineWaves, MdAutoAwesome } from "react-icons/md";
-import { SwiperSlide } from "swiper/react";
 
 const creative: PaymentIn[] = [
   {
@@ -80,11 +79,11 @@ const Home = () => {
         </h1>
 
         <p className="mt-4 text-xs md:text-base text-center px-0 lg:px-40 leading-relaxed">
-          An Immersive Cute Boka Experience while you let Cute Boka transform
+         {`An Immersive Cute Boka Experience while you let Cute Boka transform
           your vocals into Industry Standard Perfection with professional-grade
           mixing using top-tier UAD plugins, ensuring your voice shines in any
           genre whether it's pop, rap, or R&B. Crisp, Clean & Creative. Your
-          voice deserves the Premium treatment.
+          voice deserves the Premium treatment.`}
         </p>
       </section>
 

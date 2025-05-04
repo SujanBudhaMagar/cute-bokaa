@@ -1,4 +1,4 @@
-import { JSX, ReactElement } from "react";
+import { JSX } from "react";
 
 export interface AboutCardProps {
   img: string;

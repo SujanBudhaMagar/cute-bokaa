@@ -1,9 +1,8 @@
 import BlogCard from "@/components/card/BlogCard";
 import MusicCard from "@/components/card/MusicCard";
-import Footer from "@/components/Footer";
 import SearchBar from "@/components/SearchBar";
 import CustomSwiperSlide from "@/components/SwiperSlide";
-import { BlogCardData, MusicCardData, Treading } from "@/constants";
+import { BlogCardData, Treading } from "@/constants";
 import { FollowBtnProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -201,9 +200,9 @@ const Home = () => {
             </h1>
 
             <p className="text-[#8C9092] mt-4 md:mt-6 text-xs md:text-base ">
-              Take a deeper dive into Cute Boka's Producer Community &{" "}
-              <br className="hidden md:block" /> learn more about the vision
-              behind it.
+              {`Take a deeper dive into Cute Boka's Producer Community &`}
+              <br className="hidden md:block" /> {`learn more about the vision
+              behind it.`}
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4 md:flex md:flex-row md:gap-6 md:justify-center">

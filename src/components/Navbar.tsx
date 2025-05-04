@@ -1,6 +1,5 @@
 "use client";
 import { NavAuth, NavData } from "@/constants";
-import { NavProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
