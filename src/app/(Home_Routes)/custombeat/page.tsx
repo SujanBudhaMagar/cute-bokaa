@@ -12,7 +12,7 @@ import CustomSwiperSlide from "@/components/SwiperSlide";
 import LogoComp from "@/components/LogoComp";
 import PricingSection from "@/components/pricing-section";
 
-export const CustomBeatData: CustomBeatProps[] = [
+const CustomBeatData: CustomBeatProps[] = [
   {
     icon: <RxMixerHorizontal size={24} className="text-[#F03F98]" />,
     des: "Full control over the mix",
@@ -95,7 +95,7 @@ const CustomBeat = () => {
                   {item.des}
                 </p>
               </div>
-            ))}
+            ))} 
           </div>
         </div>
         {/* features */}

@@ -66,7 +66,7 @@ export interface StudioRulesProps {
 }
 
 export interface CustomBeatProps {
-  icon: React.JSX.Element;
+  icon: JSX.Element;
   des: string;
 }
 
