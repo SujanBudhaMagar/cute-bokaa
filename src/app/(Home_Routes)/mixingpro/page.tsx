@@ -1,8 +1,8 @@
-'use client'
+"use client";
 import LogoComp from "@/components/LogoComp";
 import PricingSection from "@/components/pricing-section";
 import CustomSwiperSlide from "@/components/SwiperSlide";
-import { comparisonData } from "@/constants";
+import { comparisonData, services } from "@/constants";
 import { PaymentIn } from "@/types";
 import Image from "next/image";
 import {
@@ -199,7 +199,7 @@ const Home = () => {
         <h1 className="horizon-outlined text-sm md:text-xl text-center mt-5 md:mt-9">
           Customize <span className="horizon">your package</span>
         </h1>
-        <PricingSection />
+        <PricingSection services={services} />
       </section>
 
       <section className="py-20">

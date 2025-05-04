@@ -1,9 +1,21 @@
 "use client";
-import { services } from "@/constants";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function PricingSection() {
-    
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  price: string | number;
+  isIncluded?: boolean;
+  isTBD?: boolean;
+}
+
+interface PricingSectionProps {
+  services: Service[];
+}
+
+export default function PricingSection({ services }: PricingSectionProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
 
@@ -28,7 +40,7 @@ export default function PricingSection() {
       .reduce((sum, service) => sum + Number(service.price), 0);
 
     setTotal(newTotal);
-  }, [selectedServices]);
+  }, [selectedServices, services]);
 
   const formatPrice = (
     price: string | number,
@@ -84,7 +96,7 @@ export default function PricingSection() {
       <div className="bg-[#252525] p-6 mt-12 rounded-lg">
         <div className="flex justify-between items-center pt-4">
           <div>
-            <p className="font-medium text-xl">Total</p>
+            <p className="font-medium text-xl text-white">Total</p>
             <p className="text-xs text-gray-500">
               Selected items: {selectedServices.length}
             </p>
@@ -94,9 +106,12 @@ export default function PricingSection() {
 
         {/* Buy Now Button */}
         <div className="flex justify-end mt-4">
-          <button className="bg-gradient-to-r from-[#945AED] to-[#E6499E] px-8 py-4 rounded-lg text-white hover:opacity-90 transition-opacity text-sm md:text-xl border-[1px] border-[#8C9092]">
+          <Link
+            href="/mixingform"
+            className="bg-gradient-to-r from-[#945AED] to-[#E6499E] px-8 py-4 rounded-lg text-white hover:opacity-90 transition-opacity text-sm md:text-xl border-[1px] border-[#8C9092]"
+          >
             Buy Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

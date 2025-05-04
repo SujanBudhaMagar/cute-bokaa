@@ -40,13 +40,11 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-5">
         {/* booking */}
         <div className="flex flex-col gap-8">
-          <p className="uppercase text-white font-bold horizon text-base md:text-3xl tracking-wider md:tracking-widest">
+          <p className="uppercase text-white font-bold horizon text-xl md:text-3xl tracking-wider md:tracking-widest">
             Book a Studio Session with{" "}
-            <span className="horizon-outlined text-base md:text-3xl tracking-widest">
-              Cute Boka
-            </span>
+            <span className="horizon-outlined">Cute Boka</span>
           </p>
-          <p className="text-white text-[10px] md:text-base mb-3">
+          <p className="text-white text-sm md:text-base mb-3">
             Session includes song writing, lyrics writing, recording & more.
             (Only for Melbourne)
           </p>
