@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { RiBeerLine } from "react-icons/ri";
 import { MdWatchLater } from "react-icons/md";
 import LogoComp from "@/components/LogoComp";
+import { extraTimes, timeOptions } from "@/constants";
 
 const Book: BookProps[] = [
   {
@@ -37,9 +38,6 @@ const BookNow = () => {
 
   const hourlyRate = 245;
   const totalAmount = duration * hourlyRate;
-
-  const timeOptions = ["12:00 PM", "02:00 PM", "04:00 PM"];
-  const extraTimes = ["06:00 PM", "08:00 PM"];
 
   return (
     <div className="min-h-screen bg-primary">
@@ -142,11 +140,11 @@ const BookNow = () => {
                   <button
                     key={idx}
                     className={`px-4 py-2 rounded w-full ${
-                      timeSlot === slot ? "bg-purple-600" : "bg-primary"
+                      timeSlot === slot.name ? "bg-purple-600" : "bg-primary"
                     } hover:bg-[#444]`}
-                    onClick={() => setTimeSlot(slot)}
+                    onClick={() => setTimeSlot(slot.name)}
                   >
-                    {slot}
+                    {slot.name}
                   </button>
                 ))}
                 <select
@@ -157,8 +155,8 @@ const BookNow = () => {
                     Select time
                   </option>
                   {extraTimes.map((et, idx) => (
-                    <option key={idx} value={et}>
-                      {et}
+                    <option key={idx} value={et.name}>
+                      {et.name}
                     </option>
                   ))}
                 </select>
@@ -211,13 +209,13 @@ const BookNow = () => {
               ></iframe>
               <div className="flex gap-2 items-start mb-2">
                 <FaLocationDot className="mt-1" />
-                <p className="text-[10px] md:text-base">
+                <p className="text-[12px] md:text-base">
                   16 Anderson St, Werribee 3030 VIC
                 </p>
               </div>
               <div className="flex gap-2 items-start">
                 <FaPhoneAlt className="mt-1" />
-                <p className="text-[10px] md:text-base">+61 403 464 735</p>
+                <p className="text-[12px] md:text-base">+61 403 464 735</p>
               </div>
             </div>
 
@@ -230,7 +228,7 @@ const BookNow = () => {
                 {StudioRules.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <span className="text-xl">{item.icon}</span>
-                    <p className="text-[10px] md:text-base">{item.name}</p>
+                    <p className="text-[12px] md:text-base">{item.name}</p>
                   </div>
                 ))}
               </div>

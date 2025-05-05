@@ -10,6 +10,7 @@ import {
   FeatureProps,
   ServiceOption,
   comparisonDataProps,
+  time,
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -87,6 +88,13 @@ export const SpotifyData: AboutDataProps[] = [
   },
 ];
 
+export const timeOptions: time[] = [
+  { name: "12:00 PM" },
+  { name: "02:00 PM" },
+  { name: "04:00 PM" },
+];
+export const extraTimes: time[] = [{ name: "06:00 PM" }, { name: "08:00 PM" }];
+
 export const NavData: NavProps[] = [
   { href: "/mixingpro", name: "Mixing", more: "Pro" },
   { href: "/custombeat", name: "Custom Beat", more: "Pro" },
@@ -95,10 +103,9 @@ export const NavData: NavProps[] = [
 ];
 
 export const NavAuth: NavProps[] = [
-  { href: "signup", name: "Sign Up",},
+  { href: "signup", name: "Sign Up" },
   { href: "/login", name: "Login" },
 ];
-
 
 export const QuickLinks: FooterProps[] = [
   { href: "/", name: "Home" },

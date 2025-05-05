@@ -104,3 +104,13 @@ export interface comparisonDataProps {
   regular: string;
   cuteboka: string;
 }
+export interface time {
+  name: string;
+}
+export interface FooterTopSectionProps {
+  title: string;
+  title2: string;
+  des: string;
+  link: string;
+  button: string;
+}
