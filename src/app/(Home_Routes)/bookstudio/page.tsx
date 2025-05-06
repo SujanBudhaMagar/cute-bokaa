@@ -29,7 +29,7 @@ const StudioRules: StudioRulesProps[] = [
   { icon: <FaMoneyBill />, name: "Extra time charges apply" },
 ];
 
-const BookNow = () => {
+const BookStudio = () => {
   const [date, setDate] = useState("");
   const [duration, setDuration] = useState(1);
   const [timeSlot, setTimeSlot] = useState("");
@@ -242,4 +242,4 @@ const BookNow = () => {
   );
 };
 
-export default BookNow;
+export default BookStudio;

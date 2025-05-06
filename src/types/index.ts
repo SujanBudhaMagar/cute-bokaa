@@ -104,3 +104,11 @@ export interface comparisonDataProps {
   regular: string;
   cuteboka: string;
 }
+
+
+export interface Feature1props {
+  icon: JSX.Element;
+  bgColor: string;
+  title: string;
+  description: string;
+}
