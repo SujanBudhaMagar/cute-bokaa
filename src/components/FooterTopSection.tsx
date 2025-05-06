@@ -11,12 +11,12 @@ const FooterTopSection: React.FC<FooterTopSectionProps> = ({
 }) => {
   return (
     <div className="flex flex-col h-full md:flex-row items-center justify-between gap-5">
-      <div className="flex flex-col justify-between gap-8 w-full md:w-[1050px]">
-        <p className="text-white font-bold horizon text-base md:text-3xl tracking-widest">
+      <div className="flex flex-col justify-between gap-8 w-full md:w-[1080px]">
+        <p className="text-white horizon text-base md:text-3xl tracking-widest">
           {title}
           <span className="horizon-outlined">{title2}</span>
         </p>
-        <p className="text-white text-[10px] md:text-base mb-3 tracking-widest w-full">
+        <p className="text-white text-[12px] md:text-base mb-3 tracking-widest w-full">
           {des}
         </p>
       </div>
