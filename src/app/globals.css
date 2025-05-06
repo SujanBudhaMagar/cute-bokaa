@@ -45,7 +45,7 @@ body {
 
 @font-face {
   font-family: "HorizonFont";
-  src: url("/fonts/horizon.ttf") format("truetype");
+  src: url("/fonts/custom_horizon.ttf") format("truetype");
 }
 
 @font-face {
