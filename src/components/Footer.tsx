@@ -56,7 +56,7 @@ const Footer = () => {
           title="Book a Studio Session with "
           title2="Cute Boka"
           des="Session includes song writing, lyrics writing, recording & more. (Only for Melbourne)"
-          link="/booknow"
+          link="/bookstudio"
           button="Book Now"
         />
       )}

@@ -95,7 +95,7 @@ const CustomBeat = () => {
                   {item.des}
                 </p>
               </div>
-            ))} 
+            ))}
           </div>
         </div>
         {/* features */}
@@ -106,19 +106,19 @@ const CustomBeat = () => {
           Beat{" "}
           <span className="horizon-outlined text-xl md:text-3xl">Package</span>
         </p>
-        <div className="flex items-end gap-1 md:gap-3 ml-5 mt-2">
+        <div className="flex items-end gap-1 md:gap-2 ml-5 mt-2">
           <p className="bg-gradient-to-r from-[#B5C8F2] to-[#E04AA3] text-transparent bg-clip-text text-3xl md:text-5xl horizon">
             $199.99
           </p>
-          <p className="text-[10px] md:text-sm text-[#8C9092] mb-2 md:mb-3">
+          <p className="text-[10px] md:text-sm text-[#8C9092] mb-2 md:mb-1">
             base price
           </p>
         </div>
 
         {/* customize package */}
-        <p className="horizon-outlined text-xl md:text-3xl text-white text-center md:text-start tracking-widest ml-5 mt-4 md:mt-1">
+        <p className="horizon-outlined text-base md:text-xl text-white text-center md:text-start tracking-widest ml-5 mt-4 md:mt-1">
           Customize{" "}
-          <span className="horizon text-xl md:text-3xl">Your Package</span>
+          <span className="horizon text-base md:text-xl">Your Package</span>
         </p>
         <div className="w-full">
           <PricingSection services={Packages} />
