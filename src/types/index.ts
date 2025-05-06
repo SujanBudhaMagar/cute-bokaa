@@ -104,6 +104,7 @@ export interface comparisonDataProps {
   regular: string;
   cuteboka: string;
 }
+
 export interface time {
   name: string;
 }
@@ -113,4 +114,11 @@ export interface FooterTopSectionProps {
   des: string;
   link: string;
   button: string;
+}
+
+export interface Feature1props {
+  icon: JSX.Element;
+  bgColor: string;
+  title: string;
+  description: string;
 }

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="pb-3 pt-7 sticky top-0 z-10 bg-[#151515]">
+      <div className="pb-3 pt-7 sticky top-0 z-50 bg-[#151515]">
         <div className="globalContainer">
           {/* Desktop view */}
           <div className=" hidden sm:hidden md:hidden lg:flex justify-between ">

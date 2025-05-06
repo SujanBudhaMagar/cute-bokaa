@@ -45,24 +45,21 @@ body {
 
 @font-face {
   font-family: "HorizonFont";
-  src: url("/fonts/horizon.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("/fonts/custom_horizon.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "HorizonOutlinedFont";
   src: url("/fonts/horizon_outlined.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  
 }
 
 .horizon {
-  font-family: "HorizonFont", sans-serif; /* Fallback to sans-serif */
+  font-family: "HorizonFont";/* Fallback to sans-serif */
 }
 
 .horizon-outlined {
-  font-family: "HorizonOutlinedFont", sans-serif; /* Fallback to sans-serif */
+  font-family: "HorizonOutlinedFont"; /* Fallback to sans-serif */
 }
 
 .date-input::-webkit-calendar-picker-indicator {
