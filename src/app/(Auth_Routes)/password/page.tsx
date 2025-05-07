@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+import AuthLogoComp from "@/components/AuthLogo";
+import Link from "next/link";
 import { useState } from "react";
 
 const SignUpPassword = () => {
@@ -10,13 +11,7 @@ const SignUpPassword = () => {
     <div className="bg-primary min-h-screen flex flex-col items-center justify-center px-4 md:px-0">
       <div className="flex flex-col items-center justify-center w-full max-w-lg">
         {/* Logo */}
-        <Image
-          src="/img/logo.png"
-          alt="Logo"
-          width={60}
-          height={60}
-          className="mb-6"
-        />
+        <AuthLogoComp />
         <div className="bg-[#252525] px-6 py-8 md:px-8 md:py-12 rounded-lg shadow-2xl w-full">
           <h2 className="text-center text-lg md:text-2xl font-bold mb-6 text-[#FAFAFA] tracking-widest horizon-outlined">
             CREATE{" "}
@@ -59,12 +54,12 @@ const SignUpPassword = () => {
                 className="mx-auto w-full max-w-sm px-3 py-2 md:py-3 text-base rounded-xl bg-[#151515] placeholder-[#8C9092] border border-[#374151] text-[#8C9092]"
               />
             </div>
-            <a
+            <Link
               href="/login"
               className="mx-auto block py-2 md:py-3 rounded-xl text-base text-white font-semibold bg-gradient-to-r from-secondary to-tertiary text-center w-full max-w-sm"
             >
               Sign Up
-            </a>
+            </Link>
           </div>
           <div className="flex items-center justify-center gap-2 mt-6 text-xs text-white">
             <input type="checkbox" id="terms" />

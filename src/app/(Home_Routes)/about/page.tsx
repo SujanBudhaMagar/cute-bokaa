@@ -9,46 +9,47 @@ import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
 const About = () => {
   return (
     <div className="bg-primary overflow-hidden">
-      <div className="bg-[#000000]">
-        {/* details */}
-        <div className="flex flex-col items-center">
-          <LogoComp />
-          <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer">
-            <div className="w-full md:w-[55%] ml-4 ">
-              <div className="inline-block">
-                <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest horizon">
-                  {`HELLO, I'M MIKE`}
-                </p>
-                <p className="horizon inline-block px-1 mt-1 text-xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
-                  SHRESTHA
-                </p>
-              </div>
-              <hr className="border-[#F03F98] border-t my-4 w-32" />
-              <p className="text-[#8C9092] md:text-xl text-sm">
-                A creative developer and content creator passionate about
-                building immersive digital experiences. With over 8 years of
-                experience in web development and digital content creation.
+      {/* details */}
+      <div className="bg-[#000000] flex flex-col items-center">
+        <LogoComp />
+        <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer ">
+          <div className="w-full md:w-[55%] ml-4 ">
+            <div className="inline-block">
+              <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest horizon">
+                {`HELLO, I'M MIKE`}
               </p>
-              <div className="flex gap-4 mt-6 text-white mb-5 md:mb-0">
-                <BsYoutube size={30} />
-                <BsSpotify size={30} />
-                <BsLinkedin size={30} />
-                <BsInstagram size={30} />
-              </div>
+              <p className="horizon inline-block px-1 mt-1 text-xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
+                SHRESTHA
+              </p>
             </div>
-            <div>
-              <Image
-                src="/img/mike.png"
-                alt="Mike Shrestha"
-                height={370}
-                width={420}
-                className="h-[440px] w-[320px] md:h-[640px] md:w-[400px] mb-4 md:mb-0 "
-              />
+            <hr className="border-[#F03F98] border-t my-4 w-32" />
+            <p className="text-[#8C9092] md:text-xl text-sm">
+              A creative developer and content creator passionate about building
+              immersive digital experiences. With over 8 years of experience in
+              web development and digital content creation.
+            </p>
+            <div className="flex gap-4 mt-6 text-white mb-5 md:mb-0">
+              <BsYoutube size={30} />
+              <BsSpotify size={30} />
+              <BsLinkedin size={30} />
+              <BsInstagram size={30} />
             </div>
           </div>
+          <div className="relative">
+            <div className="absolute right-0 top-0 h-full w-full bg-gradient-to-t from-black via-[#9135A7] to-[#00AB36] blur-[300px] overflow-hidden">
+              Hello
+            </div>
+            <Image
+              src="/img/mike.png"
+              alt="Mike Shrestha"
+              height={1000}
+              width={1000}
+              className="relative h-[440px] w-[320px] md:h-[660px] md:w-[450px] mb-4 md:mb-0"
+            />
+          </div>
         </div>
-        {/* details */}
       </div>
+      {/* details */}
 
       <div className="flex items-center justify-center flex-col">
         <p className="horizon text-white font-bold text-3xl my-16">
