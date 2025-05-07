@@ -39,7 +39,7 @@ const Footer = () => {
   const [openLegal, setOpenLegal] = useState(false);
 
   const isAboutPageOrBooknowPage =
-    pathname === "/about" || pathname === "/booknow";
+    pathname === "/about" || pathname === "/bookstudio";
 
   return (
     <div className="bg-[#151515] mt-10 md:mt-36 globalContainer">
