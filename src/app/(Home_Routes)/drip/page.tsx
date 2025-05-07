@@ -16,15 +16,15 @@ const Drip = () => {
         <LogoComp />
         {/* section1 */}
         <div className="flex flex-col items-center justify-evenly globalContainer w-full">
-          <p className="uppercase horizon text-base md:text-3xl text-white tracking-widest mt-4">
+          <p className="uppercase horizon text-xl md:text-3xl text-white tracking-widest mt-4">
             Rock{" "}
-            <span className="horizon-outlined text-base md:text-3xl text-white tracking-widest mt-4">
+            <span className="horizon-outlined text-xl md:text-3xl text-white tracking-widest mt-4">
               the Beat.
             </span>
           </p>
-          <p className="horizon-outlined uppercase text-base md:text-3xl text-white tracking-widest mt-4">
+          <p className="horizon-outlined uppercase text-xl md:text-3xl text-white tracking-widest mt-4">
             wear{" "}
-            <span className="horizon text-base md:text-3xl text-white tracking-widest mt-4">
+            <span className="horizon text-xl md:text-3xl text-white tracking-widest mt-4">
               the drip.
             </span>
           </p>
@@ -35,7 +35,7 @@ const Drip = () => {
             {ProductData.map((item, idx) => (
               <div
                 key={idx}
-                className="h-[320px] w-[180px] md:h-[330px] md:w-[230px] rounded-md shadow-lg "
+                className="h-[320px] w-[160px] md:h-[330px] md:w-[230px] rounded-md shadow-lg "
               >
                 <div className="h-[250px] w-full">
                   <Image
@@ -59,7 +59,7 @@ const Drip = () => {
             ))}
           </div>
           {/* products section */}
-          <p className="horizon text-xl md:text-3xl text-white mt-2 tracking-widest">
+          <p className="horizon text-base md:text-2xl text-white mt-2 tracking-widest">
             Trusted By{" "}
             <span className=" horizon-outlined text-white">The Best</span>
           </p>

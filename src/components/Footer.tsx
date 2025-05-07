@@ -8,6 +8,8 @@ import { CiTwitter } from "react-icons/ci";
 import Image from "next/image";
 import { IconProps } from "@/types";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import FooterTopSection from "./FooterTopSection";
 
 const Icons: IconProps[] = [
   { icon: <FaFacebook size={20} />, className: "hidden md:block text-white" },
@@ -30,30 +32,34 @@ const Icons: IconProps[] = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname();
   const [openQuickLinks, setOpenQuickLinks] = useState(false);
   const [openSupport, setOpenSupport] = useState(false);
   const [openResources, setOpenResources] = useState(false);
   const [openLegal, setOpenLegal] = useState(false);
 
+  const isAboutPageOrBooknowPage =
+    pathname === "/about" || pathname === "/booknow";
+
   return (
-    <div className="bg-[#151515] h-full mt-10 md:mt-20 globalContainer">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-        {/* booking */}
-        <div className="flex flex-col gap-8">
-          <p className="uppercase text-white font-bold horizon text-xl md:text-3xl tracking-wider md:tracking-widest">
-            Book a Studio Session with{" "}
-            <span className="horizon-outlined">Cute Boka</span>
-          </p>
-          <p className="text-white text-sm md:text-base mb-3">
-            Session includes song writing, lyrics writing, recording & more.
-            (Only for Melbourne)
-          </p>
-        </div>
-        <Link href={"/booknow"} className="text-white w-full md:w-auto py-5 md:px-6 md:py-4 text-center text-base md:text-xl bg-gradient-to-r from-[#945AED] to-[#E24AA2] rounded-md">
-          Book Now
-        </Link>
-      </div>
-      {/* booking */}
+    <div className="bg-[#151515] mt-10 md:mt-36 globalContainer">
+      {isAboutPageOrBooknowPage ? (
+        <FooterTopSection
+          title="Explore our "
+          title2="PREMIUM MUSIC "
+          des="Connecting artists and producers with high-quality beats and services for an unparalleled music experience."
+          link="/explorenow"
+          button="Explore Now"
+        />
+      ) : (
+        <FooterTopSection
+          title="Book a Studio Session with "
+          title2="Cute Boka"
+          des="Session includes song writing, lyrics writing, recording & more. (Only for Melbourne)"
+          link="/bookstudio"
+          button="Book Now"
+        />
+      )}
       <hr className="border border-[#FAFAFA] mt-10 w-full hidden md:block" />
       <div className="flex flex-col md:flex-row items-start justify-between py-10 md:py-18 md:gap-8 gap-2">
         {/* Quick Links */}
@@ -62,17 +68,17 @@ const Footer = () => {
             className="flex md:block cursor-pointer gap-3"
             onClick={() => setOpenQuickLinks(!openQuickLinks)}
           >
-            <p className="horizon mb-2">Quick Links</p>
+            <p className="horizon mb-4">Quick Links</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
             className={`flex-col ${
               openQuickLinks ? "flex" : "hidden"
-            } md:flex gap-2`}
+            } md:flex gap-4`}
           >
             {QuickLinks.map((item, idx) => (
               <div key={idx}>
-                <a href={item.href}>{item.name}</a>
+                <Link href={item.href}>{item.name}</Link>
               </div>
             ))}
           </div>
@@ -82,19 +88,19 @@ const Footer = () => {
         {/* Support */}
         <div className="flex flex-col text-white text-sm w-full md:w-auto">
           <div
-            className="flex gap-3 md:block cursor-pointer"
+            className="flex md:block cursor-pointer"
             onClick={() => setOpenSupport(!openSupport)}
           >
-            <p className="horizon mb-2">Support</p>
+            <p className="horizon mb-4">Support</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
             className={`flex-col ${
               openSupport ? "flex" : "hidden"
-            } md:flex gap-2`}
+            } md:flex gap-4`}
           >
-            <a href="/faq">FAQ</a>
-            <a href="/helpcenter">Help Center</a>
+            <Link href="/faq">FAQ</Link>
+            <Link href="/helpcenter">Help Center</Link>
           </div>
         </div>
         {/* Support */}
@@ -102,19 +108,19 @@ const Footer = () => {
         {/* Resources */}
         <div className="flex flex-col text-white text-sm w-full md:w-auto">
           <div
-            className="flex gap-3 md:block cursor-pointer"
+            className="flex md:block cursor-pointer"
             onClick={() => setOpenResources(!openResources)}
           >
-            <p className="horizon mb-2">Resources</p>
+            <p className="horizon mb-4">Resources</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
             className={`flex-col ${
               openResources ? "flex" : "hidden"
-            } md:flex gap-2`}
+            } md:flex gap-4`}
           >
-            <a href="/blog">Blog</a>
-            <a href="/beatpasal">Beat Pasal</a>
+            <Link href="/blog">Blog</Link>
+            <Link href="/beatpasal">Beat Pasal</Link>
           </div>
         </div>
         {/* Resources */}
@@ -122,20 +128,20 @@ const Footer = () => {
         {/* Legal */}
         <div className="flex flex-col text-white text-sm w-full md:w-auto">
           <div
-            className="flex gap-3 md:block cursor-pointer"
+            className="flex md:block cursor-pointer"
             onClick={() => setOpenLegal(!openLegal)}
           >
-            <p className="horizon mb-2">Legal</p>
+            <p className="horizon mb-4">Legal</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
             className={`flex-col ${
               openLegal ? "flex" : "hidden"
-            } md:flex gap-2`}
+            } md:flex gap-4`}
           >
             {Legal.map((item, idx) => (
               <div key={idx}>
-                <a href={item.href}>{item.name}</a>
+                <Link href={item.href}>{item.name}</Link>
               </div>
             ))}
           </div>

@@ -79,7 +79,7 @@ const Home = () => {
         </h1>
 
         <p className="mt-4 text-xs md:text-base text-center px-0 lg:px-40 leading-relaxed">
-         {`An Immersive Cute Boka Experience while you let Cute Boka transform
+          {`An Immersive Cute Boka Experience while you let Cute Boka transform
           your vocals into Industry Standard Perfection with professional-grade
           mixing using top-tier UAD plugins, ensuring your voice shines in any
           genre whether it's pop, rap, or R&B. Crisp, Clean & Creative. Your
@@ -111,7 +111,7 @@ const Home = () => {
                 ))}
               </ul>
 
-              <div className="bg-zinc-900 rounded-lg py-3.5 px-5 w-full ">
+              <div className="bg-[#252525] rounded-lg py-3.5 px-5 w-full ">
                 <div className="text-center mb-4">
                   <h3 className="text-base">Before Mixing</h3>
                   <p>(Raw Audio)</p>
@@ -165,7 +165,7 @@ const Home = () => {
                 ))}
               </ul>
 
-              <div className="bg-zinc-900 rounded-lg py-3.5 px-5">
+              <div className="bg-[#252525] rounded-lg py-3.5 px-5 border-[#9B24CB] border">
                 <div className="text-center mb-4">
                   <h3>After Mixing</h3>
                   <p>(Professionally Enhanced)</p>

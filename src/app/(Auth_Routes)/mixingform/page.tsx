@@ -151,7 +151,7 @@ const MixingProForm = () => {
 
             {/* Upload Files */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="files" className="text-white mb-3s">
+              <label htmlFor="files" className="text-white mb-3">
                 Upload Files
               </label>
               <input
