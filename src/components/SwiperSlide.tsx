@@ -14,7 +14,7 @@ const CustomSwiperSlide = () => {
   );
 
   return (
-    <div className="w-full mt-3 md:mt-6 h-14 md:h-24 relative overflow-hidden">
+    <div className="w-full mt-3 md:mt-2 h-14 md:h-20 relative overflow-hidden">
       <div className="relative w-full h-full animate-slide gap-3">
         {repeatedSlides.map((slide, index) => (
           <div

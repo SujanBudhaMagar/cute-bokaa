@@ -119,57 +119,84 @@ const MixingProForm = () => {
               />
             </div>
 
-            {/* Preferred Music Style */}
+            {/* Mood */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="preferred" className="text-white mb-3">
-                Preferred Music Style
+              <label htmlFor="mood" className="text-white mb-3">
+                Mood
               </label>
-              <select
-                name="preferred"
-                id="preferred"
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base p-4 md:px-4 md:py-2 bg-[#151515]"
-              >
-                <option value="Select style">Select style</option>
-                <option value="1">Style 1</option>
-                <option value="2">Style 2</option>
-                <option value="3">Style 3</option>
-              </select>
-            </div>
-
-            {/* Describe Your Needs */}
-            <div className="flex flex-col mb-4">
-              <label htmlFor="needs" className="text-white mb-3">
-                Describe Your Needs
-              </label>
-              <textarea
-                id="needs"
-                placeholder="Link your reference tracks, sample mixes"
+              <input
+                id="mood"
+                type="text"
+                placeholder="Describe the mood you're going for..."
                 required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-[#151515] text-xs md:text-base"
+                className="w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-[#151515]"
               />
             </div>
 
-            {/* Upload Files */}
+            {/* BPM */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="files" className="text-white mb-3">
-                Upload Files
+              <label htmlFor="needs" className="text-white mb-3">
+                BPM
               </label>
               <input
-                id="files"
+                id="BPM"
+                placeholder="Enter the tempo(BPM) of your beat..."
+                required
+                className="w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-[#151515]"
+              />
+            </div>
+
+            {/* Song Key */}
+            <div className="flex flex-col mb-4">
+              <label htmlFor="files" className="text-white mb-3">
+                Song Key
+              </label>
+              <input
+                id="songKey"
                 type="text"
-                placeholder="Provide your Google Drive link here..."
+                placeholder="Enter the key for your beat..."
                 required
                 className="w-full border border-[#374151] text-[#8C9092] rounded-md p-4 md:p-2 bg-[#151515] text-xs md:text-base"
               />
             </div>
 
-            {/* Additional Instructions */}
+            {/* Instrument */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="instructions" className="text-white mb-3">
+              <label htmlFor="instrument" className="text-white mb-3">
+                Instruments
+              </label>
+              <input
+                id="instrument"
+                type="text"
+                placeholder="Enter the instruments in your song..."
+                required
+                className="w-full border border-[#374151] text-[#8C9092] rounded-md p-4 md:p-2 bg-[#151515] text-xs md:text-base"
+              />
+            </div>
+
+            {/* reference track */}
+            <div className="flex flex-col mb-4">
+              <label htmlFor="referenceTrack" className="text-white mb-3">
+                Reference Track
+              </label>
+              <textarea
+                id="referenceTrack"
+                placeholder="Link to a song that matches the vibe.."
+                required
+                className="w-full border border-[#374151] text-[#8C9092] text-sm md:text-base rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-[#151515]"
+              />
+            </div>
+
+            {/* Additional instructions */}
+            <div className="flex flex-col mb-4">
+              <label
+                htmlFor="additionalInstructions"
+                className="text-white mb-3"
+              >
                 Additional Instructions
               </label>
               <textarea
-                id="instructions"
+                id="additionalInstructions"
                 placeholder="Any specific requirements..."
                 required
                 className="w-full border border-[#374151] text-[#8C9092] text-sm md:text-base rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-[#151515]"
