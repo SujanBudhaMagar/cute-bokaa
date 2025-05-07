@@ -9,7 +9,6 @@ import { MdOutlineDateRange } from "react-icons/md";
 
 const ViewBooking = () => {
   const [date, setDate] = useState<Date | null>(null);
-  const [duration, setDuration] = useState("1 hour");
   const [timeSlot, setTimeSlot] = useState("12:00 PM");
   const [equipment, setEquipment] = useState("Guitar");
   const [beatUrl, setBeatUrl] = useState("http beat.com");
@@ -34,8 +33,8 @@ const ViewBooking = () => {
         </div>
       </section>
 
-      <div className="relative w-full mb-64 flex items-center justify-center">
-        <div className="absolute w-fit bg-[#252525] text-white p-8 rounded-2xl border border-[#FFFFFF1A] z-10 -mt-64  ">
+      <div className="relative w-full mb-32 lg:mb-72 flex items-center justify-center">
+        <div className="absolute w-fit bg-[#252525] text-white p-8 rounded-2xl border border-[#FFFFFF1A] z-10 -mt-[600px] lg:-mt-40  ">
           <div className="mb-8 text-center">
             <h1 className="text-3xl text-shadow-white horizon">
               BOOKING
@@ -49,7 +48,7 @@ const ViewBooking = () => {
                 <label htmlFor="date" className="text-gray-400 text-sm">
                   Date
                 </label>
-                <div className="relative">
+                <div className="relative mt-4">
                   <DatePicker
                     selected={date}
                     onChange={(date) => setDate(date)}
@@ -62,15 +61,13 @@ const ViewBooking = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="duration" className="text-gray-400 text-sm">
+                <label htmlFor="duration" className="text-gray-400 text-sm ">
                   Select Duration(in hour)
                 </label>
-                <div className="relative">
+                <div className="relative mt-4">
                   <select
                     id="duration"
-                    value={duration}
-                    onChange={(e) => setDuration(e.target.value)}
-                    className="bg-[#1e1e1e] border border-[#333] rounded-md text-white w-full p-2 appearance-none"
+                    className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full appearance-none"
                   >
                     <option>1 hour</option>
                     <option>2 hours</option>
@@ -86,30 +83,34 @@ const ViewBooking = () => {
               <label htmlFor="timeSlot" className="text-gray-400 text-sm">
                 Time Slot
               </label>
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  id="timeSlot"
-                  type="text"
-                  value={timeSlot}
-                  onChange={(e) => setTimeSlot(e.target.value)}
-                  className="bg-[#1e1e1e] border-[#333] text-white rounded-md"
-                  readOnly
-                />
-                <div className="relative">
-                  <select
-                    id="selectTime"
-                    className="bg-[#1e1e1e] border border-[#333] rounded-md text-white w-full p-2 appearance-none"
+
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="flex gap-2">
+                  <input
+                    id="timeSlot"
+                    type="text"
+                    value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
-                  >
-                    <option>Select time</option>
-                    <option>9:00 AM</option>
-                    <option>10:00 AM</option>
-                    <option>11:00 AM</option>
-                    <option>12:00 PM</option>
-                    <option>1:00 PM</option>
-                  </select>
-                  <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    className="bg-[#151515] border-[#374151] text-[#8C9092] rounded-md p-3  w-[150px]"
+                    readOnly
+                  />
+                  <div className="relative">
+                    <select
+                      id="selectTime"
+                      className="bg-[#151515] border-[#374151] text-[#8C9092] rounded-md p-3 w-[180px] appearance-none"
+                      onChange={(e) => setTimeSlot(e.target.value)}
+                    >
+                      <option value="">Select time</option>
+                      <option value="9:00 AM">9:00 AM</option>
+                      <option value="10:00 AM">10:00 AM</option>
+                      <option value="11:00 AM">11:00 AM</option>
+                      <option value="12:00 PM">12:00 PM</option>
+                      <option value="1:00 PM">1:00 PM</option>
+                    </select>
+                    <FaChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                  </div>
                 </div>
+                <div></div>
               </div>
             </div>
 
@@ -117,31 +118,31 @@ const ViewBooking = () => {
               <label className="text-gray-400 text-sm">
                 Additional Equipment
               </label>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mt-4">
                 <input
                   type="text"
                   value={equipment}
                   onChange={(e) => setEquipment(e.target.value)}
-                  className="bg-[#1e1e1e] border-[#333] text-white rounded-md"
+                  className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full"
                   placeholder="Equipment"
                 />
                 <input
                   type="text"
                   value={beatUrl}
                   onChange={(e) => setBeatUrl(e.target.value)}
-                  className="bg-[#1e1e1e] border-[#333] text-white rounded-md"
+                  className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full"
                   placeholder="URL"
                 />
               </div>
             </div>
 
-            <div className="bg-[#1e1e1e] rounded-md p-4 flex justify-between items-center">
+            <div className="bg-[#151515] rounded-md p-6 flex justify-between items-center">
               <div className="text-gray-400">Total Amount:</div>
               <div className="text-xl font-bold">$245</div>
             </div>
 
             <button
-              className="w-full h-12 text-white font-medium"
+              className="w-full h-12 text-white font-medium rounded-md"
               style={{
                 background: "linear-gradient(to right, #4361ee, #e649f5)",
               }}
