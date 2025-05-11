@@ -66,13 +66,13 @@ const BookStudio = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 z-20 mt-36 px-4 text-center flex flex-col items-center gap-14">
-          <h1 className="text-xl md:text-3xl horizon mt-46">
+          <h1 className="text-xl md:text-3xl horizon mt-46 tracking-widest">
             <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
               BOOK YOUR STUDIO{" "}
             </span>
             <span className="text-white">RECORDING TIME</span>
           </h1>
-          <p className="text-sm md:text-base max-w-xl text-[#FAFAFA]">
+          <p className="text-sm md:text-base w-full md:w-[640px] text-[#FAFAFA] tracking-widest">
             Secure your session in a professional studio space. High-quality
             recording, mixing, and mastering, all in one place.
           </p>
@@ -102,7 +102,7 @@ const BookStudio = () => {
         <div className="flex flex-col md:flex-row gap-6 md:gap-4">
           {/* Booking Form */}
           <div className="bg-[#252525] rounded-xl p-6 w-full md:w-[80%] flex flex-col gap-4 md:gap-10">
-            <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-wide">
+            <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-widest">
               Book{" "}
               <span className="horizon-outlined text-lg md:text-3xl">
                 Your Session
@@ -205,7 +205,7 @@ const BookStudio = () => {
               onClick={() => {
                 setShowPopUp(true);
               }}
-              className="w-full p-4 rounded-lg text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base"
+              className="w-full tracking-widest p-4 rounded-lg text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base"
             >
               Confirm Booking
             </button>

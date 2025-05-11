@@ -68,7 +68,7 @@ const MixingProForm = () => {
               ABOUT YOUR MIXING NEEDS
             </span>
           </p>
-          <p className="text-[#8C9092] text-xs md:text-base w-sm md:w-2xl">
+          <p className="text-[#8C9092] text-xs md:text-base w-sm md:w-3xl tracking-widest">
             Provide details about your beat, voice, and mixing preferences.
             Upload your files, and our experts will handle the rest!
           </p>
@@ -76,7 +76,7 @@ const MixingProForm = () => {
 
         {/* Form Container */}
         <div className="bg-[#252525] w-full max-w-3xl md:px-28 md:py-14 px-10 py-5 rounded-md globalContainer">
-          <form className="flex flex-col gap-2 md:gap-4">
+          <form className="flex flex-col gap-2 md:gap-4 tracking-widest">
             {/* Name Input */}
             <div className="flex flex-col mb-4">
               <label htmlFor="name" className="text-white mb-3">
@@ -217,7 +217,7 @@ const MixingProForm = () => {
                 {Payment.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-56 rounded-lg p-2"
+                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-60 rounded-lg p-2"
                   >
                     <input
                       type="checkbox"

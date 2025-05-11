@@ -31,7 +31,7 @@ const Drip = () => {
           {/* section1 */}
 
           {/* products section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 md:flex-wrap gap-6 justify-center py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:flex-wrap md:gap-14 gap-6 justify-center py-12">
             {ProductData.map((item, idx) => (
               <div
                 key={idx}
@@ -67,7 +67,7 @@ const Drip = () => {
         </div>
       </div>
       {/* section 2 */}
-      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-20">
+      <div className="flex flex-col items-center justify-between globalContainer overflow-hidden gap-3 mt-14 md:mt-20">
         <p className="horizon text-white text-xl md:text-3xl tracking-widest">
           Worn by <span className="horizon-outlined">the Best</span>
         </p>
@@ -75,7 +75,7 @@ const Drip = () => {
           Join the elite community of producers and artists who trust our brand
         </p>
         {/* animated slides */}
-        <div className="flex gap-6 mt-14 animate-slide relative w-full">
+        <div className="flex gap-7 mt-14 animate-slide relative w-full">
           {photoSlides.map((item, idx) => (
             <div
               className="w-[200px] h-[320px] md:w-[330px] md:h-[320px] relative"
