@@ -16,19 +16,19 @@ import LogoComp from "@/components/LogoComp";
 
 const Payment: PaymentIn[] = [
   {
-    icon: <FaCcVisa className="text-[#014AE6] h-5 w-5 md:h-8 md:w-8" />,
+    icon: <FaCcVisa className="text-[#014AE6] h-6 w-6" />,
     name: "Visa",
   },
   {
-    icon: <FaCcMastercard className="text-[#EB001B] h-5 w-5 md:h-8 md:w-8" />,
+    icon: <FaCcMastercard className="text-[#EB001B] h-6 w-6" />,
     name: "Master Card",
   },
   {
-    icon: <FaPaypal className="text-[#014AE6] h-5 w-5 md:h-8 md:w-8" />,
+    icon: <FaPaypal className="text-[#014AE6] h-6 w-6" />,
     name: "Paypal",
   },
   {
-    icon: <FaApplePay className="h-5 w-5 md:h-8 md:w-8" />,
+    icon: <FaApplePay className="h-6 w-6" />,
     name: "Apple Pay",
   },
 ];
@@ -217,7 +217,7 @@ const MixingProForm = () => {
                 {Payment.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-60 rounded-lg p-2"
+                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-50 rounded-lg p-2"
                   >
                     <input
                       type="checkbox"
@@ -231,7 +231,7 @@ const MixingProForm = () => {
                       className="flex items-center gap-2"
                     >
                       {item.icon}
-                      <span className="md:text-base text-[10px]">
+                      <span className="md:text-xs text-[10px]">
                         {item.name}
                       </span>
                     </label>
