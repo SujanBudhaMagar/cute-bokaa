@@ -12,6 +12,7 @@ import { extraTimes, timeOptions } from "@/constants";
 import DatePicker from "react-datepicker";
 import { LuCalendarDays } from "react-icons/lu";
 import "react-datepicker/dist/react-datepicker.css";
+import { PopUpForm } from "@/components/ViewBookPopUp";
 
 const Book: BookProps[] = [
   {
@@ -38,6 +39,7 @@ const BookStudio = () => {
   const [duration, setDuration] = useState(1);
   const [timeSlot, setTimeSlot] = useState("");
   const [beatLink, setBeatLink] = useState("");
+  const [ShowPopUp, setShowPopUp] = useState(false);
 
   const hourlyRate = 245;
   const totalAmount = duration * hourlyRate;
@@ -199,7 +201,12 @@ const BookStudio = () => {
             </div>
 
             {/* Confirm Booking Button */}
-            <button className="w-full p-4 rounded-lg text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base">
+            <button
+              onClick={() => {
+                setShowPopUp(true);
+              }}
+              className="w-full p-4 rounded-lg text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base"
+            >
               Confirm Booking
             </button>
           </div>
@@ -251,6 +258,12 @@ const BookStudio = () => {
           </div>
         </div>
       </div>
+      {/* Pop-up */}
+      {ShowPopUp && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <PopUpForm onClose={() => setShowPopUp(false)} />
+        </div>
+      )}
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Producer = () => {
     <div className="bg-primary overflow-hidden">
       <div className="flex flex-col items-center justify-between ">
         <LogoComp />
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 px-10 md:py-10 py-14 globalContainer">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-9 px-10 md:py-10 py-14 globalContainer">
           <Image
             src="/img/producer.jpg"
             alt="Not found"

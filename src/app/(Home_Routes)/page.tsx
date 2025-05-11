@@ -1,17 +1,20 @@
+"use client";
 import BlogCard from "@/components/card/BlogCard";
 import MusicCard from "@/components/card/MusicCard";
+import { LandingPagePopUpForm } from "@/components/LandingPagePopUp";
 import SearchBar from "@/components/SearchBar";
 import CustomSwiperSlide from "@/components/SwiperSlide";
 import { BlogCardData, Treading } from "@/constants";
 import { FollowBtnProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsFire } from "react-icons/bs";
 import { CiYoutube } from "react-icons/ci";
 import { FaDiscord, FaSpotify } from "react-icons/fa";
 
 const Home = () => {
+  const [showPopUp, setShowPopUp] = useState(true);
   const followBtn: FollowBtnProps[] = [
     {
       Icon: <FaSpotify className="w-4 h-4 md:w-6 md:h-6 text-white" />,
@@ -29,10 +32,21 @@ const Home = () => {
       color: "#5865F280",
     },
   ];
+  useEffect(() => {
+    if (showPopUp) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showPopUp]);
 
   return (
     <div className="overflow-hidden">
-      <SearchBar logo="/img/Logo-wide 1.png"/>
+      <SearchBar logo="/img/Logo-wide 1.png" />
       {/* trending track */}
       <section className="globalContainer pb-9 md:pb-16">
         <h3 className="text-center text-base md:text-4xl font-bold horizon text-white ">
@@ -64,7 +78,10 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <Link href={'/viewallbeat'} className="text-xs py-2 px-4 -mt-5 md:mt-0 md:bg-gradient-to-r from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer">
+            <Link
+              href={"/viewallbeat"}
+              className="text-xs py-2 px-4 -mt-5 md:mt-0 md:bg-gradient-to-r from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer"
+            >
               View all
             </Link>
           </div>
@@ -201,7 +218,8 @@ const Home = () => {
 
             <p className="text-[#8C9092] mt-4 md:mt-6 text-xs md:text-base ">
               {`Take a deeper dive into Cute Boka's Producer Community &`}
-              <br className="hidden md:block" /> {`learn more about the vision
+              <br className="hidden md:block" />{" "}
+              {`learn more about the vision
               behind it.`}
             </p>
 
@@ -213,12 +231,11 @@ const Home = () => {
                   ${idx === 2 ? "col-span-2" : "col-span-1"} md:col-auto`}
                   style={{ backgroundColor: item.color }}
                 >
-                 {item.Icon}
+                  {item.Icon}
                   {item.title}
                 </button>
               ))}
             </div>
-
           </div>
         </div>
       </section>
@@ -227,12 +244,15 @@ const Home = () => {
       {/* BlogCard  */}
       <section className="globalContainer md:pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
-          {BlogCardData.slice(0,3).map((item, idx) => (
+          {BlogCardData.slice(0, 3).map((item, idx) => (
             <BlogCard key={idx} item={item} />
           ))}
         </div>
         <div className="w-full text-center md:text-right mt-7">
-          <Link href={"/blogs"} className="bg-gradient-to-r from-[#F03F98] to-[#9B24CB] text-transparent bg-clip-text text-lg cursor-pointer">
+          <Link
+            href={"/blogs"}
+            className="bg-gradient-to-r from-[#F03F98] to-[#9B24CB] text-transparent bg-clip-text text-lg cursor-pointer"
+          >
             View More
           </Link>
         </div>
@@ -276,6 +296,14 @@ const Home = () => {
         </div>
       </section>
       {/* Drip  */}
+
+      {/* Landing page popup */}
+      {showPopUp && (
+        <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50">
+          <LandingPagePopUpForm onclose={() => setShowPopUp(false)} />
+        </div>
+      )}
+      {/* Landing page popup */}
     </div>
   );
 };

@@ -110,14 +110,14 @@ export const NavAuth: NavProps[] = [
 export const QuickLinks: FooterProps[] = [
   { href: "/", name: "Home" },
   { href: "/about", name: "About Us" },
-  { href: "/contact", name: "Contact" },
+  { href: "/mixingpro", name: "Mixing" },
+  { href: "/custombeat", name: "Custom Beat" },
   { href: "drip", name: "Drip" },
 ];
 
 export const Legal: FooterProps[] = [
   { href: "/terms&conditions", name: "Terms & Conditions" },
   { href: "/privacy", name: "Privacy and Policy" },
-  { href: "/cookies", name: "Cookie Policy" },
   { href: "/copyright", name: "Copyright Complaint" },
   { href: "/quickdownloads", name: "Quick Downloads" },
 ];
