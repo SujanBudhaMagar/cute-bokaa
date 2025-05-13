@@ -80,9 +80,9 @@ const BookStudio = () => {
             {Book.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-4 bg-[#252525] py-6 px-4 rounded-lg shadow-lg"
+                className="flex items-center gap-4 bg-[#252525] py-7 px-5 rounded-2xl shadow-lg"
               >
-                <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-2xl rounded-full p-3">
+                <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-2xl rounded-full p-4">
                   {item.icon}
                 </div>
                 <div className="flex flex-col">

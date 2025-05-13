@@ -40,7 +40,7 @@ const Navbar = () => {
                   />
                 </svg>
               </Link>
-              <div className="flex gap-9">
+              <div className="flex gap-9 tracking-widest">
                 {NavData.map((item, index) => (
                   <div key={index} className="flex items-center gap-1">
                     <Link

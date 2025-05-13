@@ -34,7 +34,6 @@ const Icons: IconProps[] = [
 const Footer = () => {
   const pathname = usePathname();
   const [openQuickLinks, setOpenQuickLinks] = useState(false);
-  const [openSupport, setOpenSupport] = useState(false);
   const [openResources, setOpenResources] = useState(false);
   const [openLegal, setOpenLegal] = useState(false);
 

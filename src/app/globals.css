@@ -51,11 +51,10 @@ body {
 @font-face {
   font-family: "HorizonOutlinedFont";
   src: url("/fonts/horizon_outlined.ttf") format("truetype");
-  
 }
 
 .horizon {
-  font-family: "HorizonFont";/* Fallback to sans-serif */
+  font-family: "HorizonFont"; /* Fallback to sans-serif */
 }
 
 .horizon-outlined {
