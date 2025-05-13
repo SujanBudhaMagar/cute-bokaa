@@ -61,11 +61,11 @@ const CustomBeat = () => {
               Custom{" "}
               <span className="horizon-outlined text-xl md:text-3xl">Beat</span>
             </h1>
-            <p className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text text-sm md:text-xl mb-2 md:mb-4 ml-1 horizon">
+            <p className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] tracking-widest text-transparent bg-clip-text text-sm md:text-xl mb-2 md:mb-4 ml-1 horizon">
               Pro
             </p>
           </div>
-          <p className="text-sm md:text-base text-[#FAFAFA] text-center w-xs md:w-[750px]">
+          <p className="text-sm md:text-base text-[#FAFAFA] text-center w-xs md:w-[820px] tracking-widest">
             At Custom Beat Pro, we specialize in creating high-quality,
             tailor-made beats that match your unique style. Elevate your music
             with precision-crafted sounds designed just for you.
@@ -73,7 +73,7 @@ const CustomBeat = () => {
         </div>
 
         {/* features */}
-        <div className="flex flex-col md:flex-row items-center justify-center  gap-10 md:my-14 my-6 md:gap-18">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:my-14 my-6 md:gap-9">
           <div
             className={`w-fit rounded ${
               blinkTarget === "image" ? "blinking-border" : ""
@@ -91,7 +91,7 @@ const CustomBeat = () => {
             {CustomBeatData.map((item, idx) => (
               <div key={idx} className="flex items-center">
                 <div className="mr-3">{item.icon}</div>
-                <p className="text-sm md:text-base text-[#FAFAFA]">
+                <p className="text-sm md:text-base text-[#FAFAFA] tracking-widest">
                   {item.des}
                 </p>
               </div>
@@ -102,7 +102,7 @@ const CustomBeat = () => {
       </div>
       {/* packages */}
       <div className="flex flex-col items-start mt-10 gap-2 globalContainer">
-        <p className="horizon text-xl md:text-3xl text-white ml-5">
+        <p className="horizon text-xl md:text-3xl text-white ml-5 tracking-widest">
           Beat{" "}
           <span className="horizon-outlined text-xl md:text-3xl">Package</span>
         </p>

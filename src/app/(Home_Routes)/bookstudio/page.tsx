@@ -9,6 +9,10 @@ import { RiBeerLine } from "react-icons/ri";
 import { MdWatchLater } from "react-icons/md";
 import LogoComp from "@/components/LogoComp";
 import { extraTimes, timeOptions } from "@/constants";
+import DatePicker from "react-datepicker";
+import { LuCalendarDays } from "react-icons/lu";
+import "react-datepicker/dist/react-datepicker.css";
+import { PopUpForm } from "@/components/ViewBookPopUp";
 
 const Book: BookProps[] = [
   {
@@ -24,17 +28,18 @@ const Book: BookProps[] = [
 ];
 
 const StudioRules: StudioRulesProps[] = [
-  { icon: <MdWatchLater />, name: "Arrive 10 mins early" },
-  { icon: <RiBeerLine />, name: "Drinks allowed" },
-  { icon: <CiWarning />, name: "No refunds or cancellation" },
-  { icon: <FaMoneyBill />, name: "Extra time charges apply" },
+  { icon: <MdWatchLater size={16} />, name: "Arrive 10 mins early" },
+  { icon: <RiBeerLine size={16} />, name: "Drinks allowed" },
+  { icon: <CiWarning size={16} />, name: "No refunds or cancellation" },
+  { icon: <FaMoneyBill size={16} />, name: "Extra time charges apply" },
 ];
 
 const BookStudio = () => {
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState<Date | null>(null);
   const [duration, setDuration] = useState(1);
   const [timeSlot, setTimeSlot] = useState("");
   const [beatLink, setBeatLink] = useState("");
+  const [ShowPopUp, setShowPopUp] = useState(false);
 
   const hourlyRate = 245;
   const totalAmount = duration * hourlyRate;
@@ -42,105 +47,115 @@ const BookStudio = () => {
   return (
     <div className="min-h-screen bg-primary">
       {/* Hero Section */}
-      <div className="flex flex-col items-center relative w-full h-[650px] bg-primary">
-        {/* Logo */}
-        <div className="absolute top-6 items-center z-5">
-          <LogoComp />
-        </div>{" "}
+      <div className="flex flex-col items-center relative w-full h-screen overflow-hidden bg-primary">
+        {/* Background Image */}
         <Image
           src="/img/book.png"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover z-0"
         />
+
+        {/* Overlay background to darken image */}
+        <div className="absolute inset-0 bg-primary opacity-80 z-10"></div>
+
+        {/* Logo */}
+        <div className="absolute top-6 z-20">
+          <LogoComp />
+        </div>
+
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-primary opacity-80 z-0">
-          <div className="absolute inset-0 flex flex-col items-center justify-evenly px-4 text-center">
-            <h1 className="text-xl md:text-3xl horizon mt-44">
-              <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
-                BOOK YOUR STUDIO{" "}
-              </span>
-              <span className="text-white">RECORDING TIME</span>
-            </h1>
-            <p className="text-sm md:text-base max-w-xl text-[#FAFAFA]">
-              Secure your session in a professional studio space. High-quality
-              recording, mixing, and mastering, all in one place.
-            </p>
-            <div className="flex flex-col md:flex-row gap-6">
-              {Book.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-4 bg-[#252525] py-6 px-4 rounded-lg shadow-lg"
-                >
-                  <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-2xl rounded-full p-3">
-                    {item.icon}
-                  </div>
-                  <div className="flex flex-col">
-                    <p className="text-white text-lg font-semibold">
-                      {item.price}
-                    </p>
-                    <p className="text-[#8C9092] text-sm">{item.detail}</p>
-                  </div>
+        <div className="absolute inset-0 z-20 mt-36 px-4 text-center flex flex-col items-center gap-14">
+          <h1 className="text-xl md:text-3xl horizon mt-46 tracking-widest">
+            <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
+              BOOK YOUR STUDIO{" "}
+            </span>
+            <span className="text-white">RECORDING TIME</span>
+          </h1>
+          <p className="text-sm md:text-base w-full md:w-[640px] text-[#FAFAFA] tracking-widest">
+            Secure your session in a professional studio space. High-quality
+            recording, mixing, and mastering, all in one place.
+          </p>
+          <div className="flex flex-col md:flex-row gap-6">
+            {Book.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-4 bg-[#252525] py-6 px-4 rounded-lg shadow-lg"
+              >
+                <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-2xl rounded-full p-3">
+                  {item.icon}
                 </div>
-              ))}
-            </div>
+                <div className="flex flex-col">
+                  <p className="text-white text-lg font-semibold">
+                    {item.price}
+                  </p>
+                  <p className="text-[#8C9092] text-sm">{item.detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Booking Section */}
-      <div id="form" className="py-16 md:py-10 globalContainer text-white">
-        <div className="flex flex-col md:flex-row gap-8">
+      <div id="form" className="py-16 md:py-14 globalContainer text-white">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-4">
           {/* Booking Form */}
-          <div className="bg-[#252525] rounded-xl p-6 w-full md:max-w-4xl flex flex-col justify-around">
-            <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-wide">
+          <div className="bg-[#252525] rounded-xl p-6 w-full md:w-[80%] flex flex-col gap-4 md:gap-10">
+            <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-widest">
               Book{" "}
               <span className="horizon-outlined text-lg md:text-3xl">
                 Your Session
               </span>
             </p>
-            <div className="flex md:flex-row flex-col w-full gap-4 md:gap-8">
+            <div className="flex md:flex-row flex-col w-full gap-4 md:gap-10">
               {/* Date Picker */}
-              <div className=" block w-full md:w-1/2">
-                <label className="mb-2 text-[12px] md:text-base font-medium">
-                  Select Date
-                </label>
-                <input
-                  type="date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="date-input uppercase appearance-none text-white w-full p-2 rounded bg-primary border border-[#374151] mt-2 md:mt-2 text-[10px] md:text-base"
-                />
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 w-full">
+                <div className="block w-full">
+                  <label className="mb-2 text-sm md:text-base font-medium text-white">
+                    Select Date
+                  </label>
+                  <div className="relative px-4 py-3 rounded-lg bg-primary border border-[#374151] mt-2 text-xs md:text-base">
+                    <DatePicker
+                      selected={date}
+                      onChange={(date) => setDate(date)}
+                      placeholderText="04/05/2025"
+                      className="text-[#8C9092] w-full "
+                    />
 
-              {/* Duration Selector */}
-              <div className="block w-full md:w-1/2">
-                <label className="mb-2 text-[12px] md:text-base font-medium">
-                  Select Duration (in hour)
-                </label>
-                <select
-                  value={duration}
-                  onChange={(e) => setDuration(Number(e.target.value))}
-                  className="w-full mb-4 p-2 rounded bg-primary border border-[#374151] mt-2 text-[10px] md:text-base"
-                >
-                  <option value={1}>1 hour</option>
-                  <option value={2}>2 hours</option>
-                  <option value={3}>3 hours</option>
-                </select>
+                    <LuCalendarDays className="h-5 w-5 text-white absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* Duration Selector */}
+                <div className="block w-full gap-4">
+                  <label className="mb-2 text-sm md:text-base font-medium">
+                    Select Duration (in hour)
+                  </label>
+                  <select
+                    value={duration}
+                    onChange={(e) => setDuration(Number(e.target.value))}
+                    className="w-full px-4 py-3 rounded-lg bg-primary border border-[#374151] mt-2 text-xs md:text-base text-[#8C9092]"
+                  >
+                    <option value={1}>1 hour</option>
+                    <option value={2}>2 hours</option>
+                    <option value={3}>3 hours</option>
+                  </select>
+                </div>
               </div>
             </div>
 
             {/* Time Slots */}
             <div className="w-full">
-              <label className="block mb-2 text-[12px] md:text-base font-medium">
+              <label className="block mb-2 text-sm md:text-base font-medium text-[#FAFAFA]">
                 Select Time Slot
               </label>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm md:text-base">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-base text-[#8C9092]">
                 {timeOptions.map((slot, idx) => (
                   <button
                     key={idx}
-                    className={`px-4 py-2 rounded w-full ${
-                      timeSlot === slot.name ? "bg-purple-600" : "bg-primary"
+                    className={`px-4 py-3 rounded w-full ${
+                      timeSlot === slot.name ? "bg-primary" : "bg-primary"
                     } hover:bg-[#444]`}
                     onClick={() => setTimeSlot(slot.name)}
                   >
@@ -148,12 +163,10 @@ const BookStudio = () => {
                   </button>
                 ))}
                 <select
-                  className="px-4 py-2 rounded bg-primary border border-[#374151] text-sm md:text-base w-full"
+                  className="px-4 py-3 rounded-lg bg-primary border border-[#374151] text-sm md:text-base w-full"
                   onChange={(e) => setTimeSlot(e.target.value)}
                 >
-                  <option className="text-text-[12px] md:text-base">
-                    Select time
-                  </option>
+                  <option className="text-xs md:text-base">Select time</option>
                   {extraTimes.map((et, idx) => (
                     <option key={idx} value={et.name}>
                       {et.name}
@@ -164,8 +177,8 @@ const BookStudio = () => {
             </div>
 
             {/* Upload Beat */}
-            <div>
-              <label className="block mb-2 text-sm md:text-base font-medium">
+            <div className="gap-4">
+              <label className="block mb-2 text-sm md:text-base font-medium text-[#FAFAFA]">
                 Upload Beat
               </label>
               <input
@@ -173,12 +186,12 @@ const BookStudio = () => {
                 placeholder="Provide your Google Drive link here..."
                 value={beatLink}
                 onChange={(e) => setBeatLink(e.target.value)}
-                className="w-full mb-4 p-2 rounded bg-primary border border-[#374151] text-sm md:text-base"
+                className="w-full mb-4 px-4 py-3 rounded-lg bg-primary border border-[#374151] text-xs md:text-base"
               />
             </div>
 
             {/* Total Amount */}
-            <div className="mb-4 bg-primary p-3 rounded flex justify-between items-center font-semibold">
+            <div className="mb-4 bg-primary p-6 rounded-lg flex justify-between items-center font-semibold">
               <span className="text-[#8C9092] text-sm md:text-xl">
                 Total Amount:
               </span>
@@ -188,7 +201,12 @@ const BookStudio = () => {
             </div>
 
             {/* Confirm Booking Button */}
-            <button className="w-full py-3 rounded text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base">
+            <button
+              onClick={() => {
+                setShowPopUp(true);
+              }}
+              className="w-full tracking-widest p-4 rounded-lg text-white font-semibold bg-gradient-to-r from-[#9A58E6] to-[#D94CAB] hover:opacity-90 transition text-sm md:text-base"
+            >
               Confirm Booking
             </button>
           </div>
@@ -196,8 +214,8 @@ const BookStudio = () => {
           {/* Studio Info */}
           <div className="flex flex-col gap-4">
             {/* Studio Location */}
-            <div className="bg-[#252525] p-4 rounded-md">
-              <p className="text-sm md:text-lg font-semibold mb-3">
+            <div className="bg-[#252525] rounded-2xl px-4 py-6 md:px-6 md:py-9">
+              <p className="text-base md:text-lg mb-6 text-center tracking-widest text-[#FAFAFA]">
                 Studio Location
               </p>
               <iframe
@@ -205,30 +223,34 @@ const BookStudio = () => {
                 width="100%"
                 height="250"
                 loading="lazy"
-                className="rounded-md mb-4"
+                className="rounded-md mb-8"
               ></iframe>
-              <div className="flex gap-2 items-start mb-2">
-                <FaLocationDot className="mt-1" />
-                <p className="text-[12px] md:text-base">
+              <div className="flex gap-4 items-center mb-2">
+                <FaLocationDot size={16} />
+                <p className="text-sm md:text-base tracking-wider">
                   16 Anderson St, Werribee 3030 VIC
                 </p>
               </div>
-              <div className="flex gap-2 items-start">
-                <FaPhoneAlt className="mt-1" />
-                <p className="text-[12px] md:text-base">+61 403 464 735</p>
+              <div className="flex gap-4 items-center">
+                <FaPhoneAlt size={16} />
+                <p className="text-sm md:text-base tracking-wider">
+                  +61 403 464 735
+                </p>
               </div>
             </div>
 
             {/* Studio Rules */}
-            <div className="bg-[#252525] p-4 rounded-md">
-              <p className="text-sm md:text-lg font-semibold mb-3">
+            <div className="bg-[#252525] rounded-2xl px-4 py-6 md:px-6 md:py-9">
+              <p className="text-base md:text-lg mb-6 tracking-widest text-center">
                 Studio Rules
               </p>
               <div className="space-y-2">
                 {StudioRules.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2">
-                    <span className="text-xl">{item.icon}</span>
-                    <p className="text-[12px] md:text-base">{item.name}</p>
+                  <div key={idx} className="flex items-center gap-4">
+                    <span>{item.icon}</span>
+                    <p className="text-sm md:text-base tracking-wider">
+                      {item.name}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -236,6 +258,12 @@ const BookStudio = () => {
           </div>
         </div>
       </div>
+      {/* Pop-up */}
+      {ShowPopUp && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <PopUpForm onClose={() => setShowPopUp(false)} />
+        </div>
+      )}
     </div>
   );
 };

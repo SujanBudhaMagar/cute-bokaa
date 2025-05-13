@@ -61,14 +61,14 @@ const Footer = () => {
         />
       )}
       <hr className="border border-[#FAFAFA] mt-10 w-full hidden md:block" />
-      <div className="flex flex-col md:flex-row items-start justify-between py-10 md:py-18 md:gap-8 gap-2">
+      <div className="flex flex-col md:flex-row items-start justify-around py-10 md:py-18 md:gap-8 gap-4">
         {/* Quick Links */}
         <div className="flex flex-col text-white text-sm w-full md:w-auto">
           <div
             className="flex md:block cursor-pointer gap-3"
             onClick={() => setOpenQuickLinks(!openQuickLinks)}
           >
-            <p className="horizon mb-4">Quick Links</p>
+            <p className="horizon mb-2 md:mb-4">Quick Links</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
@@ -85,33 +85,13 @@ const Footer = () => {
         </div>
         {/* Quick Links */}
 
-        {/* Support */}
-        <div className="flex flex-col text-white text-sm w-full md:w-auto">
-          <div
-            className="flex md:block cursor-pointer"
-            onClick={() => setOpenSupport(!openSupport)}
-          >
-            <p className="horizon mb-4">Support</p>
-            <FaAngleDown size={20} className="md:hidden" />
-          </div>
-          <div
-            className={`flex-col ${
-              openSupport ? "flex" : "hidden"
-            } md:flex gap-4`}
-          >
-            <Link href="/faq">FAQ</Link>
-            <Link href="/helpcenter">Help Center</Link>
-          </div>
-        </div>
-        {/* Support */}
-
         {/* Resources */}
         <div className="flex flex-col text-white text-sm w-full md:w-auto">
           <div
             className="flex md:block cursor-pointer"
             onClick={() => setOpenResources(!openResources)}
           >
-            <p className="horizon mb-4">Resources</p>
+            <p className="horizon mb-2 md:mb-4">Resources</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
@@ -131,7 +111,7 @@ const Footer = () => {
             className="flex md:block cursor-pointer"
             onClick={() => setOpenLegal(!openLegal)}
           >
-            <p className="horizon mb-4">Legal</p>
+            <p className="horizon mb-2 md:mb-4">Legal</p>
             <FaAngleDown size={20} className="md:hidden" />
           </div>
           <div
