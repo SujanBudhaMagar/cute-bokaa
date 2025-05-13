@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import Image from "next/image";
 import LogoComp from "@/components/LogoComp";
 import MusicCard from "@/components/card/MusicCard";
+import CheckoutModal from "@/components/checkout";
 
 export default function ShoppingCart() {
   const [cart, setCart] = useState({
@@ -70,6 +71,21 @@ export default function ShoppingCart() {
     }));
   };
 
+  const [CartModel, setCartModel] = useState(false);
+
+  useEffect(() => {
+    if (CartModel) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  
+    // Cleanup in case the component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [CartModel]);
+
   return (
     <div className="globalContainer relative overflow-hidden">
       <LogoComp />
@@ -101,7 +117,9 @@ export default function ShoppingCart() {
                     </div>
                     <div>
                       <p className="text-xs md:text-base">{item.name}</p>
-                      <p className="text-[10px] md:text-sm text-[#8C9092]">{item.license}</p>
+                      <p className="text-[10px] md:text-sm text-[#8C9092]">
+                        {item.license}
+                      </p>
                       <div className="flex items-center mt-2">
                         <button
                           className="py-[1px] px-2 flex items-center justify-center border border-[#E5E7EB] rounded-sm"
@@ -161,7 +179,9 @@ export default function ShoppingCart() {
                     </div>
                     <div>
                       <p className=" text-xs md:text-base ">{item.name}</p>
-                      <p className="text-[10px] md:text-sm text-[#8C9092]">{item.details}</p>
+                      <p className="text-[10px] md:text-sm text-[#8C9092]">
+                        {item.details}
+                      </p>
                       <div className="flex items-center mt-2">
                         <button
                           className="py-[1px] px-2 flex items-center justify-center border border-[#E5E7EB] rounded-sm"
@@ -229,16 +249,24 @@ export default function ShoppingCart() {
           {/* Price Breakdown */}
           <div className="space-y-3 mb-6">
             <div className="flex justify-between">
-              <span className="text-[#FAFAFA]  text-xs md:text-base ">Subtotal</span>
-              <span className=" text-xs md:text-base ">${subtotal.toFixed(2)}</span>
+              <span className="text-[#FAFAFA]  text-xs md:text-base ">
+                Subtotal
+              </span>
+              <span className=" text-xs md:text-base ">
+                ${subtotal.toFixed(2)}
+              </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-[#8C9092]  text-xs md:text-base ">Discount</span>
-              <span className=" text-xs md:text-base ">-${discount.toFixed(2)}</span>
+              <span className="text-[#8C9092]  text-xs md:text-base ">
+                Discount
+              </span>
+              <span className=" text-xs md:text-base ">
+                -${discount.toFixed(2)}
+              </span>
             </div>
             <div className="flex justify-between">
               <span className="text-[#FAFAFA]  text-xs md:text-base ">Tax</span>
-              <span className=" text-xs md:text-base " >${tax.toFixed(2)}</span>
+              <span className=" text-xs md:text-base ">${tax.toFixed(2)}</span>
             </div>
             <div className="h-px bg-[#8C9092] my-4"></div>
             <div className="flex justify-between  text-xs md:text-base ">
@@ -248,20 +276,22 @@ export default function ShoppingCart() {
           </div>
 
           {/* Checkout Button */}
-          <button className="w-full bg-gradient-to-r from-[#9B24CB] to-[#F03F98] border border-[#D4D4D4] text-white py-3 rounded-md transition-colors  text-xs md:text-base ">
+          <button onClick={()=>setCartModel(true)} className="w-full bg-gradient-to-r from-[#9B24CB] to-[#F03F98] border border-[#D4D4D4] text-white py-3 rounded-md transition-colors  text-xs md:text-base ">
             Proceed to Checkout
           </button>
         </div>
       </section>
 
       <section>
-          <h1 className="text-white text-xl d:text-3xl horizon-outlined text-center my-10">
+        <h1 className="text-white text-xl d:text-3xl horizon-outlined text-center my-10">
           You <span className="horizon">Might Also Like</span>
-          </h1>
-          <div className="pb-10">
-          <MusicCard/>
-          </div>
+        </h1>
+        <div className="pb-10">
+          <MusicCard />
+        </div>
       </section>
+
+     <CheckoutModal isOpen={CartModel} onclose={() => setCartModel(false)}/>
     </div>
   );
 }

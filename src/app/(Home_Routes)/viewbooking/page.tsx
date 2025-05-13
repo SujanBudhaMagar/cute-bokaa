@@ -13,6 +13,8 @@ const ViewBooking = () => {
   const [equipment, setEquipment] = useState("Guitar");
   const [beatUrl, setBeatUrl] = useState("http beat.com");
 
+
+
   return (
     <div>
       <section className="w-full">
@@ -149,6 +151,8 @@ const ViewBooking = () => {
             >
               Edit Booking
             </button>
+
+           
           </div>
         </div>
       </div>
