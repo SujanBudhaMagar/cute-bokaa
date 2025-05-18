@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
-import { FaCircle, FaEllipsisH, FaEye, FaChevronDown } from "react-icons/fa"
+import { FaCircle, FaEye, FaChevronDown } from "react-icons/fa"
 
 // Order data constant
 const ORDERS_DATA = [

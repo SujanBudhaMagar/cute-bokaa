@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { FaCamera, FaCheck, FaTrashAlt } from "react-icons/fa";
+import { FaCamera,  FaTrashAlt } from "react-icons/fa";
 
 // Define interfaces for our state
 interface ProfileData {
