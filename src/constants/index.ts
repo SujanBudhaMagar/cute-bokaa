@@ -11,6 +11,8 @@ import {
   ServiceOption,
   comparisonDataProps,
   time,
+  orderItemsProps,
+  wishlistItemsprops,
 } from "@/types";
 
 export const YoutubeData: AboutDataProps[] = [
@@ -389,5 +391,87 @@ export const comparisonData: comparisonDataProps[] = [
     category: "Mastering",
     regular: "Additional Charge",
     cuteboka: "FREE with Mixing Service",
+  },
+];
+
+
+export const orderItems:orderItemsProps[] = [
+  {
+    id: 1,
+    title: "Summer Vibes Beat",
+    subtitle: "Standard License",
+    image: "/img/blogimg/5.jpg",
+    status: "Completed",
+  },
+  {
+    id: 2,
+    title: "Producer Hoodie",
+    subtitle: "Black - Size L",
+    image: "/img/trip.jpg",
+    status: "Processing",
+  },
+];
+
+
+export const wishlistItems:wishlistItemsprops[] = [
+  {
+    id: 1,
+    title: "Trap Soul Beat",
+    price: "$89.99",
+    image: "/img/worn/1.jpg",
+  },
+  {
+    id: 2,
+    title: "Hip Hop Bundle",
+    price: "$49.99",
+    image: "/img/blogimg/7.jpg",
+  },
+  {
+    id: 3,
+    title: "Trap Soul Beat",
+    price: "$89.99",
+    image: "/img/worn/1.jpg",
+  },
+  {
+    id: 4,
+    title: "Hip Hop Bundle",
+    price: "$49.99",
+    image: "/img/blogimg/7.jpg",
+  },
+  {
+    id: 5,
+    title: "Trap Soul Beat",
+    price: "$89.99",
+    image: "/img/worn/1.jpg",
+  },
+  {
+    id: 6,
+    title: "Hip Hop Bundle",
+    price: "$49.99",
+    image: "/img/blogimg/7.jpg",
+  },
+  {
+    id: 7,
+    title: "Trap Soul Beat",
+    price: "$89.99",
+    image: "/img/worn/1.jpg",
+  },
+  {
+    id: 8,
+    title: "Hip Hop Bundle",
+    price: "$49.99",
+    image: "/img/blogimg/7.jpg",
+  },
+  {
+    id: 9,
+    title: "Trap Soul Beat",
+    price: "$89.99",
+    image: "/img/worn/1.jpg",
+  },
+  {
+    id: 10,
+    title: "Hip Hop Bundle",
+    price: "$49.99",
+    image: "/img/blogimg/7.jpg",
   },
 ];

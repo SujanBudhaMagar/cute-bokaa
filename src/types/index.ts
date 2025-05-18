@@ -122,3 +122,25 @@ export interface Feature1props {
   title: string;
   description: string;
 }
+
+export interface orderItemsProps {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  status: string;
+}
+
+export interface wishlistItemsprops {
+  id: number;
+  title: string;
+  price: string;
+  image: string;
+}
+
+
+export interface wishlistItemsProps {
+  key: string;
+  label: string;
+  icon: JSX.Element;
+}

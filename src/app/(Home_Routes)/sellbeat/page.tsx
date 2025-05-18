@@ -1,4 +1,4 @@
-"use client";
+
 import LogoComp from "@/components/LogoComp";
 import { Feature1props } from "@/types";
 import Image from "next/image";
