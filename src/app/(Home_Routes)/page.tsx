@@ -34,13 +34,18 @@ const Home = () => {
   ];
   useEffect(() => {
     if (showPopUp) {
+      const scrollBarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
     } else {
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     }
 
     return () => {
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     };
   }, [showPopUp]);
 
@@ -299,7 +304,7 @@ const Home = () => {
 
       {/* Landing page popup */}
       {showPopUp && (
-        <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/50 transition-opacity duration-300 opacity-100 flex items-center justify-center z-50">
           <LandingPagePopUpForm onclose={() => setShowPopUp(false)} />
         </div>
       )}

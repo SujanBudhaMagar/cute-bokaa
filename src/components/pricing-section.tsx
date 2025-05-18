@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 interface Service {
@@ -18,6 +19,10 @@ interface PricingSectionProps {
 export default function PricingSection({ services }: PricingSectionProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
+  const pathname = usePathname();
+
+  const isMixingForm = pathname === "/mixingpro";
+  const isCustomForm = pathname === "/custombeat";
 
   const toggleService = (id: string) => {
     setSelectedServices((prev) => {
@@ -106,12 +111,23 @@ export default function PricingSection({ services }: PricingSectionProps) {
 
         {/* Buy Now Button */}
         <div className="flex justify-end mt-4">
-          <Link
-            href="/mixingform"
-            className="bg-gradient-to-r from-[#945AED] to-[#E6499E] px-8 py-4 rounded-lg text-white hover:opacity-90 transition-opacity text-sm md:text-xl border-[1px] border-[#8C9092]"
-          >
-            Buy Now
-          </Link>
+          {isMixingForm ? (
+            <Link
+              href="/mixingform"
+              className="bg-gradient-to-r from-[#945AED] to-[#E6499E] px-8 py-4 rounded-lg text-white hover:opacity-90 transition-opacity text-sm md:text-xl border-[1px] border-[#8C9092]"
+            >
+              Buy Now
+            </Link>
+          ) : isCustomForm ? (
+            <Link
+              href="/custombeatform"
+              className="bg-gradient-to-r from-[#945AED] to-[#E6499E] px-8 py-4 rounded-lg text-white hover:opacity-90 transition-opacity text-sm md:text-xl border-[1px] border-[#8C9092]"
+            >
+              Buy Now
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

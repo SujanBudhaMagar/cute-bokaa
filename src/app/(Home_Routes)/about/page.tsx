@@ -12,7 +12,7 @@ const About = () => {
       {/* details */}
       <div className="bg-[#000000] flex flex-col items-center">
         <LogoComp />
-        <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer ">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer tracking-widest">
           <div className="w-full md:w-[55%] ml-4 ">
             <div className="inline-block">
               <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest horizon">
