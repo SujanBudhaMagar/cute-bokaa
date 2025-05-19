@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import { BiPause, BiPlay } from "react-icons/bi";
@@ -44,7 +45,7 @@ const AudioPlayer = ({ title, sub, Array }: AudioPlayerProps) => {
               ))}
             </div>
           </div>
-          <p className="text-[12px] text-[#8C9092]">{sub}</p>
+          <Link href={"producer"}><p className="text-[12px] text-[#8C9092]">{sub}</p></Link>
         </div>
       </div>
       <div className="w-full h-4 bg-zinc-800 rounded-full my-6 overflow-hidden">

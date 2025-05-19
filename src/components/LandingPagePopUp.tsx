@@ -11,7 +11,7 @@ export const LandingPagePopUpForm: React.FC<LandingPagePopUpProps> = ({
     <div className="flex items-center justify-center h-screen">
       <div className="relative h-[307px] w-[340px] md:h-[350px] md:w-[450px] flex flex-col items-center justify-center bg-[#252525] rounded-2xl py-8 px-5 text-white">
         <IoMdClose
-          className="absolute top-4 right-5 h-6 w-6 md:h-8 md:w-8"
+          className="absolute top-4 right-5 h-6 w-6 md:h-8 md:w-8 cursor-pointer"
           onClick={onclose}
         />
         <h1 className="horizon-outlined tracking-widest text-xl md:text-3xl mb-1">

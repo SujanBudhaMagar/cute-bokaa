@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import { IoMdStar } from "react-icons/io";
 import { RxMixerHorizontal } from "react-icons/rx";
 import { HiFire } from "react-icons/hi";
@@ -36,22 +35,12 @@ const CustomBeatData: CustomBeatProps[] = [
 ];
 
 const CustomBeat = () => {
-  const [blinkTarget, setBlinkTarget] = useState<"div1" | "image">("div1");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setBlinkTarget((prev) => (prev === "div1" ? "image" : "div1"));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="bg-primary overflow-hidden min-h-screen globalContainer">
       <LogoComp />
       <div
-        className={`absolute w-[210px] md:w-[585px] h-[15vh] md:h-[20vh] rounded ${
-          blinkTarget === "div1" ? "blinking-border" : ""
-        }`}
+        className={`absolute w-[210px] md:w-[585px] h-[15vh] md:h-[20vh] rounded `}
       ></div>
 
       <div className="flex flex-col items-center justify-around md:justify-between">
@@ -75,9 +64,7 @@ const CustomBeat = () => {
         {/* features */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:my-14 my-6 md:gap-9">
           <div
-            className={`w-fit rounded ${
-              blinkTarget === "image" ? "blinking-border" : ""
-            }`}
+            className={`w-fit rounded blinking-border`}
           >
             <Image
               src="/img/custombeat.jpg"

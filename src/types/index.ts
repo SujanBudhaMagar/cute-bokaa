@@ -85,7 +85,7 @@ export interface blogCardprops {
 }
 
 export interface FeatureProps {
-  name: string;
+  name: JSX.Element;
   available: boolean;
 }
 

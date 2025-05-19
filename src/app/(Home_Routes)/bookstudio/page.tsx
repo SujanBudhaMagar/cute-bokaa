@@ -47,13 +47,13 @@ const BookStudio = () => {
   return (
     <div className="min-h-screen bg-primary">
       {/* Hero Section */}
-      <div className="flex flex-col items-center relative w-full h-screen overflow-hidden bg-primary">
+      <div className="flex flex-col items-center relative w-full h-screen md:h-[700px] overflow-hidden bg-primary">
         {/* Background Image */}
         <Image
           src="/img/book.png"
           alt="Background"
           fill
-          className="object-cover z-0"
+          className="object-cover z-0 w-auto h-full"
         />
 
         {/* Overlay background to darken image */}
@@ -219,7 +219,7 @@ const BookStudio = () => {
                 Studio Location
               </p>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14136.810748159813!2d85.35074544999999!3d27.6492001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1745922536704!5m2!1sen!2snp"
+                src="https://www.google.com/maps?q=7+Highcombe+Crescent,+St+Albans,+VIC+3021,+Australia&output=embed"
                 width="100%"
                 height="250"
                 loading="lazy"
@@ -228,13 +228,13 @@ const BookStudio = () => {
               <div className="flex gap-4 items-center mb-2">
                 <FaLocationDot size={16} />
                 <p className="text-sm md:text-base tracking-wider">
-                  16 Anderson St, Werribee 3030 VIC
+                  7 Highcombe St, St Albans 3021, Melbourne 
                 </p>
               </div>
               <div className="flex gap-4 items-center">
                 <FaPhoneAlt size={16} />
                 <p className="text-sm md:text-base tracking-wider">
-                  +61 403 464 735
+                 0403 464 735
                 </p>
               </div>
             </div>

@@ -7,7 +7,6 @@ import {
   ProductDataProps,
   WornProps,
   blogCardprops,
-  FeatureProps,
   ServiceOption,
   comparisonDataProps,
   time,
@@ -289,23 +288,7 @@ export const BlogCardData: blogCardprops[] = [
   },
 ];
 
-export const standardFeatures: FeatureProps[] = [
-  { name: "High Quality WAV Version", available: true },
-  { name: "Radio Play & Profit Live Performance", available: true },
-  { name: "Unlimited Streams  50,000 Streams", available: false },
-  { name: "Unlimited Rights Limited Rights", available: false },
-  { name: "Free Performance Version", available: false },
-  { name: "Producer Tag", available: false },
-];
 
-export const premiumFeatures: FeatureProps[] = [
-  { name: "Fully Customized Beat with STEMS", available: true },
-  { name: "Exclusive License with Full Rights", available: true },
-  { name: "Unlimited Streams", available: true },
-  { name: "Free Performance Version", available: true },
-  { name: "Radio Play & Profit Live Performance", available: true },
-  { name: "Remove Producer Tag", available: true },
-];
 
 export const services: ServiceOption[] = [
   {

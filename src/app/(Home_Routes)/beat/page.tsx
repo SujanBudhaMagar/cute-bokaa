@@ -3,12 +3,30 @@ import Image from "next/image";
 import PricingCard from "@/components/card/Pricing-Card";
 import AudioPlayer from "@/components/card/Audio-Player";
 import { FaCrown } from "react-icons/fa6";
-import { premiumFeatures, standardFeatures } from "@/constants";
+
 import LogoComp from "@/components/LogoComp";
 import MusicCard from "@/components/card/MusicCard";
 import Link from "next/link";
+import { FeatureProps } from "@/types";
 
 const AudioArray = ["140 BPM", "Trap", "Am"];
+const standardFeatures: FeatureProps[] = [
+  { name: <p>High Quality WAV Version</p>, available: true },
+  { name: <p>Radio Play & Profit Live Performance</p>, available: true },
+  { name: <p><span className="line-through">Unlimited Streams</span> 50,000 Streams</p>, available: false },
+  { name: <p><span className="line-through">Unlimited Rights </span> Limited Rights</p>, available: false },
+  { name: <p>Free Performance Version</p>, available: false },
+  { name: <p>Producer Tag</p>, available: false },
+];
+
+const premiumFeatures: FeatureProps[] = [
+  { name: <p>Fully Customized Beat with STEMS</p>, available: true },
+  { name: <p>Exclusive License with Full Rights</p>, available: true },
+  { name: <p>Unlimited Streams</p>, available: true },
+  { name: <p>Free Performance Version</p>, available: true },
+  { name: <p>Radio Play & Profit Live Performance</p>, available: true },
+  { name: <p>Remove Producer Tag</p>, available: true },
+];
 
 const Beat = () => {
   return (
@@ -27,7 +45,9 @@ const Beat = () => {
               </span>{" "}
               PACKAGE
             </h2>
-            <p className="text-xl md:text-3xl text-white md:mt-1 text-center">$29.99</p>
+            <p className="text-xl md:text-3xl text-white md:mt-1 text-center">
+              $29.99
+            </p>
           </div>
 
           <PricingCard features={standardFeatures} />
@@ -58,7 +78,10 @@ const Beat = () => {
               <button className="flex-1 bg-gradient-to-r from-[#9B58E6] to-[#E94CA1] text-white py-4  rounded-lg border border-[#8C9092] ">
                 Buy Now
               </button>
-              <Link href={"/cart"} className="flex-1 flex items-center justify-center bg-transparent border border-[#8C9092] text-white py-4  rounded-lg">
+              <Link
+                href={"/cart"}
+                className="flex-1 flex items-center justify-center bg-transparent border border-[#8C9092] text-white py-4  rounded-lg"
+              >
                 Add to Cart
               </Link>
             </div>
@@ -80,7 +103,9 @@ const Beat = () => {
               </span>{" "}
               PACKAGE
             </h2>
-            <p className="text-xl md:text-3xl text-white mt-1 text-center">$199.99</p>
+            <p className="text-xl md:text-3xl text-white mt-1 text-center">
+              $199.99
+            </p>
           </div>
 
           <PricingCard features={premiumFeatures} />

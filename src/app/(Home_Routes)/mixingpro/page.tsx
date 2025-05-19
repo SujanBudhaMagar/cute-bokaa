@@ -165,7 +165,7 @@ const Home = () => {
                 ))}
               </ul>
 
-              <div className="bg-[#252525] rounded-lg py-3.5 px-5 border-[#9B24CB] border">
+              <div className="bg-[#252525] rounded-lg py-3.5 px-5 blinking-border">
                 <div className="text-center mb-4">
                   <h3>After Mixing</h3>
                   <p>(Professionally Enhanced)</p>
