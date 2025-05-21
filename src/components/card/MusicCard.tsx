@@ -52,9 +52,11 @@ const MusicCard = () => {
 
               <div className="flex items-center justify-between pt-3 text-[#FAFAFA]">
                 <p className="text-xs">${item.price}</p>
+               
                 <button className="text-[10px] py-1.5 px-4 bg-[#151515] rounded-[6px]">
                   Buy
                 </button>
+              
               </div>
             </div>
             <div className="absolute top-1 right-1 p-1.5 bg-[#25252580] rounded-full cursor-pointer">

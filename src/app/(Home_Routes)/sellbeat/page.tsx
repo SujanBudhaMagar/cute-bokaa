@@ -88,7 +88,7 @@ const SellBeat = () => {
               </p>
               <div className="flex items-center justify-center ">
                 <Link
-                  href={""}
+                  href={"#apply"}
                   className="text-xs md:text-[16px] py-2.5 md:py-3 px-4 bg-gradient-to-r mt-8 from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer  tracking-widest "
                 >
                   Apply Now
@@ -99,10 +99,10 @@ const SellBeat = () => {
         </div>
       </section>
 
-      <div className="text-white flex items-center justify-center py-12 md:px-10">
+      <div className="text-white flex items-center justify-center py-12 md:px-10 " id="apply">
         <div className="globalContainer grid lg:grid-cols-2 gap-20">
           {/* Producer Registration Form */}
-          <div className="bg-[#252525] rounded-lg p-8">
+          <div className="bg-[#252525] rounded-lg p-8" >
             <h2 className="text-xl mb-6 tracking-wider horizon text-center">
               PRODUCER <span className="horizon-outlined">REGISTRATION</span>
             </h2>

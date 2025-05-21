@@ -13,8 +13,22 @@ const AudioArray = ["140 BPM", "Trap", "Am"];
 const standardFeatures: FeatureProps[] = [
   { name: <p>High Quality WAV Version</p>, available: true },
   { name: <p>Radio Play & Profit Live Performance</p>, available: true },
-  { name: <p><span className="line-through">Unlimited Streams</span> 50,000 Streams</p>, available: false },
-  { name: <p><span className="line-through">Unlimited Rights </span> Limited Rights</p>, available: false },
+  {
+    name: (
+      <p>
+        <span className="line-through">Unlimited Streams</span> 50,000 Streams
+      </p>
+    ),
+    available: false,
+  },
+  {
+    name: (
+      <p>
+        <span className="line-through">Unlimited Rights </span> Limited Rights
+      </p>
+    ),
+    available: false,
+  },
   { name: <p>Free Performance Version</p>, available: false },
   { name: <p>Producer Tag</p>, available: false },
 ];
@@ -75,9 +89,13 @@ const Beat = () => {
               Array={AudioArray}
             />
             <div className="flex gap-2 mt-10 w-full">
-              <button className="flex-1 bg-gradient-to-r from-[#9B58E6] to-[#E94CA1] text-white py-4  rounded-lg border border-[#8C9092] ">
+              <Link
+                href={"cart"}
+                className="flex-1 text-center bg-gradient-to-r from-[#9B58E6] to-[#E94CA1] text-white py-4  rounded-lg border border-[#8C9092] "
+              >
                 Buy Now
-              </button>
+              </Link>
+
               <Link
                 href={"/cart"}
                 className="flex-1 flex items-center justify-center bg-transparent border border-[#8C9092] text-white py-4  rounded-lg"

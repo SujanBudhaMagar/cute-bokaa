@@ -4,35 +4,44 @@ import LogoComp from "@/components/LogoComp";
 import { SpotifyData, YoutubeData } from "@/constants";
 
 import Image from "next/image";
-import { BsInstagram, BsLinkedin, BsSpotify, BsYoutube } from "react-icons/bs";
+import Link from "next/link";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsSpotify,
+  BsYoutube,
+} from "react-icons/bs";
 
 const About = () => {
   return (
-    <div className="bg-primary overflow-hidden">
+    <div className="bg-primary  overflow-hidden">
       {/* details */}
-      <div className="bg-[#000000] flex flex-col items-center">
+      <div className="bg-[#000000] py-20 flex flex-col items-center">
         <LogoComp />
         <div className="flex flex-col-reverse md:flex-row items-center justify-evenly w-full globalContainer tracking-widest">
           <div className="w-full md:w-[55%] ml-4 ">
-            <div className="inline-block">
-              <p className="text-white text-xl md:text-4xl font-bold leading-tight tracking-widest horizon">
-                {`HELLO, I'M MIKE`}
-              </p>
-              <p className="horizon inline-block px-1 mt-1 text-xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] to-[#F03F98] tracking-widest">
-                SHRESTHA
-              </p>
-            </div>
             <hr className="border-[#F03F98] border-t my-4 w-32" />
-            <p className="text-[#8C9092] md:text-xl text-sm">
-              A creative developer and content creator passionate about building
-              immersive digital experiences. With over 8 years of experience in
-              web development and digital content creation.
+            <p className="text-[#8C9092] md:text-[16px] text-[10px]">
+              {`Withdrawn & Introspective rapper Cute Boka rides hypnotic trap beats with his wavy sing or flaunting sleek flows, crafting a sonic blend that draws upon styles similar to contemporaries such as Young Thug, PnB Rock and NAV. His most notable collaboration Bhaagera & Lakshya with Sushant KC peaked at number #27 & #19 on YouTube Trending Charts (Nepal) and clocked over 2.5 Million streams worldwide. Having produced / engineered for notable artists like Sushant KC, Yodda, Chirag Khadka aka 5:55, Young Lama, NJK, Vyoma & Vek, Cute Boka is also known for his famous producer tag line “Lil Stone Finna Cook This Beat”. The Atlanta-Florida rap influenced producer who stamps his every beat with Tag has over 25 Million streams worldwide. Nepal born Hirak Hemant Bhattarai & alter ego disguised as Cute Boka had been steadily building a following performing a string of unreleased songs including “Harna Man Le Mandaina” at Local Clubs in Sydney which would lead to collaborate with Sushant KC & ABBOYE for his debut single Lakshya sampled in late Tara Devi’s “Ukali Orali Haruma”. His Before Cute Boka mixtape appeared in early 2019 which presented chock-full of versatile vocals and slick beats. The release was preceded by Sushant KC’s lead single “Bhaagera” featuring Cute Boka. And a year later, a quick turnaround with sophomore follow-up Lilac Fashion featuring the Local Sydney group 2oolit was released. The track was quickly co-signed by UK based RnB artist Jay Author who later hopped on for Lilac Fashion (Remix) with Sushant KC. He has then dropped songs like Dirty Kura Kani ft. Chirag (5:55) & Najeek REMIX ft. Oasis Thapa with a great success. He is currently managed & distributed by Silent Roar a Division of Warner Music.`}
             </p>
+
             <div className="flex gap-4 mt-6 text-white mb-5 md:mb-0">
-              <BsYoutube size={30} />
-              <BsSpotify size={30} />
-              <BsLinkedin size={30} />
-              <BsInstagram size={30} />
+              <Link href={"https://www.youtube.com/@lilrocklook/"}>
+                <BsYoutube size={30} />
+              </Link>
+              <Link
+                href={
+                  "https://open.spotify.com/embed/artist/1onW0aoWIXT09Pb9REqwO5?utm"
+                }
+              >
+                <BsSpotify size={30} />
+              </Link>
+              <Link href={"https://www.facebook.com/cutebokaofficial/"}>
+                <BsFacebook size={30} />
+              </Link>
+              <Link href={"https://www.instagram.com/lilrocklook/"}>
+                <BsInstagram size={30} />
+              </Link>
             </div>
           </div>
           <div className="relative">

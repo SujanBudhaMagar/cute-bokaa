@@ -44,6 +44,7 @@ export interface FooterImageProps {
 export interface IconProps {
   icon: React.JSX.Element;
   className: string;
+  href:string
 }
 export interface ProductDataProps {
   image: string;

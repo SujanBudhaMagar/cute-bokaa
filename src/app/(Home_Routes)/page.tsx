@@ -13,6 +13,7 @@ import React, { useEffect, useState } from "react";
 import { BsFire } from "react-icons/bs";
 import { CiYoutube } from "react-icons/ci";
 import { FaDiscord, FaSpotify } from "react-icons/fa";
+import PopupNotification from "@/components/PopNotification";
 
 const Home = () => {
   const [showPopUp, setShowPopUp] = useState(true);
@@ -246,6 +247,8 @@ const Home = () => {
         </div>
       </section>
       {/* for creators  */}
+
+      <PopupNotification />
 
       {/* Who Is  */}
       <section className="globalContainer md:py-10 pb-10 md:pb-20">

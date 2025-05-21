@@ -1,10 +1,8 @@
 "use client";
 import { FooterImage, Legal, QuickLinks } from "@/constants";
 import React, { useState } from "react";
-import { BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
-import { FaAngleDown, FaFacebook, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { CiTwitter } from "react-icons/ci";
+import { BsInstagram, BsSpotify, BsYoutube } from "react-icons/bs";
+import { FaAngleDown, FaFacebook, } from "react-icons/fa";
 import Image from "next/image";
 import { IconProps } from "@/types";
 import Link from "next/link";
@@ -12,23 +10,13 @@ import { usePathname } from "next/navigation";
 import FooterTopSection from "./FooterTopSection";
 
 const Icons: IconProps[] = [
-  { icon: <FaFacebook size={20} />, className: "hidden md:block text-white" },
+  { icon: <FaFacebook size={20} />, className: "hidden md:block text-white", href: "https://www.facebook.com/cutebokaofficial/ " },
   {
     icon: <BsInstagram size={20} />,
-    className: "block text-[#F03F98] md:text-white",
+    className: "block text-[#F03F98] md:text-white", href: "https://www.instagram.com/lilrocklook/ "
   },
-  { icon: <FaXTwitter size={20} />, className: "hidden md:block text-white" },
-  { icon: <BsLinkedin size={20} />, className: "hidden md:block text-white" },
-  { icon: <BsYoutube size={20} />, className: "hidden md:block text-white" },
-  {
-    icon: <CiTwitter size={20} />,
-    className: "block md:hidden text-[#B5C8F2]",
-  },
-  {
-    icon: <FaFacebook size={20} />,
-    className: "block md:hidden text-[#8B5CF6]",
-  },
-  { icon: <FaTiktok size={20} />, className: "block md:hidden text-[#DB9078]" },
+  { icon: <BsSpotify size={20} />, className: "hidden md:block text-white",href: "https://www.instagram.com/lilrocklook/" },
+  { icon: <BsYoutube size={20} />, className: "hidden md:block text-white",href: "https://www.youtube.com/@lilrocklook/" },
 ];
 
 const Footer = () => {
@@ -132,9 +120,9 @@ const Footer = () => {
           <p className="horizon text-sm hidden md:block">Social Media</p>
           <div className="flex items-center justify-center gap-4">
             {Icons.map((item, idx) => (
-              <div key={idx} className={item.className}>
+              <Link key={idx} href={item.href} className={item.className}>
                 {item.icon}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
