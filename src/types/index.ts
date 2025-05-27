@@ -145,3 +145,4 @@ export interface wishlistItemsProps {
   label: string;
   icon: JSX.Element;
 }
+

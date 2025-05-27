@@ -134,7 +134,7 @@ const Beat = () => {
         </div>
       </div>
 
-      <section className="globalContainer py-10 md:py-20">
+      <section className="py-10 md:py-20">
         <h1 className="horizon-outlined text-base md:text-3xl text-white mb-9">
           Top Selling <span className="horizon">Tracks RIGHT NOW</span>
         </h1>

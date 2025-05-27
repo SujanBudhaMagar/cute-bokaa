@@ -38,7 +38,7 @@ const AudioPlayer = ({ title, sub, Array }: AudioPlayerProps) => {
               {Array.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#252525] p-1.5 rounded-lg text-[10px]"
+                  className="bg-[#252525] p-1.5 rounded-lg text-[9px] md:text-[10px]"
                 >
                   {item}
                 </div>

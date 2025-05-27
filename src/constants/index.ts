@@ -117,9 +117,9 @@ export const QuickLinks: FooterProps[] = [
 ];
 
 export const Legal: FooterProps[] = [
-  { href: "/terms&conditions", name: "Terms & Conditions" },
+  { href: "/termandcondition", name: "Terms & Conditions" },
   { href: "/privacy", name: "Privacy and Policy" },
-  { href: "/copyright", name: "Copyright Complaint" },
+  { href: "/copyright", name: "Support" },
   { href: "/quickdownloads", name: "Quick Downloads" },
 ];
 

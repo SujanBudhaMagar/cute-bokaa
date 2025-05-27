@@ -10,13 +10,13 @@ import { usePathname } from "next/navigation";
 import FooterTopSection from "./FooterTopSection";
 
 const Icons: IconProps[] = [
-  { icon: <FaFacebook size={20} />, className: "hidden md:block text-white", href: "https://www.facebook.com/cutebokaofficial/ " },
+  { icon: <FaFacebook size={20} />, className: "text-[#8b5cf6] md:text-white", href: "https://www.facebook.com/cutebokaofficial/ " },
   {
     icon: <BsInstagram size={20} />,
-    className: "block text-[#F03F98] md:text-white", href: "https://www.instagram.com/lilrocklook/ "
+    className: " text-[#F03F98] md:text-white", href: "https://www.instagram.com/lilrocklook/ "
   },
-  { icon: <BsSpotify size={20} />, className: "hidden md:block text-white",href: "https://www.instagram.com/lilrocklook/" },
-  { icon: <BsYoutube size={20} />, className: "hidden md:block text-white",href: "https://www.youtube.com/@lilrocklook/" },
+  { icon: <BsSpotify size={20} />, className: " text-[#16db63] md:text-white",href: "https://www.instagram.com/lilrocklook/" },
+  { icon: <BsYoutube size={20} />, className: " text-[#F03F98] md:text-white",href: "https://www.youtube.com/@lilrocklook/" },
 ];
 
 const Footer = () => {
