@@ -45,9 +45,9 @@ const BookStudio = () => {
   const totalAmount = duration * hourlyRate;
 
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="bg-primary min-h-screen">
       {/* Hero Section */}
-      <div className="flex flex-col items-center relative w-full h-screen overflow-hidden bg-primary">
+      <div className="relative h-[500px] md:h-[730px] flex items-center justify-center flex-col">
         {/* Background Image */}
         <Image
           src="/img/book.png"
@@ -56,40 +56,45 @@ const BookStudio = () => {
           className="object-cover z-0"
         />
 
-        {/* Overlay background to darken image */}
+        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-primary opacity-80 z-10"></div>
 
         {/* Logo */}
-        <div className="absolute top-6 z-20">
+        <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 hidden md:block">
           <LogoComp />
         </div>
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 z-20 mt-36 px-4 text-center flex flex-col items-center gap-14">
-          <h1 className="text-xl md:text-3xl horizon mt-46 tracking-widest">
+        <div className="absolute inset-0 z-20 mt-28 flex flex-col justify-center items-center gap-6 md:gap-14 text-center px-4 md:px-0">
+          <h1 className="text-xl md:text-3xl horizon tracking-widest">
             <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
               BOOK YOUR STUDIO{" "}
             </span>
             <span className="text-white">RECORDING TIME</span>
           </h1>
-          <p className="text-sm md:text-base w-full md:w-[640px] text-[#FAFAFA] tracking-widest">
-            Secure your session in a professional studio space. High-quality
-            recording, mixing, and mastering, all in one place.
+          <p className="text-sm md:text-base text-[#FAFAFA] tracking-widest">
+            Secure your session in a professional studio space.
+            <br className="hidden md:block" /> High-quality recording, mixing,
+            and mastering, all in one
+            <br />
+            place.
           </p>
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex gap-6">
             {Book.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-4 bg-[#252525] py-7 px-5 rounded-2xl shadow-lg"
+                className="flex items-center gap-4 bg-[#252525] px-3 py-5 md:py-7 md:px-5 rounded-2xl shadow-lg"
               >
-                <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-2xl rounded-full p-4">
+                <div className="bg-gradient-to-b from-[#E851A4] to-[#BABBEA] text-base md:text-2xl rounded-full p-2 md:p-4">
                   {item.icon}
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-white text-lg font-semibold">
+                  <p className="text-white text-sm md:text-lg font-semibold">
                     {item.price}
                   </p>
-                  <p className="text-[#8C9092] text-sm">{item.detail}</p>
+                  <p className="text-[#8C9092] text-xs md:text-sm">
+                    {item.detail}
+                  </p>
                 </div>
               </div>
             ))}
@@ -103,7 +108,7 @@ const BookStudio = () => {
           {/* Booking Form */}
           <div className="bg-[#252525] rounded-xl p-6 w-full md:w-[80%] flex flex-col gap-4 md:gap-10">
             <p className="text-center text-lg md:text-3xl mb-6 horizon tracking-widest">
-              Book{" "}
+              Book
               <span className="horizon-outlined text-lg md:text-3xl">
                 Your Session
               </span>

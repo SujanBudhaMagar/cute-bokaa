@@ -67,7 +67,7 @@ const Navbar = () => {
                       </svg>
                     </Link>
                     {item.more && (
-                      <p className=" bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text text-[10px] mb-6 ml-1 cursor-pointer">
+                      <p className=" bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text text-[10px] mb-6 cursor-pointer">
                         {item.more}
                       </p>
                     )}

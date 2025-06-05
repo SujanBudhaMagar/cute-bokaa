@@ -3,13 +3,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
-const SearchBar = ({logo}:{logo:string}) => {
+const SearchBar = ({ logo }: { logo: string }) => {
   const treading = ["pop", "dark", "drill"];
   const Mood = [
     "all",
     "sad",
     "happy",
-    "had",
+    "hard",
     "angry",
     "cheerful",
     "passionate",

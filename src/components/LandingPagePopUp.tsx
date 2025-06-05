@@ -32,7 +32,16 @@ export const LandingPagePopUpForm: React.FC<LandingPagePopUpProps> = ({
           Sign Up
         </Link>
         <p className="text-center text-[#8C9092] text-xs tracking-wide mt-2 w-2xs md:w-xs">
-          By signing up, you agree to our Terms of Service and Privacy Policy
+          By signing up, you agree to our
+          <a href="/" className="text-[#60A5FA] hover:underline">
+            {" "}
+            Terms & Conditions{" "}
+          </a>
+          and
+          <a href="/" className="text-[#60A5FA] hover:underline">
+            {" "}
+            Privacy Policy
+          </a>
         </p>
       </div>
     </div>
