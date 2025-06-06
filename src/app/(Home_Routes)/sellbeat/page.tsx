@@ -205,7 +205,7 @@ const SellBeat = () => {
                   {PaymentSellBeat.map((payment, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-50 rounded-lg p-2 md:px-3 md:py-4 bg-primary"
+                      className="flex items-center gap-3 text-white border border-[#8C9092] w-full rounded-lg p-2 md:px-3 md:py-4 bg-primary"
                     >
                       <input
                         type="checkbox"
