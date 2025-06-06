@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 
@@ -25,7 +26,7 @@ const SearchBar = ({ logo }: { logo: string }) => {
             <input
               type="text"
               placeholder="Search beats, producers..."
-              className="bg-[#FAF8F01A] rounded-lg py-5 px-5 text-xs border border-[#F03F9880] outline-none w-[358px] md:w-[450px] placeholder-[#8C9092] text-[#8C9092] placeholder:text-[10px] md:placeholder:text-xs"
+              className="bg-[#FAF8F01A] rounded-lg py-5 px-5 text-xs border  blinking-border outline-none w-[358px] md:w-[450px] placeholder-[#8C9092] text-[#8C9092] placeholder:text-[10px] md:placeholder:text-xs"
             />
             <div className="w-fit flex gap-3 md:gap-5 items-center text-[#FAFAFA] absolute top-3 right-5">
               <div className="flex gap-2 items-center">
@@ -78,15 +79,17 @@ const SearchBar = ({ logo }: { logo: string }) => {
             </div>
           </div>
         </div>
-        <div className="hidden  md:block w-[250px] h-full">
-          <Image
-            src={logo}
-            alt="logo"
-            width={1000}
-            height={1000}
-            className="object-center w-full h-auto"
-          />
-        </div>
+        <Link href={"/"}>
+          <div className="hidden  md:block w-[250px] h-full">
+            <Image
+              src={logo}
+              alt="logo"
+              width={1000}
+              height={1000}
+              className="object-center w-full h-auto"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

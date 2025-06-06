@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import BlogCard from "@/components/card/BlogCard";
 import MusicCard from "@/components/card/MusicCard";
 import { LandingPagePopUpForm } from "@/components/LandingPagePopUp";
@@ -12,6 +13,7 @@ import React, { useEffect, useState } from "react";
 import { BsFire } from "react-icons/bs";
 import { CiYoutube } from "react-icons/ci";
 import { FaDiscord, FaSpotify } from "react-icons/fa";
+import PopupNotification from "@/components/PopNotification";
 
 const Home = () => {
   const [showPopUp, setShowPopUp] = useState(true);
@@ -64,10 +66,22 @@ const Home = () => {
 
         <div className="flex justify-between items-center py-4 md:py-12 text-[#FAFAFA]">
           <div>
-            <h3 className="text-xs md:text-xl font-bold horizon pb-4">
-              Trending <span className="horizon-outlined">Tracks</span>{" "}
-              <BsFire className="inline -mt-2 ml-2" color="#FF5027" />
-            </h3>
+            <div className="flex gap-5 overflow-hidden h-8 mb-2">
+              <h3 className="text-xs md:text-xl font-bold horizon pb-4">
+                Trending <span className="horizon-outlined">Tracks</span>{" "}
+              </h3>
+              <div className="animate-translateYLoop">
+                {[...Array(5)].map((_, index) => (
+                  <BsFire
+                    key={index}
+                    className={`ml-2 mt-4`} // custom spacing
+                    color="#FF5027"
+                    size={25}
+                  />
+                ))}
+              </div>
+            </div>
+
             <p className="hidden md:block font-normal">
               {`Discover what's hot in music right now`}
             </p>
@@ -135,7 +149,13 @@ const Home = () => {
       {/* Mixing Pro  */}
       <section className="globalContainer md:pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-4 md:gap-20">
-          <div className="relative w-full md:w-[616px] h-[250px] md:h-[640px]">
+          <motion.div
+            className="relative w-full md:w-[616px] h-[250px] md:h-[640px]"
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <Image
               src={"/img/Mixingpro.jpg"}
               alt="mixingImg"
@@ -143,8 +163,14 @@ const Home = () => {
               height={1000}
               className="object-cover w-full h-full object-[object-position:50%_10%] rounded-lg md:rounded-none"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            className="relative w-full md:w-[616px] h-[250px] md:h-[640px]"
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h1 className="horizon text-base md:text-5xl text-[#FAFAFA] inline tracking-widest relative">
               Mix<span className="horizon-outlined">ing</span>
               <span className="horizon text-[10px] md:text-xl inline md:-mt-2 ml-2 absolute bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text">
@@ -167,7 +193,7 @@ const Home = () => {
                 Buy Now
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* Mixing Pro  */}
@@ -175,7 +201,12 @@ const Home = () => {
       {/* for creators  */}
       <section className="globalContainer py-10 md:pb-20">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-4 md:gap-20">
-          <div>
+          <motion.div
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h1 className="horizon text-base md:text-5xl text-[#FAFAFA] tracking-widest">
               F<span className="horizon-outlined">or </span>
               <span className="horizon text-base md:text-5xl inline bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text">
@@ -190,13 +221,21 @@ const Home = () => {
               <p className="mt-6 text-[#8C9092] tracking-widest text-[10px] md:text-base">
                 {`Are you a Music Producer ? Do you want to start selling your own beats & make a profit ? Join me & the Top Producers of Nepal & start earning today.`}
               </p>
-              <button className="text-xs md:text-[16px] py-2.5 md:py-3 px-4 bg-gradient-to-r mt-8 from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer  tracking-widest ">
-                Apply Now
-              </button>
+              <Link href={"/sellbeat"}>
+                <button className="text-xs md:text-[16px] py-2.5 md:py-3 px-4 bg-gradient-to-r mt-8 from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer  tracking-widest ">
+                  Apply Now
+                </button>
+              </Link>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative w-full md:w-[616px] h-[250px] md:h-[640px]">
+          <motion.div
+            className="relative w-full md:w-[616px] h-[250px] md:h-[640px]"
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <Image
               src={"/img/creators.jpg"}
               alt="mixingImg"
@@ -204,10 +243,12 @@ const Home = () => {
               height={1000}
               className="object-cover w-full h-full object-[object-position:50%_10%] rounded-lg md:rounded-none"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* for creators  */}
+
+      <PopupNotification />
 
       {/* Who Is  */}
       <section className="globalContainer md:py-10 pb-10 md:pb-20">
@@ -250,7 +291,15 @@ const Home = () => {
       <section className="globalContainer md:pb-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
           {BlogCardData.slice(0, 3).map((item, idx) => (
-            <BlogCard key={idx} item={item} />
+            <motion.div
+              key={idx}
+              initial={{ y: 200, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              transition={{ ease: "easeIn" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <BlogCard item={item} />
+            </motion.div>
           ))}
         </div>
         <div className="w-full text-center md:text-right mt-7">
@@ -268,7 +317,12 @@ const Home = () => {
       {/* Drip  */}
       <section className="globalContainer py-10 md:py-20">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-4 md:gap-20">
-          <div>
+          <motion.div
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h1 className="horizon-outlined text-base md:text-5xl text-[#FAFAFA] inline tracking-widest relative">
               Dr<span className="horizon">ip</span>
               <span className="horizon text-[10px] md:text-xl inline md:-mt-2 ml-2 absolute bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text">
@@ -287,9 +341,15 @@ const Home = () => {
                 Coming Soon
               </button>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative w-full md:w-[616px] h-[250px] md:h-[640px]">
+          <motion.div
+            className="relative w-full md:w-[616px] h-[250px] md:h-[640px]"
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 100 }}
+            transition={{ ease: "easeIn" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <Image
               src={"/img/trip.jpg"}
               alt="mixingImg"
@@ -297,7 +357,7 @@ const Home = () => {
               height={1000}
               className="object-cover w-full h-full object-[object-position:50%_10%]"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* Drip  */}

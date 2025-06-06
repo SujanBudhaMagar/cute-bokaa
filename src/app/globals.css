@@ -21,22 +21,18 @@
   border: 1px solid red;
 }
 
-@keyframes slideAnimation {
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 140s linear infinite;
+}
+@keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
-}
-
-.animate-slide {
-  display: flex;
-  animation: slideAnimation 10s linear infinite;
-}
-
-.animate-slide > div {
-  flex-shrink: 0;
 }
 
 body {
@@ -59,6 +55,7 @@ body {
 
 .horizon-outlined {
   font-family: "HorizonOutlinedFont"; /* Fallback to sans-serif */
+  font-weight: 600;
 }
 
 .date-input::-webkit-calendar-picker-indicator {
@@ -85,4 +82,13 @@ body {
   border-radius: 8px;
   border-width: 2px;
   border-style: solid;
+}
+.input:-webkit-autofill,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #151515 inset;
+  box-shadow: 0 0 0 1000px #151515 inset;
+  -webkit-text-fill-color: #8c9092;
+  /* transition: background-color 5000s ease-in-out 0s; */
 }

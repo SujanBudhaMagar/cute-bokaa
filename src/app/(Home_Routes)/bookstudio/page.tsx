@@ -47,13 +47,13 @@ const BookStudio = () => {
   return (
     <div className="bg-primary min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[500px] md:h-[730px] flex items-center justify-center flex-col">
+      <div className="relative h-[500px] md:h-[730px] flex-col">
         {/* Background Image */}
         <Image
           src="/img/book.png"
           alt="Background"
           fill
-          className="object-cover z-0"
+          className="object-cover z-0 w-auto h-full"
         />
 
         {/* Dark Overlay */}
@@ -65,7 +65,7 @@ const BookStudio = () => {
         </div>
 
         {/* Overlay Content */}
-        <div className="absolute inset-0 z-20 mt-28 flex flex-col justify-center items-center gap-6 md:gap-14 text-center px-4 md:px-0">
+        <div className="absolute inset-0 z-20 md:mt-28 flex flex-col justify-center items-center gap-6 md:gap-14 text-center px-4 md:px-0">
           <h1 className="text-xl md:text-3xl horizon tracking-widest">
             <span className="bg-gradient-to-r from-[#F03F98] to-[#B5C8F2] text-transparent bg-clip-text">
               BOOK YOUR STUDIO{" "}
@@ -224,7 +224,7 @@ const BookStudio = () => {
                 Studio Location
               </p>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14136.810748159813!2d85.35074544999999!3d27.6492001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1745922536704!5m2!1sen!2snp"
+                src="https://www.google.com/maps?q=7+Highcombe+Crescent,+St+Albans,+VIC+3021,+Australia&output=embed"
                 width="100%"
                 height="250"
                 loading="lazy"
@@ -233,13 +233,13 @@ const BookStudio = () => {
               <div className="flex gap-4 items-center mb-2">
                 <FaLocationDot size={16} />
                 <p className="text-sm md:text-base tracking-wider">
-                  16 Anderson St, Werribee 3030 VIC
+                  7 Highcombe St, St Albans 3021, Melbourne
                 </p>
               </div>
               <div className="flex gap-4 items-center">
                 <FaPhoneAlt size={16} />
                 <p className="text-sm md:text-base tracking-wider">
-                  +61 403 464 735
+                  0403 464 735
                 </p>
               </div>
             </div>

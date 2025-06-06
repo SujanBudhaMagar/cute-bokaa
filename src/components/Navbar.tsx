@@ -14,13 +14,13 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="pb-3 pt-7 sticky top-0 z-50 bg-[#151515]">
+      <div className="pb-3 pt-7 sticky top-0 z-50 bg-primary">
         <div className="globalContainer">
           {/* Desktop view */}
           <div className=" hidden sm:hidden md:hidden lg:flex justify-between ">
             <div className="md:flex items-center gap-9 ">
               <Link
-                href={"/"}
+                href={"/viewallbeat"}
                 className={`text-sm flex flex-col items-center justify-center cursor-pointer group font-bold bg-gradient-to-r from-[#E94DA1] to-[#B4C8F2] text-transparent bg-clip-text text-center horizon`}
               >
                 BEAT PASAL

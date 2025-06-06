@@ -44,6 +44,7 @@ export interface FooterImageProps {
 export interface IconProps {
   icon: React.JSX.Element;
   className: string;
+  href: string;
 }
 export interface ProductDataProps {
   image: string;
@@ -85,7 +86,7 @@ export interface blogCardprops {
 }
 
 export interface FeatureProps {
-  name: string;
+  name: JSX.Element;
   available: boolean;
 }
 
@@ -97,6 +98,10 @@ export interface ServiceOption {
   priceLabel?: string;
   isIncluded?: boolean;
   isTBD?: boolean;
+}
+
+export interface ArtistDataProps {
+  name: string;
 }
 
 export interface comparisonDataProps {
@@ -121,4 +126,25 @@ export interface Feature1props {
   bgColor: string;
   title: string;
   description: string;
+}
+
+export interface orderItemsProps {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  status: string;
+}
+
+export interface wishlistItemsprops {
+  id: number;
+  title: string;
+  price: string;
+  image: string;
+}
+
+export interface wishlistItemsProps {
+  key: string;
+  label: string;
+  icon: JSX.Element;
 }

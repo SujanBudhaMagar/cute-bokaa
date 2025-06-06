@@ -13,8 +13,6 @@ const ViewBooking = () => {
   const [equipment, setEquipment] = useState("Guitar");
   const [beatUrl, setBeatUrl] = useState("http beat.com");
 
-
-
   return (
     <div>
       <section className="w-full">
@@ -55,7 +53,7 @@ const ViewBooking = () => {
                     selected={date}
                     onChange={(date) => setDate(date)}
                     placeholderText="04/05/2025"
-                    className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full"
+                    className="bg-primary border-[#374151] text-white pr-10 rounded-md p-3 w-full"
                   />
 
                   <MdOutlineDateRange className="h-5 w-5 text-white absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
@@ -69,7 +67,7 @@ const ViewBooking = () => {
                 <div className="relative mt-4">
                   <select
                     id="duration"
-                    className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full appearance-none"
+                    className="bg-primary border-[#374151] text-white pr-10 rounded-md p-3 w-full appearance-none"
                   >
                     <option>1 hour</option>
                     <option>2 hours</option>
@@ -93,13 +91,13 @@ const ViewBooking = () => {
                     type="text"
                     value={timeSlot}
                     onChange={(e) => setTimeSlot(e.target.value)}
-                    className="bg-[#151515] border-[#374151] text-[#8C9092] rounded-md p-3  w-[150px]"
+                    className="bg-primary border-[#374151] text-[#8C9092] rounded-md p-3  w-[150px]"
                     readOnly
                   />
                   <div className="relative">
                     <select
                       id="selectTime"
-                      className="bg-[#151515] border-[#374151] text-[#8C9092] rounded-md p-3 w-[180px] appearance-none"
+                      className="bg-primary border-[#374151] text-[#8C9092] rounded-md p-3 w-[180px] appearance-none"
                       onChange={(e) => setTimeSlot(e.target.value)}
                     >
                       <option value="">Select time</option>
@@ -125,20 +123,20 @@ const ViewBooking = () => {
                   type="text"
                   value={equipment}
                   onChange={(e) => setEquipment(e.target.value)}
-                  className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full"
+                  className="bg-primary border-[#374151] text-white pr-10 rounded-md p-3 w-full"
                   placeholder="Equipment"
                 />
                 <input
                   type="text"
                   value={beatUrl}
                   onChange={(e) => setBeatUrl(e.target.value)}
-                  className="bg-[#151515] border-[#374151] text-white pr-10 rounded-md p-3 w-full"
+                  className="bg-primary border-[#374151] text-white pr-10 rounded-md p-3 w-full"
                   placeholder="URL"
                 />
               </div>
             </div>
 
-            <div className="bg-[#151515] rounded-md p-6 flex justify-between items-center">
+            <div className="bg-primary rounded-md p-6 flex justify-between items-center">
               <div className="text-gray-400">Total Amount:</div>
               <div className="text-xl font-bold">$245</div>
             </div>
@@ -151,8 +149,6 @@ const ViewBooking = () => {
             >
               Edit Booking
             </button>
-
-           
           </div>
         </div>
       </div>

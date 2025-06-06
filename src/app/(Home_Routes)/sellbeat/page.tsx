@@ -1,9 +1,10 @@
 "use client";
 import LogoComp from "@/components/LogoComp";
-import { Feature1props } from "@/types";
+import { Feature1props, PaymentIn } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { FaCcMastercard, FaCcVisa, FaPaypal } from "react-icons/fa";
 import { FiBarChart2, FiCloud, FiFileText } from "react-icons/fi";
 import { IoIosArrowDown, IoMdCloudUpload } from "react-icons/io";
 
@@ -32,7 +33,26 @@ const features: Feature1props[] = [
 const SellBeat = () => {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedPayment, setSelectedPayment] = useState<number | null>(null);
 
+  const PaymentSellBeat: PaymentIn[] = [
+    {
+      icon: <FaCcVisa className="text-[#014AE6] h-6 w-6" />,
+      name: "Visa",
+    },
+    {
+      icon: <FaCcMastercard className="text-[#EB001B] h-6 w-6" />,
+      name: "Mastercard",
+    },
+    {
+      icon: <FaPaypal className="text-[#014AE6] h-6 w-6" />,
+      name: "Paypal",
+    },
+  ];
+
+  const handlePayment = (idx: number) => {
+    setSelectedPayment(idx);
+  };
   const handleDrag = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -88,7 +108,7 @@ const SellBeat = () => {
               </p>
               <div className="flex items-center justify-center ">
                 <Link
-                  href={""}
+                  href={"#apply"}
                   className="text-xs md:text-[16px] py-2.5 md:py-3 px-4 bg-gradient-to-r mt-8 from-[#A655DA] to-[#D84BAB] rounded-lg text-[#FAFAFA] hover:bg-[#252525] cursor-pointer  tracking-widest "
                 >
                   Apply Now
@@ -99,7 +119,10 @@ const SellBeat = () => {
         </div>
       </section>
 
-      <div className="text-white flex items-center justify-center py-12 md:px-10">
+      <div
+        className="text-white flex items-center justify-center py-12 md:px-10 "
+        id="apply"
+      >
         <div className="globalContainer grid lg:grid-cols-2 gap-20">
           {/* Producer Registration Form */}
           <div className="bg-[#252525] rounded-lg p-8">
@@ -174,6 +197,34 @@ const SellBeat = () => {
                   <p className="text-xs text-center text-gray-500 mt-1">
                     MP3, WAV, up to 50MB
                   </p>
+                </div>
+              </div>
+              <div>
+                <p>Mode of Payment</p>
+                <div className="flex gap-2 mt-4 mb-6">
+                  {PaymentSellBeat.map((payment, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-50 rounded-lg px-3 py-4 bg-primary"
+                    >
+                      <input
+                        type="checkbox"
+                        id={`payment-${idx}`}
+                        checked={selectedPayment === idx}
+                        onChange={() => handlePayment(idx)}
+                        className="appearance-none h-5 w-5 border border-[#8C9092] rounded-full checked:bg-[#925AEE] checked:border-transparent focus:outline-none"
+                      />
+                      <label
+                        htmlFor={`payment-${idx}`}
+                        className="flex items-center gap-2"
+                      >
+                        {payment.icon}
+                        <span className="md:text-xs text-[10px]">
+                          {payment.name}
+                        </span>
+                      </label>
+                    </div>
+                  ))}
                 </div>
               </div>
 

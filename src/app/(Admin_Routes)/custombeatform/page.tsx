@@ -54,7 +54,7 @@ const MixingProForm = () => {
   };
 
   return (
-    <div className="bg-[#151515] min-h-screen w-full overflow-hidden">
+    <div className="bg-primary min-h-screen w-full overflow-hidden">
       <Navbar />
       <div className="flex flex-col items-center justify-center px-4 md:px-0 text-white gap-6 md:gap-12">
         {/* Logo */}
@@ -68,8 +68,9 @@ const MixingProForm = () => {
               ABOUT YOUR MIXING NEEDS
             </span>
           </p>
-          <p className="text-[#8C9092] text-xs md:text-base w-sm md:w-3xl tracking-widest">
+          <p className="text-[#8C9092] text-xs md:text-base tracking-widest">
             Provide details about your beat, voice, and mixing preferences.
+            <br className="hidden md:block" />
             Upload your files, and our experts will handle the rest!
           </p>
         </div>
@@ -87,7 +88,7 @@ const MixingProForm = () => {
                 type="text"
                 placeholder="Your Full Name"
                 required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md bg-[#151515] text-xs md:text-base md:px-4 md:py-2 p-4"
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md bg-primary text-xs md:text-base md:px-4 md:py-2 p-4"
               />
             </div>
 
@@ -101,7 +102,7 @@ const MixingProForm = () => {
                 type="email"
                 placeholder="your@email.com"
                 required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md bg-[#151515] text-xs md:text-base md:px-4 md:py-2 p-4"
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md bg-primary text-xs md:text-base md:px-4 md:py-2 p-4"
               />
             </div>
 
@@ -115,64 +116,91 @@ const MixingProForm = () => {
                 type="text"
                 placeholder="Tell us about your music genre.."
                 required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-[#151515]"
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-primary"
               />
             </div>
 
-            {/* Preferred Music Style */}
+            {/* Mood */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="preferred" className="text-white mb-3">
-                Preferred Music Style
-              </label>
-              <select
-                name="preferred"
-                id="preferred"
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base p-4 md:px-4 md:py-2 bg-[#151515]"
-              >
-                <option value="Select style">Select style</option>
-                <option value="1">Style 1</option>
-                <option value="2">Style 2</option>
-                <option value="3">Style 3</option>
-              </select>
-            </div>
-
-            {/* Describe Your Needs */}
-            <div className="flex flex-col mb-4">
-              <label htmlFor="needs" className="text-white mb-3">
-                Describe Your Needs
-              </label>
-              <textarea
-                id="needs"
-                placeholder="Link your reference tracks, sample mixes"
-                required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-[#151515] text-xs md:text-base"
-              />
-            </div>
-
-            {/* Upload Files */}
-            <div className="flex flex-col mb-4">
-              <label htmlFor="files" className="text-white mb-3">
-                Upload Files
+              <label htmlFor="mood" className="text-white mb-3">
+                Mood
               </label>
               <input
-                id="files"
+                id="mood"
                 type="text"
-                placeholder="Provide your Google Drive link here..."
+                placeholder="Describe the mood you're going for..."
                 required
-                className="w-full border border-[#374151] text-[#8C9092] rounded-md p-4 md:p-2 bg-[#151515] text-xs md:text-base"
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-primary"
               />
             </div>
 
-            {/* Additional Instructions */}
+            {/* BPM */}
             <div className="flex flex-col mb-4">
-              <label htmlFor="instructions" className="text-white mb-3">
+              <label htmlFor="needs" className="text-white mb-3">
+                BPM
+              </label>
+              <input
+                id="BPM"
+                placeholder="Enter the tempo(BPM) of your beat..."
+                required
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md text-xs md:text-base md:px-4 md:py-2 p-4 bg-primary"
+              />
+            </div>
+
+            {/* Song Key */}
+            <div className="flex flex-col mb-4">
+              <label htmlFor="files" className="text-white mb-3">
+                Song Key
+              </label>
+              <input
+                id="songKey"
+                type="text"
+                placeholder="Enter the key for your beat..."
+                required
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md p-4 md:p-2 bg-primary text-xs md:text-base"
+              />
+            </div>
+
+            {/* Instrument */}
+            <div className="flex flex-col mb-4">
+              <label htmlFor="instrument" className="text-white mb-3">
+                Instruments
+              </label>
+              <input
+                id="instrument"
+                type="text"
+                placeholder="Enter the instruments in your song..."
+                required
+                className="input w-full border border-[#374151] text-[#8C9092] rounded-md p-4 md:p-2 bg-primary text-xs md:text-base"
+              />
+            </div>
+
+            {/* reference track */}
+            <div className="flex flex-col mb-4">
+              <label htmlFor="referenceTrack" className="text-white mb-3">
+                Reference Track
+              </label>
+              <textarea
+                id="referenceTrack"
+                placeholder="Link to a song that matches the vibe.."
+                required
+                className="input w-full border border-[#374151] text-[#8C9092] text-sm md:text-base rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-primary"
+              />
+            </div>
+
+            {/* Additional instructions */}
+            <div className="flex flex-col mb-4">
+              <label
+                htmlFor="additionalInstructions"
+                className="text-white mb-3"
+              >
                 Additional Instructions
               </label>
               <textarea
-                id="instructions"
+                id="additionalInstructions"
                 placeholder="Any specific requirements..."
                 required
-                className="w-full border border-[#374151] text-[#8C9092] text-sm md:text-base rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-[#151515]"
+                className="input w-full border border-[#374151] text-[#8C9092] text-sm md:text-base rounded-md pl-4 pr-14 md:pr-28 pt-2 pb-24 bg-primary"
               />
             </div>
 
@@ -190,7 +218,7 @@ const MixingProForm = () => {
                 {Payment.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-50 rounded-lg p-2"
+                    className="flex items-center gap-3 text-white border border-[#8C9092] w-full md:w-50 rounded-lg px-2 py-3 bg-primary"
                   >
                     <input
                       type="checkbox"

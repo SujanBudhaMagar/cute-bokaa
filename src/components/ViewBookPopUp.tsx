@@ -26,7 +26,7 @@ export const PopUpForm: React.FC<PopUpFormProps> = ({ onClose }) => {
         </Link>
         <button
           onClick={onClose}
-          className="text-base border border-[#374151] text-white w-full text-center py-4 rounded-xl"
+          className="text-base border border-[#374151] text-white w-full text-center py-4 rounded-xl cursor-pointer"
         >
           Close
         </button>

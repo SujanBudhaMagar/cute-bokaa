@@ -75,14 +75,14 @@ export default function ShoppingCart() {
 
   useEffect(() => {
     if (CartModel) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
-  
+
     // Cleanup in case the component unmounts
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [CartModel]);
 
@@ -120,7 +120,7 @@ export default function ShoppingCart() {
                       <p className="text-[10px] md:text-sm text-[#8C9092]">
                         {item.license}
                       </p>
-                      <div className="flex items-center mt-2">
+                      {/* <div className="flex items-center mt-2">
                         <button
                           className="py-[1px] px-2 flex items-center justify-center border border-[#E5E7EB] rounded-sm"
                           onClick={() =>
@@ -138,7 +138,7 @@ export default function ShoppingCart() {
                         >
                           +
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
@@ -276,7 +276,10 @@ export default function ShoppingCart() {
           </div>
 
           {/* Checkout Button */}
-          <button onClick={()=>setCartModel(true)} className="w-full bg-gradient-to-r from-[#9B24CB] to-[#F03F98] border border-[#D4D4D4] text-white py-3 rounded-md transition-colors  text-xs md:text-base ">
+          <button
+            onClick={() => setCartModel(true)}
+            className="w-full bg-gradient-to-r from-[#9B24CB] to-[#F03F98] border border-[#D4D4D4] text-white py-3 rounded-md transition-colors  text-xs md:text-base "
+          >
             Proceed to Checkout
           </button>
         </div>
@@ -291,7 +294,7 @@ export default function ShoppingCart() {
         </div>
       </section>
 
-     <CheckoutModal isOpen={CartModel} onclose={() => setCartModel(false)}/>
+      <CheckoutModal isOpen={CartModel} onclose={() => setCartModel(false)} />
     </div>
   );
 }

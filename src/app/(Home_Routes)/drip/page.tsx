@@ -1,15 +1,13 @@
+"use client";
+import DripSwiper from "@/components/card/DripSwiper";
 import LogoComp from "@/components/LogoComp";
 import CustomSwiperSlide from "@/components/SwiperSlide";
-import { ProductData, WornData } from "@/constants";
+import { ProductData } from "@/constants";
 import Image from "next/image";
 import React from "react";
 import { FaCartShopping } from "react-icons/fa6";
 
 const Drip = () => {
-  const photoSlides = Array.from(
-    { length: 150 }, // Increase the number of slides for smoothness
-    (_, i) => WornData[i % WornData.length]
-  );
   return (
     <div className="bg-primary min-h-screen overflow-hidden">
       <div className="flex flex-col items-center">
@@ -71,26 +69,11 @@ const Drip = () => {
         <p className="horizon text-white text-xl md:text-3xl tracking-widest">
           Worn by <span className="horizon-outlined">the Best</span>
         </p>
-        <p className="text-[#8C9092] text-sm md:text-base text-center">
+        <p className="text-[#8C9092] text-sm md:text-base text-center mb-9 md:mb-16">
           Join the elite community of producers and artists who trust our brand
         </p>
         {/* animated slides */}
-        <div className="flex gap-7 mt-14 animate-slide relative w-full">
-          {photoSlides.map((item, idx) => (
-            <div
-              className="w-[200px] h-[320px] md:w-[330px] md:h-[320px] relative"
-              key={idx}
-            >
-              <Image
-                src={item.image}
-                alt="none"
-                height={1000}
-                width={1000}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          ))}
-        </div>
+        <DripSwiper />
         {/* animated slides */}
       </div>
       {/* section 2 */}

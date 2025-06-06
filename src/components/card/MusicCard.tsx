@@ -32,7 +32,7 @@ const MusicCard = () => {
     >
       {MusicCardData.map((item, idx) => (
         <SwiperSlide
-        key={idx}
+          key={idx}
           className={`relative w-[145px] cursor-pointer overflow-hidden bg-[#252525] rounded-lg shadow-sm 
           }`}
         >
@@ -52,7 +52,8 @@ const MusicCard = () => {
 
               <div className="flex items-center justify-between pt-3 text-[#FAFAFA]">
                 <p className="text-xs">${item.price}</p>
-                <button className="text-[10px] py-1.5 px-4 bg-[#151515] rounded-[6px]">
+
+                <button className="text-[10px] py-1.5 px-4 bg-primary rounded-[6px]">
                   Buy
                 </button>
               </div>
