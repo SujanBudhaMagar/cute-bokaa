@@ -90,5 +90,5 @@ body {
   -webkit-box-shadow: 0 0 0 1000px #151515 inset;
   box-shadow: 0 0 0 1000px #151515 inset;
   -webkit-text-fill-color: #8c9092;
-  /* transition: background-color 5000s ease-in-out 0s; */
+  transition: background-color 5000s ease-in-out 0s;
 }
