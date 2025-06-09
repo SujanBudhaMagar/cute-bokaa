@@ -201,18 +201,18 @@ const SellBeat = () => {
               </div>
               <div>
                 <p>Mode of Payment</p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4 mb-6">
+                <div className="grid md:grid-cols-3 grid-cols-2 gap-2 mt-4 mb-6">
                   {PaymentSellBeat.map((payment, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-3 text-white border border-[#8C9092] w-full rounded-lg p-2 md:px-3 md:py-4 bg-primary"
+                      className="flex items-center gap-2 text-white border border-[#8C9092] w-full rounded-lg p-2 md:px-3 py-4 bg-primary"
                     >
                       <input
                         type="checkbox"
                         id={`payment-${idx}`}
                         checked={selectedPayment === idx}
                         onChange={() => handlePayment(idx)}
-                        className="appearance-none h-5 w-5 border border-[#8C9092] rounded-full checked:bg-[#925AEE] checked:border-transparent focus:outline-none"
+                        className="appearance-none h-3 w-3 md:h-4 md:w-4 border border-[#8C9092] rounded-full checked:bg-[#925AEE] checked:border-transparent focus:outline-none"
                       />
                       <label
                         htmlFor={`payment-${idx}`}
